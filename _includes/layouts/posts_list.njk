@@ -1,7 +1,7 @@
 <ul>
     {% for post in posts_list %}
         <li>
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+            <a href="{{ site.url }}{{ post.url | url }}">{{ post.data.title }}</a>
         </li>
         <span>
             <i>{{ post.data.description }}</i>

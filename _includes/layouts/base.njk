@@ -7,11 +7,20 @@ site_title: Laurel's Site
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="x-base-url" content="{{ site.url }}"/>
         <title>{{ site_title }}</title>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
         <h1>{{ site_title }}</h1>
+        <main>
         {{ content | safe }}
+        </main>
+
+        <audio id="bg" loop src="{{ site.url }}/assets/alt_text_selfies.mp3" controls>
+            Your browser does not support the audio element.
+        </audio>
+
+        <script src="{{ site.url }}/assets/js/mini-spa.js"></script>
     </body>
 </html>
