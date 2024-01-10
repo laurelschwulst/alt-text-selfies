@@ -1,5 +1,5 @@
 ---
-site_title: Laurel's Site
+site_title: Alt Text Selfies
 ---
 
 <!doctype html>
@@ -9,12 +9,32 @@ site_title: Laurel's Site
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="x-base-url" content="{{ site.url }}"/>
         <title>{{ site_title }}</title>
+        <link rel="stylesheet" href="/assets/css/index.css?333">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
-        <h1>{{ site_title }}</h1>
-        <main>
-        {{ content | safe }}
+
+        <main class="{{ main_class }}">
+
+            <header class="title fade-down">
+                <h1>
+                    <a href="{{ site.url }}/index.html">{{ site_title }}</a>
+                </h1>
+            </header>
+
+            {{ content | safe }}
+
+            <menu class="bottom fade-up">
+                <ul>
+                    <li><a class="ats-button welcome" href="{{ site.url }}/welcome">Welcome</a></li>
+                    <li><a class="ats-button selfies" href="{{ site.url }}/selfies">Selfies</a></li>
+                    <li><a class="ats-button book" href="{{ site.url }}/book">Book</a></li>
+                    <li><a class="ats-button about" href="{{ site.url }}/about">About</a></li>
+                    <li><a class="ats-button links" href="{{ site.url }}/links">Links</a></li>
+                    <li><a class="ats-button essays" href="{{ site.url }}/essays">Essays</a></li>
+                </ul>
+            </menu>
+
         </main>
 
         <audio id="bg" loop src="{{ site.url }}/assets/alt_text_selfies.mp3" controls>
@@ -22,5 +42,6 @@ site_title: Laurel's Site
         </audio>
 
         <script src="{{ site.url }}/assets/js/mini-spa.js"></script>
+        <script src="{{ site.url }}/assets/js/index.js"></script>
     </body>
 </html>

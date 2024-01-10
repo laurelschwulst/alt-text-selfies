@@ -4,12 +4,68 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Laurel&#39;s Site</title>
+        <meta name="x-base-url" content=""/>
+        <title>Alt Text Selfies</title>
+        <link rel="stylesheet" href="/assets/css/index.css?333">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
-        <h1>Laurel&#39;s Site</h1>
-        
-<a href="posts">Posts</a>
+
+        <main class="">
+
+            <header class="title fade-down">
+                <h1>
+                    <a href="/index.html">Alt Text Selfies</a>
+                </h1>
+            </header>
+
+            
+<div class="splash">
+<div class="menu-container">
+    
+    <menu>
+        <li>
+            <a class="ats-button-large sound" id="sound-on" href="welcome">
+                <span class="sound-icon">♫</span>
+                Enter<br>
+                with<br>
+                sound
+            </a>
+        </li>
+        <li>
+            <a class="ats-button-large no-sound" id="no-sound" href="welcome">
+                <span class="sound-icon">
+                    <div class="slash"></div>
+                    ♫
+                </span>
+                Enter<br>
+                * without *<br>
+                sound
+            </a>
+        </li>
+    </menu>
+
+</div>
+</div>
+
+            <menu class="bottom fade-up">
+                <ul>
+                    <li><a class="ats-button welcome" href="/welcome">Welcome</a></li>
+                    <li><a class="ats-button selfies" href="/selfies">Selfies</a></li>
+                    <li><a class="ats-button book" href="/book">Book</a></li>
+                    <li><a class="ats-button about" href="/about">About</a></li>
+                    <li><a class="ats-button links" href="/links">Links</a></li>
+                    <li><a class="ats-button essays" href="/essays">Essays</a></li>
+                </ul>
+            </menu>
+
+        </main>
+
+        <audio id="bg" loop src="/assets/alt_text_selfies.mp3" controls>
+            Your browser does not support the audio element.
+        </audio>
+
+        <script src="/assets/js/mini-spa.js"></script>
+        <script src="/assets/js/index.js"></script>
     </body>
 </html>
