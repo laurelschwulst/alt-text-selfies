@@ -1,0 +1,63 @@
+---
+layout: layouts/essay.njk
+title: "Making a Case for Self-Description: It’s Not About Eye Candy"
+author: Thomas Reid
+---
+
+When the World Health Organization declared COVID-19 a pandemic on March 11, 2020, the world changed forever and a spotlight shined on systemic inequality in areas such as the following: 
+
+[Police brutality and systematic racism](\"https://www.psychiatrictimes.com/view/policing-and-covid-19-disparities-discrimination-racism-and-xenophobia\")
+
+[Inequitable healthcare](\"https://www.cdc.gov/coronavirus/2019-ncov/community/health-equity/race-ethnicity.html\")
+
+[Overworked and dissatisfied employees](\"https://time.com/6051955/work-after-covid-19/\")
+
+That spotlight radiated outward enabling others to see new possibilities. Working from home, an accommodation to some and a necessity for others, became more commonplace. The world became aware of Zoom and other online meeting platforms. Eventually, even corporations began including self-descriptions and pronouns in meeting protocols.
+
+Over the past few months, there’s been some debate on including self-descriptions in meetings and presentations. The opposition has come from individuals within the Blind community both directly and in response to questions from non-Blind people seeking to understand the effectiveness of the practice. Is it performative, or is it access, or a combination of both?
+
+A self-description provides information about a person that non-blind people passively glean. This includes identity characteristics such as skin color, gender identity, hair length and texture, wardrobe, and more. 
+
+In the Reddit thread titled [How do you feel about people self-describing before they speak in professional presentations?](\"https://www.reddit.com/r/Blind/comments/q9ts5r/how_do_you_feel_about_people_selfdescribing/\"), the author, a sighted grad student, was putting together accessibility guidelines for academic presentations. A colleague suggested presenters “briefly describe themselves along the lines of gender, race, or other distinguishing features” to make the conference accessible to those who are Blind or have low vision. The grad student asks if self-description is helpful and if so what specifically is preferred and should it be the default or available upon request.
+
+The consensus, in this thread at least, self-description isn’t important and wastes time. According to some Reddit responders, as well as other individuals presumably in the community, the practice ‘elevates’ the relevancy of race, skin color, and ethnicity.
+
+I’ve been in meetings and presentations where attendees or presenters were asked to provide self-descriptions without any advanced notice or education. There’s an awkward moment of silence as people struggle to figure out what exactly they should describe about themselves and how much detail they should provide. However, just because some are uncomfortable or uninformed doesn’t mean the process itself is pointless.
+
+Allowing time for thought and preparation along with some guidelines can alleviate excessive description and the search for the right adjectives. One such resource, [Self-description for inclusive meetings from VocalEyes](\"https://vocaleyes.co.uk/services/resources/self-description-for-inclusive-meetings/#:~:text=Self-description%20provides%20information%20about,or%20in%20the%20room%20generally.\"), a UK based audio description services company, provides some explanation of the benefits of self-description to those who are Blind or have low vision. This document offers a template for preparing your own in advance of any meeting or conference. That preparation makes the difference between long uncomfortable descriptions which can include information about things off screen that aren’t even visible to those with sight. 
+
+In an article in the National Federation of the Blind’s _Braille Monitor_ titled [A Case for Why We Should Not Do Visual Descriptions of Ourselves](\"https://nfb.org/images/nfb/publications/bm/bm22/bm2201/bm220107.htm\"), the author Mark Lasser claims to offer his view as to “why this practice is a bad idea with potentially worse outcomes.”
+
+Although he never actually describes the potentially bad outcome, Lasser claims “we are elevating race, gender, and age, and ignoring what sighted folks often notice such as physical attractiveness, unusual or unconventional surroundings or clothing, blemishes, weight, or things that might be paramount to a sighted user and pointedly avoided in someone providing self-description.” Purporting we’re missing the bigger picture, he goes on to describe race, and gender as “the most superficial and arguably useless details while what we might really want to know is excluded from the visual description.”
+
+It’s an absurd and uninformed argument that providing descriptions of our identity; race, gender, age elevates its importance, while studies have clearly shown the effect identity has on just about all aspects of our lives including [healthcare](\"https://www.americanbar.org/groups/crsj/publications/human_rights_magazine_home/the-state-of-healthcare-in-the-united-states/racial-disparities-in-health-care/\"), [wages](\"https://www.pewresearch.org/fact-tank/2016/07/01/racial-gender-wage-gaps-persist-in-u-s-despite-some-progress/\") and [home ownership](\"https://www.npr.org/sections/codeswitch/2021/05/08/991535564/black-americans-and-the-racist-architecture-of-homeownership\"). 
+
+Perhaps some of the distress on the part of the self-describer is about drawing attention to that which is visible but yet rarely examined or discussed. For many, the act of providing description is a means of recognizing diversity. In a society where whiteness is the default, evident in products from “[nude” Band-Aids](\"https://www.glamour.com/story/band-aid-is-adding-brown-and-black-skin-tones-reactions\") to all sorts of [fashion products](\"https://www.cosmopolitan.com/style-beauty/fashion/g8646556/brands-diverse-shades-of-nude/\"), white people have few reasons to describe their complexions.
+
+It’s not surprising that Black people and other people of color seem much more versed in this practice using a variety of terms like dark skin, tan with red undertones, brown, copper, bronze and more to describe ourselves.
+
+An example of my personal introduction including self-description is as follows: “I am a brown-skinned Black man with a smooth shaven bald head, full neat beard wearing dark shades and a black hoodie with the words. “I am my ancestors” printed on the front. My pronouns are he, him, his.” 
+
+I’ve been fully aware of my description all my life. My blackness was first pointed out when I was in first grade at a predominantly white school. A third grader chose to refer to me using a different word, but it was clearly based on the level of melanin in my skin.
+
+For those who can relate to being pulled over by the police or stopped on the street and told, “You fit the description” of a suspect, you have no choice but to be acutely aware of your distinguishing features. Because we live under white supremacy, my race is ‘elevated’ whether I like it or not. My self-description, only 39 words taking less than 15 seconds to recite, could literally save my life. 
+
+During a meeting or a presentation, where the stakes are hopefully lower, I’d hope that my description reveals some insight to things that are of importance to me and who I am. Those in attendance can choose to do whatever they like with that information. 
+
+In a [Twitter thread on self-description](\"https://twitter.com/cmmhartmann/status/1490774801241325569\") Cristina Hartmann, [a writer who identifies as DeafBlind](\"https://disabilityvisibilityproject.com/2021/11/15/why-we-need-to-stop-making-movies-about-helen-keller/\"), and a “closet Latina,” claims she can “tell a lot from feeling on someone’s skin.”  
+
+I became Blind as an adult 18 years ago. There are definitely things we can glean through scent, sound, and touch but I wouldn’t recommend substituting over a self-description. I have held onto a sighted guide’s elbow or the lower triceps and made assumptions about their workout routine. I’ve never casually touched someone and made assumptions about their race or ethnicity. Hartman suggests that we shouldn’t assume visual details are superior to other senses such as tactile, olfactory or auditory when perceiving people. I’ve even contemplated whether my desire for access to visual information is a sign of internalized ableism. Am I trying to regain what I once had? I explore alternative ways of entertainment including audio-based dramas, books, and games. I navigate in public spaces using sound as beacons and even welcome the chance to not only find but recognize the specific type of coin or object when it falls on the floor. But it’s just undeniable, our world is biased toward the visual. This doesn’t mean self-descriptions only benefit sighted people, but it acknowledges that the world is centered on visual culture that I have to participate in like so many others.
+
+As a Blind [podcast](\"https://reidmymindradio.libsyn.com/rss\") producer, I still need to consider images for each episode. This seemingly audio-only platform is, according to Podcast Movement, one of the largest podcast conferences, “[a visual medium](\"https://podcastmovement.com/resources/creation/how-to-design-your-podcast-artwork/#:~:text=in%20her%20presentation.-,The%20Importance%20of%20Podcast%20Artwork,podcast%20unless%20you%20have%20artwork.\")” where artwork and graphics play a major role in helping listeners find your content. 
+
+Hartmann goes on to write in her Twitter thread, “I can tell a lot about you how you move your hands and body.” All people, not just those of us who are Blind, have a chance to learn to make more use of our other senses when available. When incorporating self-descriptions into a meeting or conference protocol, the process should be encouraged, but remain optional. It should be stressed that the intent is to verbalize what’s already visible to most and does not need to make anyone uncomfortable or self-conscious.
+
+Similarly, it shouldn’t fall to the Blind attendee to request this type of access. This policy forces individuals to self-identify. For many, especially those new to the experience of vision loss or uncomfortable identifying as Blind, doing so raises a real fear of the [potential loss of livelihood](\"https://visionaware.org/working-life/talking-to-your-employer/\") and stigma. 
+
+Accessibility is about making space for anyone to attend and participate. It creates a welcoming environment. And access needs can conflict and evolve over time. Access is not calling ahead to a venue or restaurant and requesting a ramp in order to get into the building. It’s not checking the schedule for the one showing of the new blockbuster action movie offering captions or audio description.   
+
+As we slowly move one day to a post-pandemic world, small gains in access which helped people with disabilities are [slowly receding as society ‘returns to normal.’](\"https://www.usnews.com/news/economy/articles/2022-03-04/the-great-return-companies-are-calling-their-workers-back-to-the-office-as-covid-19-fades\") Calling for the elimination of self-descriptions is another example of a reduction in access.
+
+Self-description is not a magic wand. It will never provide an equivalent experience to what a sighted person gleans from observation. It’s about providing access to information, increasing a Blind attendee’s opportunity to “observe” and participate. For many, it requires a bit of instruction and practice. But what if 15 extra seconds during an introduction encourages all presenters to think about how to make their talks more accessible such as describing their slides, videos, and graphs, offering large-print paper copies of their talk, slowing down for the captioner and interpreter, using a microphone, or at the very least asking the question to the audience, “Can everyone access the information here today?” 
+
+I’m not a fan of award shows and their red carpet segments and I don’t consume sports or reality television, but I would fully support any effort to increase our access to all content even if the details may bore me. I’m willing to “suffer” through 15 seconds of poor self-description understanding that the true goal is normalizing the inclusion of Blind people in spaces where we have traditionally been left out. Everyone has a role and responsibility in building a culture of access, even if it takes some time and effort.
