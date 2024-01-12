@@ -126,6 +126,10 @@ menu.bottom ul {
   gap: 0.5rem;
 }
 
+menu.bottom .ats-button.active {
+  border-color: black;
+}
+
 .column {
   max-width: 519px;
   padding: 0 0.5em;

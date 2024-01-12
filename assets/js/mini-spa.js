@@ -20,7 +20,7 @@
       }
       container.focus();
       window.scrollTo(0, 0);
-      // ToDo: update the menu to highlight the current page
+      updateMainMenu(href);
     };
     xhr.onerror = function () {
       // fallback to normal link behaviour
@@ -30,6 +30,18 @@
     xhr.open('GET', href);
     xhr.responseType = 'document';
     xhr.send();
+  }
+
+  function updateMainMenu(newHref) {
+    const menu = $('menu.bottom');
+    const links = menu.querySelectorAll('a');
+    links.forEach((link) => {
+      if (link.href === newHref) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
   }
 
   function $(sel, con) {
