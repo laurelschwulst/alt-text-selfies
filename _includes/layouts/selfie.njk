@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="column">
+
+    <h2>{{ title }}</h2>
+
+    {% if audio %}
+    <audio id="selfie" src="{{ site.url }}{{ audio }}" controls>
+        Your browser does not support the audio element.
+    </audio>
+    {% endif %}
+
+    <p> {{ content | safe }}</p>
+
+</div>

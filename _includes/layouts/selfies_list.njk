@@ -1,0 +1,13 @@
+<div class="column">
+
+    <h2>Selfies</h2>
+
+    <ul>
+        {% for selfie in selfies_list %}
+            <li>
+                <a href="{{ site.url }}{{ selfie.url | url }}">{{ selfie.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
