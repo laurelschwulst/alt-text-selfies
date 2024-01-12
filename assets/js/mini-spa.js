@@ -20,6 +20,7 @@
       }
       container.focus();
       window.scrollTo(0, 0);
+      // ToDo: update the menu to highlight the current page
     };
     xhr.onerror = function () {
       // fallback to normal link behaviour

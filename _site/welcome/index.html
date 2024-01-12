@@ -4,18 +4,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="x-base-url" content=""/>
+        <meta name="x-base-url" content="http://localhost:8080"/>
         <title>Alt Text Selfies</title>
         <link rel="stylesheet" href="/assets/css/index.css?333">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
     <body>
 
-        <main class="normal">
+        <main class="">
 
             <header class="title fade-down">
                 <h1>
-                    <a href="/index">Alt Text Selfies</a>
+                    <a href="http://localhost:8080/welcome">Alt Text Selfies</a>
+
                 </h1>
             </header>
 
@@ -28,24 +29,39 @@
 
 </div>
 
-            <menu class="bottom fade-up">
-                <ul>
-                    <li><a class="ats-button welcome" href="/welcome">Welcome</a></li>
-                    <li><a class="ats-button selfies" href="/selfies">Selfies</a></li>
-                    <li><a class="ats-button book" href="/book">Book</a></li>
-                    <li><a class="ats-button about" href="/about">About</a></li>
-                    <li><a class="ats-button links" href="/links">Links</a></li>
-                    <li><a class="ats-button essays" href="/essays">Essays</a></li>
-                </ul>
-            </menu>
+<menu class="bottom fade-up">
+    <ul>
+        <li><a class="ats-button welcome" href="http://localhost:8080/welcome">Welcome</a></li>
+        <li><a class="ats-button selfies" href="http://localhost:8080/selfies">Selfies</a></li>
+        <li><a class="ats-button book" href="http://localhost:8080/book">Book</a></li>
+        <li><a class="ats-button about" href="http://localhost:8080/about">About</a></li>
+        <li><a class="ats-button links" href="http://localhost:8080/links">Links</a></li>
+        <li><a class="ats-button essays" href="http://localhost:8080/essays">Essays</a></li>
+    </ul>
+</menu>
+
+<nav id="sound-toggle">
+    <button class="sound ats-button">
+        ♫
+    </button>
+</nav>
+
+
+<nav id="lateral">
+    <div class="next-container">
+        <a href="http://localhost:8080/selfies/andy-slater/" class="next ats-button">→</a>
+    </div>
+</nav>
+
+            
 
         </main>
 
-        <audio id="bg" loop src="/assets/alt_text_selfies.mp3" controls>
+        <audio id="bg" loop src="http://localhost:8080/assets/alt_text_selfies.mp3" controls>
             Your browser does not support the audio element.
         </audio>
 
-        <script src="/assets/js/mini-spa.js"></script>
-        <script src="/assets/js/index.js"></script>
+        <script src="http://localhost:8080/assets/js/mini-spa.js"></script>
+        <script src="http://localhost:8080/assets/js/index.js"></script>
     </body>
 </html>

@@ -1,7 +1,6 @@
 ---
-layout: layouts/page_regular.njk
+layout: layouts/welcome.njk
 title: Welcome
-main_class: normal
 ---
 
 *Welcome!*

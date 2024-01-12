@@ -1,0 +1,11 @@
+{% set previousPost = collections.selfies | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.selfies | getNextCollectionItem(page) %}
+
+<nav id="lateral">
+    <div class="next-container">
+        <a href="{{ site.url }}{{ nextPost.url }}" class="next ats-button">→</a>
+    </div>
+    <div class="prev-container">
+        <a href="{{ site.url }}{{ previousPost.url }}" class="prev ats-button">←</a>
+    </div>
+</nav>

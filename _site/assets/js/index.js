@@ -6,20 +6,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Play sound and then navigate for 'sound-on' link
     if (soundOn) {
         soundOn.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent the immediate default navigation
-            audio.play(); // Play the audio
-            
-            // Note to Taichi: the below doesn't seem to work?
-            // setTimeout(function() {
-            //     window.location.href = soundOn.href;
-            // }, 500);
+            console.log('playing');
+            audio.play();
         });
     }
 
     // Toggle sound for 'sound-toggle' link without navigating
     if (soundToggle) {
         soundToggle.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent navigation
+            console.log('click sound button');
             if (audio.paused) {
                 audio.play(); // Play the audio if it's paused
             } else {

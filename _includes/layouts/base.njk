@@ -18,23 +18,14 @@ site_title: Alt Text Selfies
 
             <header class="title fade-down">
                 <h1>
-                    <a href="{{ site.url }}/index">{{ site_title }}</a>
+                    <a href="{{ site.url }}/welcome">{{ site_title }}</a>
 
                 </h1>
             </header>
 
             {{ content | safe }}
 
-            <menu class="bottom fade-up">
-                <ul>
-                    <li><a class="ats-button welcome" href="{{ site.url }}/welcome">Welcome</a></li>
-                    <li><a class="ats-button selfies" href="{{ site.url }}/selfies">Selfies</a></li>
-                    <li><a class="ats-button book" href="{{ site.url }}/book">Book</a></li>
-                    <li><a class="ats-button about" href="{{ site.url }}/about">About</a></li>
-                    <li><a class="ats-button links" href="{{ site.url }}/links">Links</a></li>
-                    <li><a class="ats-button essays" href="{{ site.url }}/essays">Essays</a></li>
-                </ul>
-            </menu>
+            {% block menu %}{% endblock %}
 
         </main>
 
