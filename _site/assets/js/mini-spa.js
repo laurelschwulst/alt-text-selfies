@@ -21,6 +21,10 @@
       container.focus();
       window.scrollTo(0, 0);
       // ToDo: update the menu to highlight the current page
+      // write a function to find the <nav> element with the class "ats-menu"
+      // and find the link that corresponds to the content that was loaded
+      // add the class "highlighted" to that link.
+      
     };
     xhr.onerror = function () {
       // fallback to normal link behaviour

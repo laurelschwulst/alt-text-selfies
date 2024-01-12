@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         soundToggle.addEventListener('click', function(e) {
             console.log('click sound button');
             if (audio.paused) {
-                audio.play(); // Play the audio if it's paused
+                audio.play();
             } else {
-                audio.pause(); // Pause the audio if it's playing
+                audio.pause();
             }
         });
     }
