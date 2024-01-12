@@ -1,6 +1,9 @@
 ---
 layout: layouts/selfie.njk
 title: Alex Chen
+order: 6
+is-in-chapbook: false
+audio: 
 ---
 *Note - I often upload a group of images on instagram and write alt text for the whole group in a number list.*
 

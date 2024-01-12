@@ -1,8 +1,11 @@
+# when using the default proxy server port
+local_backend: true
+
 backend:
     name: git-gateway
     branch: master
 
-media_folder: "_site/images/uploads"
+media_folder: "_site/assets/sounds/selfies"
 public_folder: "/images/uploads"
 
 collections:
@@ -12,6 +15,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/selfie.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Selfie Text", name: "body", widget: "markdown" }
+      - { label: "Is in chapbook?", name: "is-in-chapbook", widget: "boolean", default: false }
+      - { label: "Audio", name: "audio", widget: "file"}
