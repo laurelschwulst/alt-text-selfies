@@ -5,7 +5,7 @@ module.exports = function() {
     }
   } else {
     return {
-      url: "https://alttextselfies.com",
+      url: "https://alt-text-selfies.netlify.app",
     }
   }
 };
