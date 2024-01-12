@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "cms:dev": "npx decap-server",
     "build:dev": "NODE_ENV=development npx @11ty/eleventy --serve",
     "build:prod": "NODE_ENV=production npx @11ty/eleventy"
   },
