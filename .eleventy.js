@@ -5,4 +5,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setTemplateFormats(["md", "njk"]);
 
+    eleventyConfig.addCollection("selfies", function(collection) {
+        // Filter the collection to include only selfies
+        return collection.getAll().filter(item => item.inputPath.startsWith('./selfies/'));
+      });
+
 };
