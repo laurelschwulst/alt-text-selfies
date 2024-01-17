@@ -7,12 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cms:dev": "npx decap-server",
     "build:dev": "NODE_ENV=development npx @11ty/eleventy --serve",
-    "build:prod": "NODE_ENV=production npx @11ty/eleventy"
+    "build:prod": "NODE_ENV=production npx @11ty/eleventy",
+    "tailwind:watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./assets/css/tailwind.css --content './**/*.njk' -w",
+    "tailwind:build": "npx tailwindcss -i ./src/css/tailwind.css -o ./assets/css/tailwind.css --content './**/*.njk' -m"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "tailwind": "^4.0.0"
   }
 }

@@ -9,24 +9,23 @@ site_title: Alt Text Selfies
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="x-base-url" content="{{ site.url }}"/>
         <title>{{ site_title }}</title>
+        <link rel="stylesheet" href="/assets/css/tailwind.css?333">
         <link rel="stylesheet" href="/assets/css/index.css?333">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {# Vue used for sort and filtering on Selfies page #}
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
     <body>
-
         <main class="{{ main_class }}">
-
             <header class="title fade-down">
                 <h1>
                     <a href="{{ site.url }}/welcome">{{ site_title }}</a>
-
                 </h1>
             </header>
 
             {{ content | safe }}
 
             {% block menu %}{% endblock %}
-
         </main>
 
         <audio id="bg" loop src="{{ site.url }}/assets/alt_text_selfies.mp3" controls>

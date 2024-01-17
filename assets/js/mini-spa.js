@@ -21,6 +21,7 @@
       container.focus();
       window.scrollTo(0, 0);
       updateMainMenu(href);
+      setupSelfieFilters();
     };
     xhr.onerror = function () {
       // fallback to normal link behaviour

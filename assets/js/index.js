@@ -23,3 +23,120 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 });
+
+setupSelfieFilters();
+
+function setupSelfieFilters() {
+    const selfieFilterSnippet = document.getElementById('filter-snippet');
+    const selfieListItems = document.querySelectorAll('.selfie-list-item');
+
+    if (selfieFilterSnippet) {
+        console.log('set up filters')
+    } else {
+        return
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentSort = urlParams.get('sort');
+    const currentFilter = urlParams.get('filter');
+
+    let filterText = '';
+    if (currentFilter === 'chapbook') {
+        filterText = 'Selfies in the chapbook, '
+        selfieListItems.forEach(function(selfieListItem) {
+            if (selfieListItem.dataset.chapbook === 'true') {
+                selfieListItem.style.display = 'block';
+            } else {
+                selfieListItem.style.display = 'none';
+            }
+        });
+    } else if (currentFilter === 'audio') {
+        filterText = 'Selfies with audio, '
+        selfieListItems.forEach(function(selfieListItem) {
+            if (selfieListItem.dataset.audio === 'true') {
+                selfieListItem.style.display = 'block';
+            } else {
+                selfieListItem.style.display = 'none';
+            }
+        });
+    } else {
+        filterText = 'All selfies, '
+        selfieListItems.forEach(function(selfieListItem) {
+            selfieListItem.style.display = 'block';
+        });
+    }
+    if (currentSort === 'length') {
+        filterText += 'sorted by length'
+        // rearrange items by value in data-length attribute
+        const selfieList = document.querySelector('.selfie-list');
+        const selfieListItems = document.querySelectorAll('.selfie-list-item');
+        const selfieListItemsArray = Array.from(selfieListItems);
+        selfieListItemsArray.sort(function(a, b) {
+            return a.dataset.length - b.dataset.length;
+        });
+        selfieListItemsArray.forEach(function(selfieListItem) {
+            selfieList.appendChild(selfieListItem);
+        });
+    } else if (currentSort === 'random') {
+        filterText += 'in random order'
+        // rearrange items in random order
+        const selfieList = document.querySelector('.selfie-list');
+        const selfieListItems = document.querySelectorAll('.selfie-list-item');
+        const selfieListItemsArray = Array.from(selfieListItems);
+        selfieListItemsArray.sort(function(a, b) {
+            return 0.5 - Math.random();
+        });
+        selfieListItemsArray.forEach(function(selfieListItem) {
+            selfieList.appendChild(selfieListItem);
+        });
+    } else {
+        filterText += 'sorted in ABC order'
+    }
+
+
+    const { createApp, ref } = Vue
+    createApp({
+        data() {
+        return {
+            filterText: filterText,
+            newSort: currentSort,
+            newFilter: currentFilter,
+            filterModalIsOpen: false,
+        }
+        },
+        methods: {
+        applySort: function(sort) {
+            this.newSort = sort
+        },
+        applyFilter: function(filter) {
+            this.newFilter = filter
+        },
+        redirectToNewUrl: function() {
+            const params = []
+            if (this.newSort) params.push(`sort=${this.newSort}`)
+            if (this.newFilter) params.push(`filter=${this.newFilter}`)
+            const paramString = params.length ? `?${params.join('&')}` : ''
+            const baseUrl = window.location.origin + window.location.pathname
+            window.location.href = baseUrl + paramString
+        },
+        openFilterModal: function() {
+            this.filterModalIsOpen = true
+        },
+        closeFilterModal: function() {
+            if (this.newSort !== currentSort || this.newFilter !== currentFilter) {
+            this.redirectToNewUrl()
+            } else {
+            this.filterModalIsOpen = false
+            }
+        }
+        },
+        // listen for escape key
+        mounted() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                this.closeFilterModal()
+                }
+            })
+        },
+    }).mount('#filter-snippet')
+}

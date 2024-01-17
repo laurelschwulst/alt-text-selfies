@@ -361,9 +361,18 @@ body.selfies menu.bottom {
   background: var(--grey);
 }
 
+.open-filters-button {
+  margin-bottom: 1em;
+}
+
+.open-filters-button h2 {
+  margin: 0;
+}
+
 .filter-modal {
   display: none;
   background: var(--grey);
+  z-index: 10;
 }
 
 .filter-modal.open {
