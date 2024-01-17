@@ -594,6 +594,8 @@ header.essay h2 {
   .column {
     padding-bottom: 0;
     margin-bottom: 1.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   /* #lateral {
