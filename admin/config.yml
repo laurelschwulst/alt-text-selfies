@@ -12,7 +12,7 @@ public_folder: ""
 collections:
   - name: "selfies"
     label: "selfies"
-    folder: "selfies"
+    folder: "src/selfies"
     create: true
     slug: "{{slug}}"
     fields:
