@@ -550,6 +550,10 @@ header.essay h2 {
 
 @media screen and (max-width: 1045px) {
 
+  html {
+    font-size: 18px;
+  }
+
   #mobile-ats-menu,
   .ats-button.close-menu {
     display: inline-block;
