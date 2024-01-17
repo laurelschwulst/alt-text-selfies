@@ -3,7 +3,23 @@ layout: layouts/base.njk
 ---
 
 <div class="column large">
-    <h2 class="stars">{{ title }}</h2>
+    <div class="star-title-container">
+        <h2 class="star-title">{{ title }}</h2>
+        <div class="stars">
+            <img class="star" src="{{site.url}}/assets/images/star01.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star02.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star03.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star04.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star05.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star06.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star07.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star08.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star09.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star10.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star11.svg"/>
+            <img class="star" src="{{site.url}}/assets/images/star12.svg"/>
+        </div>
+    </div>
     {{ content | safe }}
 </div>
 
