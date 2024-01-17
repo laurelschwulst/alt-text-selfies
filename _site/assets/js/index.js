@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var closeLink = document.querySelector("#ats-menu .close-menu");
 
     mobileLink.addEventListener("click", function(e) {
+      console.log('click mobile link');
       e.preventDefault();
       mobileLink.style.display = "none";
       menuUl.style.display = "block";

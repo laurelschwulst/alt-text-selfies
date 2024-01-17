@@ -32,6 +32,10 @@ html {
   height: 100%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 b, strong {
   font-family: 'Century Expanded';
   font-weight: normal;
@@ -310,10 +314,11 @@ nav#sound-toggle button {
   content: "";
   position: absolute;
   display: block;
-  top: -2em;
-  left: -1.25em;
+  top: -2.75em;
+  left: 0;
+  right: 0;
   height: 50px;
-  width: 100vw;
+  width: auto;
   background-image: linear-gradient(to bottom, rgba(255, 255, 195, 0), rgba(255, 255, 195, 1));
   /* background: lime; */
 }
@@ -322,10 +327,13 @@ nav#sound-toggle button {
   content: "";
   position: absolute;
   display: block;
-  top: 80px;
+  top: 3.25em;
+  width: auto;
+  left: 0;
+  right: 0;
   height: 50px;
-  width: 100vw;
   background-image: linear-gradient(to top, rgba(255, 255, 195, 0), rgba(255, 255, 195, 1));
+  /* background: lime; */
 }
 
 /* PLACEHOLDER STARS */
@@ -535,7 +543,7 @@ header.essay h2 {
 
 /* mobile */
 
-.mobile-menu-container {
+/* .mobile-menu-container {
   text-align: center;
 }
 
@@ -546,7 +554,7 @@ header.essay h2 {
 
 .ats-button.close-menu {
   display: none;
-}
+} */
 
 @media screen and (max-width: 1045px) {
 
@@ -570,9 +578,9 @@ header.essay h2 {
     background: var(--yellow);
   }
   
-  #ats-menu {
+  /* #ats-menu {
     display: none;
-  }
+  } */
 
   menu.bottom ul {
     display: block;
