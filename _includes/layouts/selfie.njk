@@ -7,6 +7,7 @@ layout: layouts/base.njk
     <h2>{{ title }}</h2>
 
     {% if audio %}
+    <button class="selfie-audio">Listen</button>
     <audio id="selfie" src="{{ site.url }}/assets/sounds/{{ audio }}" controls>
         Your browser does not support the audio element.
     </audio>

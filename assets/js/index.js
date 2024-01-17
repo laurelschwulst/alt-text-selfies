@@ -24,6 +24,46 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
+
+// audio button for individual selfie
+
+document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById("selfie");
+    var button = document.querySelector(".selfie-audio");
+
+    if (button) {
+        button.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                button.innerHTML = "Pause";
+            } else {
+                audio.pause();
+                button.innerHTML = "Listen";
+            }
+        });
+    }
+});
+
+// mobile menu
+
+document.addEventListener("DOMContentLoaded", function() {
+    var mobileLink = document.querySelector("#mobile-ats-menu .toggle-link");
+    var menuUl = document.getElementById("ats-menu");
+    var closeLink = document.querySelector("#ats-menu .close-menu");
+
+    mobileLink.addEventListener("click", function(e) {
+      e.preventDefault();
+      mobileLink.style.display = "none";
+      menuUl.style.display = "block";
+    });
+
+    closeLink.addEventListener("click", function(e) {
+      e.preventDefault();
+      mobileLink.style.display = "inline-block";
+      menuUl.style.display = "none";
+    });
+});
+
 setupSelfieFilters();
 
 function setupSelfieFilters() {

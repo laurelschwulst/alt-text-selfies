@@ -6,23 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="x-base-url" content="http://localhost:8080"/>
         <title>Alt Text Selfies</title>
+        <link rel="stylesheet" href="/assets/css/tailwind.css?333">
         <link rel="stylesheet" href="/assets/css/index.css?333">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
     <body>
-
         <main class="">
-
             <header class="title fade-down">
                 <h1>
                     <a href="http://localhost:8080/welcome">Alt Text Selfies</a>
-
                 </h1>
             </header>
 
             
 <div class="column large">
-    <h2 class="stars">About</h2>
+    <div class="star-title-container">
+        <h2 class="star-title">About</h2>
+        <div class="stars">
+            <img class="star" src="http://localhost:8080/assets/images/star01.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star02.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star03.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star04.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star05.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star06.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star07.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star08.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star09.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star10.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star11.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star12.svg"/>
+        </div>
+    </div>
     <p><em>What is an alt-text selfie?</em></p>
 <p>For us, an alt-text selfie is any written self-portrait. This project takes a well-known practice—the selfie—and approaches it through a disability lens. Selfies and self-descriptions are often visually focused, but to us, an alt-text selfie doesn’t need to center visual presentation or a literal description of an image. Alt-text selfies might focus on feelings, smells, tastes, sounds, emotions, textures, or some combination. Alt-text selfies can be any length, but for this project, we focused on writing in the one-sentence to one-paragraph range.</p>
 <hr>
@@ -45,7 +61,13 @@
 
 </div>
 
-<menu class="bottom fade-up">
+<div class="mobile-menu-container">
+    <div id="mobile-ats-menu" class="fade-up">
+        <a class="ats-button toggle-link">Menu</a>
+    </div>
+</div>
+    
+<menu id="ats-menu" class="bottom fade-up">
     <ul>
         <li><a class="ats-button welcome" href="http://localhost:8080/welcome">Welcome</a></li>
         <li><a class="ats-button selfies" href="http://localhost:8080/selfies">Selfies</a></li>
@@ -53,17 +75,15 @@
         <li><a class="ats-button about" href="http://localhost:8080/about">About</a></li>
         <li><a class="ats-button links" href="http://localhost:8080/links">Links</a></li>
         <li><a class="ats-button essays" href="http://localhost:8080/essays">Essays</a></li>
+        <li><a class="ats-button close-menu">Close</a></li>
     </ul>
 </menu>
 
 <nav id="sound-toggle">
-    <button class="sound ats-button">
-        ♫
-    </button>
+    <button class="sound ats-button">♫</button>
 </nav>
 
             
-
         </main>
 
         <audio id="bg" loop src="http://localhost:8080/assets/alt_text_selfies.mp3" controls>

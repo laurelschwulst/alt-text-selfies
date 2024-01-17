@@ -6,17 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="x-base-url" content="http://localhost:8080"/>
         <title>Alt Text Selfies</title>
+        <link rel="stylesheet" href="/assets/css/tailwind.css?333">
         <link rel="stylesheet" href="/assets/css/index.css?333">
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
     <body>
-
         <main class="">
-
             <header class="title fade-down">
                 <h1>
                     <a href="http://localhost:8080/welcome">Alt Text Selfies</a>
-
                 </h1>
             </header>
 
@@ -29,7 +29,13 @@
 
 </div>
 
-<menu class="bottom fade-up">
+<div class="mobile-menu-container">
+    <div id="mobile-ats-menu" class="fade-up">
+        <a class="ats-button toggle-link">Menu</a>
+    </div>
+</div>
+    
+<menu id="ats-menu" class="bottom fade-up">
     <ul>
         <li><a class="ats-button welcome" href="http://localhost:8080/welcome">Welcome</a></li>
         <li><a class="ats-button selfies" href="http://localhost:8080/selfies">Selfies</a></li>
@@ -37,24 +43,22 @@
         <li><a class="ats-button about" href="http://localhost:8080/about">About</a></li>
         <li><a class="ats-button links" href="http://localhost:8080/links">Links</a></li>
         <li><a class="ats-button essays" href="http://localhost:8080/essays">Essays</a></li>
+        <li><a class="ats-button close-menu">Close</a></li>
     </ul>
 </menu>
 
 <nav id="sound-toggle">
-    <button class="sound ats-button">
-        ♫
-    </button>
+    <button class="sound ats-button">♫</button>
 </nav>
 
 
 <nav id="lateral">
     <div class="next-container">
-        <a href="http://localhost:8080/selfies/andy-slater/" class="next ats-button">→</a>
+        <a href="http://localhost:8080/selfies/chinar-shah/" class="next ats-button">→</a>
     </div>
 </nav>
 
             
-
         </main>
 
         <audio id="bg" loop src="http://localhost:8080/assets/alt_text_selfies.mp3" controls>

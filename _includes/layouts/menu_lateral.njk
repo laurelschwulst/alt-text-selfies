@@ -1,11 +1,23 @@
 {% set previousPost = collections.selfies | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.selfies | getNextCollectionItem(page) %}
 
+{% if nextPost %}
+  {% set nextPostUrl = site.url ~ nextPost.url %}
+{% else %}
+  {% set nextPostUrl = site.url ~ collections.selfies[0].url %}
+{% endif %}
+
+{% if previousPost %}
+  {% set previousPostUrl = site.url ~ previousPost.url %}
+{% else %}
+  {% set previousPostUrl = site.url ~ collections.selfies[collections.selfies.length - 1].url %}
+{% endif %}
+
 <nav id="lateral">
-    <div class="next-container">
-        <a href="{{ site.url }}{{ nextPost.url }}" class="next ats-button">→</a>
-    </div>
     <div class="prev-container">
-        <a href="{{ site.url }}{{ previousPost.url }}" class="prev ats-button">←</a>
+        <a href="{{ previousPostUrl }}" class="prev ats-button">←</a>
+    </div>
+    <div class="next-container">
+        <a href="{{ nextPostUrl }}" class="next ats-button">→</a>
     </div>
 </nav>
