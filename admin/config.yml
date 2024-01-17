@@ -7,12 +7,12 @@ backend:
     repo: laurelschwulst/alt-text-selfies
 
 media_folder: "/assets/sounds"
-public_folder: ""
+public_folder: "/assets"
 
 collections:
   - name: "selfies"
     label: "selfies"
-    folder: "src/selfies"
+    folder: "selfies"
     create: true
     slug: "{{slug}}"
     fields:
