@@ -3,7 +3,7 @@ local_backend: true
 
 backend:
     name: git-gateway
-    branch: master
+    branch: main
     repo: laurelschwulst/alt-text-selfies
 
 media_folder: "/assets/sounds"
