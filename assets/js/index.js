@@ -1,8 +1,11 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+setupSoundToggle();
+
+function setupSoundToggle() {
     var audio = document.getElementById('bg');
     var soundOn = document.getElementById('sound-on');
     var soundToggle = document.getElementById('sound-toggle');
-
+    var soundToggleButton = soundToggle.querySelector('button');
+    
     // Play sound and then navigate for 'sound-on' link
     if (soundOn) {
         soundOn.addEventListener('click', function(e) {
@@ -11,18 +14,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
+    if (audio.paused) {
+        soundToggleButton.classList.add('muted')
+    }
+    
     // Toggle sound for 'sound-toggle' link without navigating
     if (soundToggle) {
         soundToggle.addEventListener('click', function(e) {
             console.log('click sound button');
             if (audio.paused) {
                 audio.play(); // Play the audio if it's paused
+                soundToggleButton.classList.remove('muted')
             } else {
                 audio.pause(); // Pause the audio if it's playing
+                soundToggleButton.classList.add('muted')
             }
         });
     }
-});
+}
 
 
 // audio button for individual selfie
