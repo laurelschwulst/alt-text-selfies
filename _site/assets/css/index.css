@@ -157,7 +157,7 @@ menu.bottom .ats-button.active {
 }
 
 .sound-icon {
-  font-size: 0.85em;
+  font-size: 0.85rem;
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -282,6 +282,23 @@ nav#sound-toggle button {
   background: transparent;
   cursor: pointer;
   font-size: 1em;
+}
+
+nav#sound-toggle button .sound-icon {
+  background: transparent;
+  cursor: pointer;
+  font-size: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav#sound-toggle button .slash {
+  display: none;
+}
+
+nav#sound-toggle button.muted .slash {
+  display: block;
 }
 
 .ats-button.sound {
@@ -460,6 +477,23 @@ audio#bg {
   display: none;
 }
 
+.selfie-list-item {
+  position: relative;
+  margin-top: 0.333em;
+}
+
+.selfie-list-item .star {
+  display: block;
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  object-position: center;
+  transform: translateY(-50%);
+}
+
 /* SPLASH */
 
 /* main.normal {
@@ -543,7 +577,7 @@ header.essay h2 {
 
 /* mobile */
 
-/* .mobile-menu-container {
+.mobile-menu-container {
   text-align: center;
 }
 
@@ -554,7 +588,7 @@ header.essay h2 {
 
 .ats-button.close-menu {
   display: none;
-} */
+}
 
 @media screen and (max-width: 1045px) {
 

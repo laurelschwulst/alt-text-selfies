@@ -1,8 +1,11 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+setupSoundToggle();
+
+function setupSoundToggle() {
     var audio = document.getElementById('bg');
     var soundOn = document.getElementById('sound-on');
     var soundToggle = document.getElementById('sound-toggle');
-
+    var soundToggleButton = soundToggle.querySelector('button');
+    
     // Play sound and then navigate for 'sound-on' link
     if (soundOn) {
         soundOn.addEventListener('click', function(e) {
@@ -11,23 +14,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
+    if (audio.paused) {
+        soundToggleButton.classList.add('muted')
+    }
+    
     // Toggle sound for 'sound-toggle' link without navigating
     if (soundToggle) {
         soundToggle.addEventListener('click', function(e) {
             console.log('click sound button');
             if (audio.paused) {
                 audio.play(); // Play the audio if it's paused
+                soundToggleButton.classList.remove('muted')
             } else {
                 audio.pause(); // Pause the audio if it's playing
+                soundToggleButton.classList.add('muted')
             }
         });
     }
-});
+}
 
+setupSelfieAudio();
 
 // audio button for individual selfie
-
-document.addEventListener("DOMContentLoaded", function() {
+function setupSelfieAudio() {
     var audio = document.getElementById("selfie");
     var button = document.querySelector(".selfie-audio");
 
@@ -42,28 +51,32 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-});
+}
 
 // mobile menu
-
-document.addEventListener("DOMContentLoaded", function() {
+setupMobileMenu();
+function setupMobileMenu() {
     var mobileLink = document.querySelector("#mobile-ats-menu .toggle-link");
     var menuUl = document.getElementById("ats-menu");
     var closeLink = document.querySelector("#ats-menu .close-menu");
 
-    mobileLink.addEventListener("click", function(e) {
-      console.log('click mobile link');
-      e.preventDefault();
-      mobileLink.style.display = "none";
-      menuUl.style.display = "block";
-    });
+    if (mobileLink) {
+        mobileLink.addEventListener("click", function(e) {
+            console.log('click mobile link');
+            e.preventDefault();
+            mobileLink.style.display = "none";
+            menuUl.style.display = "block";
+        });
+    }
 
-    closeLink.addEventListener("click", function(e) {
-      e.preventDefault();
-      mobileLink.style.display = "inline-block";
-      menuUl.style.display = "none";
-    });
-});
+    if (closeLink) {
+        closeLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            mobileLink.style.display = "inline-block";
+            menuUl.style.display = "none";
+        });
+    }
+}
 
 setupSelfieFilters();
 

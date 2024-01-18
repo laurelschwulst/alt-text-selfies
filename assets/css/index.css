@@ -577,7 +577,7 @@ header.essay h2 {
 
 /* mobile */
 
-/* .mobile-menu-container {
+.mobile-menu-container {
   text-align: center;
 }
 
@@ -588,7 +588,7 @@ header.essay h2 {
 
 .ats-button.close-menu {
   display: none;
-} */
+}
 
 @media screen and (max-width: 1045px) {
 
