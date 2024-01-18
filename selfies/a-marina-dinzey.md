@@ -1,6 +1,6 @@
 ---
 layout: layouts/selfie.njk
-title: A. Marina Dinzey !!
+title: A. Marina Dinzey
 order: 53
 is-in-chapbook: false
 audio: a.-marina-dinzey-alt-text-selfie.m4a
