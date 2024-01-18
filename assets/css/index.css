@@ -479,7 +479,7 @@ audio#bg {
 
 .selfie-list-item {
   position: relative;
-  margin-top: 12px;
+  margin-top: 0.333em;
 }
 
 .selfie-list-item .star {
