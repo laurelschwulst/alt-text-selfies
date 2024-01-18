@@ -477,6 +477,23 @@ audio#bg {
   display: none;
 }
 
+.selfie-list-item {
+  position: relative;
+  margin-top: 12px;
+}
+
+.selfie-list-item .star {
+  display: block;
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  object-position: center;
+  transform: translateY(-50%);
+}
+
 /* SPLASH */
 
 /* main.normal {

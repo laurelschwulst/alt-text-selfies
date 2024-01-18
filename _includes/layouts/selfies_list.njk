@@ -47,6 +47,7 @@
                 {% if selfie.data['audio'] %}data-audio="true"{% endif %}
                 data-length="{{ selfie.templateContent | length }}"
             >
+                <img class="star" src="{{ site.url }}/assets/images/star{{ ((loop.index) % 83 + 1).toString().padStart(2, '0') }}.svg"/>
                 <a href="{{ site.url }}{{ selfie.url | url }}">{{ selfie.data.title }}</a>
             </li>
         {% endfor %}
