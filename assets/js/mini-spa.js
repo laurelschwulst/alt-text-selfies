@@ -23,6 +23,8 @@
       updateMainMenu(href);
       setupSelfieFilters();
       setupSoundToggle();
+      setupSelfieAudio();
+      setupMobileMenu();
     };
     xhr.onerror = function () {
       // fallback to normal link behaviour

@@ -33,10 +33,10 @@ function setupSoundToggle() {
     }
 }
 
+setupSelfieAudio();
 
 // audio button for individual selfie
-
-document.addEventListener("DOMContentLoaded", function() {
+function setupSelfieAudio() {
     var audio = document.getElementById("selfie");
     var button = document.querySelector(".selfie-audio");
 
@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-});
+}
 
 // mobile menu
-
-document.addEventListener("DOMContentLoaded", function() {
+setupMobileMenu();
+function setupMobileMenu() {
     var mobileLink = document.querySelector("#mobile-ats-menu .toggle-link");
     var menuUl = document.getElementById("ats-menu");
     var closeLink = document.querySelector("#ats-menu .close-menu");
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
             menuUl.style.display = "none";
         });
     }
-});
+}
 
 setupSelfieFilters();
 
