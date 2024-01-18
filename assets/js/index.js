@@ -51,18 +51,22 @@ document.addEventListener("DOMContentLoaded", function() {
     var menuUl = document.getElementById("ats-menu");
     var closeLink = document.querySelector("#ats-menu .close-menu");
 
-    mobileLink.addEventListener("click", function(e) {
-      console.log('click mobile link');
-      e.preventDefault();
-      mobileLink.style.display = "none";
-      menuUl.style.display = "block";
-    });
+    if (mobileLink) {
+        mobileLink.addEventListener("click", function(e) {
+            console.log('click mobile link');
+            e.preventDefault();
+            mobileLink.style.display = "none";
+            menuUl.style.display = "block";
+        });
+    }
 
-    closeLink.addEventListener("click", function(e) {
-      e.preventDefault();
-      mobileLink.style.display = "inline-block";
-      menuUl.style.display = "none";
-    });
+    if (closeLink) {
+        closeLink.addEventListener("click", function(e) {
+            e.preventDefault();
+            mobileLink.style.display = "inline-block";
+            menuUl.style.display = "none";
+        });
+    }
 });
 
 setupSelfieFilters();
