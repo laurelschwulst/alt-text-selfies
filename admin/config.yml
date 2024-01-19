@@ -31,7 +31,7 @@ collections:
       - { label: "Essay Text", name: "body", widget: "markdown" }
   - name: "about"
     label: "About"
-    file: "about.md"
+    files: "about.md"
     create: false
     fields:
       - { name: 'title', label: 'Title', widget: 'string' }
