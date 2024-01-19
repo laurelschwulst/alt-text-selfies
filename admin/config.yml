@@ -11,7 +11,7 @@ public_folder: "/assets"
 
 collections:
   - name: "selfies"
-    label: "selfies"
+    label: "Selfies"
     folder: "selfies"
     create: true
     slug: "{{slug}}"
@@ -20,3 +20,19 @@ collections:
       - { label: "Selfie Text", name: "body", widget: "markdown" }
       - { label: "Is in chapbook?", name: "is-in-chapbook", widget: "boolean", default: false }
       - { label: "Audio", name: "audio", widget: "file"}
+  - name: "essays"
+    label: "Essays"
+    folder: "essays"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Essay Text", name: "body", widget: "markdown" }
+  - name: "about"
+    label: "About"
+    folder: "about"
+    create: true
+    fields:
+      - { name: 'title', label: 'Title', widget: 'string' }
+      - { name: 'content', label: 'Content', widget: 'markdown' }

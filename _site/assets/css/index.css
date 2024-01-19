@@ -33,6 +33,7 @@ html {
 }
 
 body {
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -79,11 +80,6 @@ a {
   color: var(--black);
 }
 
-body {
-  margin: 0;
-  height: 100%;
-}
-
 main {
   width: 100%;
   min-height: 100%;
@@ -107,6 +103,10 @@ header.title {
 header.title h1 {
   text-transform: uppercase;
   padding-top: 1rem;
+}
+
+.menu-container.hidden {
+  display: none;
 }
 
 menu {
@@ -331,7 +331,7 @@ nav#sound-toggle button.muted .slash {
   content: "";
   position: absolute;
   display: block;
-  top: -2.75em;
+  bottom: 100%;
   left: 0;
   right: 0;
   height: 50px;
@@ -477,9 +477,17 @@ audio#bg {
   display: none;
 }
 
+.selfie-list {
+  padding-bottom: 9em;
+}
+
 .selfie-list-item {
   position: relative;
   margin-top: 0.333em;
+}
+
+.selfie-list-item.hidden {
+  display: none;
 }
 
 .selfie-list-item .star {
@@ -535,6 +543,44 @@ main.splash a {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.splash .star-scatter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.splash .star-scatter .star {
+  position: absolute;
+  width: 25px;
+}
+
+.splash .star-scatter .star:nth-child(1) {
+  left: 15%;
+  top: 15%;
+}
+
+.splash .star-scatter .star:nth-child(2) {
+  right: 15%;
+  bottom: 10%;
+}
+
+.splash .star-scatter .star:nth-child(3) {
+  right: calc(15% + 15px);
+  bottom: calc(10% - 35px);
+}
+
+.splash .star-scatter .star:nth-child(4) {
+  right: calc(15% + 55px);
+  bottom: calc(10% - 60px);
+}
+
+.splash .star-scatter .star:nth-child(5) {
+  right: calc(15% + 95px);
+  bottom: calc(10% - 45px);
 }
 
 /* ESSAYS */
@@ -594,6 +640,14 @@ header.essay h2 {
 
   html {
     font-size: 18px;
+  }
+
+  menu#ats-menu {
+    display: none;
+  }
+
+  menu#ats-menu.mobile-open {
+    display: block;
   }
 
   #mobile-ats-menu,
