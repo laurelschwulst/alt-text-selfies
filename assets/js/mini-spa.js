@@ -21,8 +21,8 @@
       container.focus();
       window.scrollTo(0, 0);
       updateMainMenu(href);
+      setupLateralNav();
       setupSelfieFilters();
-      // setupSoundToggle();
       setupSelfieAudio();
       setupMobileMenu();
     };

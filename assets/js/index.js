@@ -79,6 +79,35 @@ function setupMobileMenu() {
     }
 }
 
+// This must run before setupSelfieFilters()
+setupLateralNav();
+function setupLateralNav() {
+    const selfieHrefs = JSON.parse(localStorage.getItem('selfieHrefs'));
+    if (!selfieHrefs) {
+        return
+    }
+    // if there is no lateral nav, or if the current page's href is not in selfieHrefs, clear localStorage and return
+    // This prevents the selfie order from persisting longer than it's needed.
+    const lateralNav = document.querySelector('nav#lateral');
+    const currentHref = window.location.href;
+    if (!lateralNav || !selfieHrefs.includes(currentHref)) {
+        console.log('clear lateral nav localStorage')
+        localStorage.removeItem('selfieHrefs')
+        return
+    }
+    console.log('found a filtered/sorted list of links for lateral nav')
+    // get the index of the current href in selfieHrefs
+    const currentIndex = selfieHrefs.indexOf(currentHref);
+    // get the previous and next hrefs, looping around if necessary
+    const previousHref = selfieHrefs[(currentIndex - 1 + selfieHrefs.length) % selfieHrefs.length];
+    const nextHref = selfieHrefs[(currentIndex + 1) % selfieHrefs.length];
+    // inside the lateral nav, find the previous and next links and set them to previousHref and nextHref
+    const previousLink = lateralNav.querySelector('.prev-container a.prev');
+    previousLink.href = previousHref;
+    const nextLink = lateralNav.querySelector('.next-container a.next');
+    nextLink.href = nextHref;
+}
+
 setupSelfieFilters();
 function setupSelfieFilters() {
     const selfieFilterSnippet = document.getElementById('filter-snippet');
@@ -90,6 +119,8 @@ function setupSelfieFilters() {
         return
     }
 
+    localStorage.removeItem('selfieHrefs')
+
     const urlParams = new URLSearchParams(window.location.search);
     const currentSort = urlParams.get('sort');
     const currentFilter = urlParams.get('filter');
@@ -99,24 +130,24 @@ function setupSelfieFilters() {
         filterText = 'Selfies in the chapbook, '
         selfieListItems.forEach(function(selfieListItem) {
             if (selfieListItem.dataset.chapbook === 'true') {
-                selfieListItem.style.display = 'block';
+                selfieListItem.classList.remove('hidden')
             } else {
-                selfieListItem.style.display = 'none';
+                selfieListItem.classList.add('hidden')  
             }
         });
     } else if (currentFilter === 'audio') {
         filterText = 'Selfies with audio, '
         selfieListItems.forEach(function(selfieListItem) {
             if (selfieListItem.dataset.audio === 'true') {
-                selfieListItem.style.display = 'block';
+                selfieListItem.classList.remove('hidden')
             } else {
-                selfieListItem.style.display = 'none';
+                selfieListItem.classList.add('hidden')
             }
         });
     } else {
         filterText = 'All selfies, '
         selfieListItems.forEach(function(selfieListItem) {
-            selfieListItem.style.display = 'block';
+            selfieListItem.classList.remove('hidden')
         });
     }
     if (currentSort === 'length') {
@@ -147,6 +178,10 @@ function setupSelfieFilters() {
         filterText += 'sorted in ABC order'
     }
 
+    if (currentSort || currentFilter) {
+        const selfieHrefs = Array.from(document.querySelectorAll('.selfie-list-item')).filter(selfieListItem => !selfieListItem.classList.contains('hidden')).map((selfieListItem) => selfieListItem.querySelector('a').href)
+        localStorage.setItem('selfieHrefs', JSON.stringify(selfieHrefs)) // save selfieHrefs to localStorage
+    }
 
     const { createApp, ref } = Vue
     createApp({

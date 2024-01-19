@@ -486,6 +486,10 @@ audio#bg {
   margin-top: 0.333em;
 }
 
+.selfie-list-item.hidden {
+  display: none;
+}
+
 .selfie-list-item .star {
   display: block;
   position: absolute;
