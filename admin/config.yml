@@ -32,9 +32,15 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - name: "about.md"
-      - name: "welcome.md"
-    create: false
-    fields:
-      - { name: 'title', label: 'Title', widget: 'string' }
-      - { name: 'content', label: 'Content', widget: 'markdown' }
+      - label: "About"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Text", name: "text", widget: "markdown" }
+      - label: "Welcome"
+        name: "welcome"
+        file: "welcome.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Text", name: "text", widget: "markdown" }
