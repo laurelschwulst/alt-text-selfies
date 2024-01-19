@@ -33,6 +33,7 @@ html {
 }
 
 body {
+  margin: 0;
   overflow-x: hidden;
 }
 
@@ -79,11 +80,6 @@ a {
   color: var(--black);
 }
 
-body {
-  margin: 0;
-  height: 100%;
-}
-
 main {
   width: 100%;
   min-height: 100%;
@@ -107,6 +103,10 @@ header.title {
 header.title h1 {
   text-transform: uppercase;
   padding-top: 1rem;
+}
+
+.menu-container.hidden {
+  display: none;
 }
 
 menu {
@@ -331,7 +331,7 @@ nav#sound-toggle button.muted .slash {
   content: "";
   position: absolute;
   display: block;
-  top: -2.75em;
+  bottom: 100%;
   left: 0;
   right: 0;
   height: 50px;
@@ -477,6 +477,10 @@ audio#bg {
   display: none;
 }
 
+.selfie-list {
+  padding-bottom: 9em;
+}
+
 .selfie-list-item {
   position: relative;
   margin-top: 0.333em;
@@ -594,6 +598,14 @@ header.essay h2 {
 
   html {
     font-size: 18px;
+  }
+
+  menu#ats-menu {
+    display: none;
+  }
+
+  menu#ats-menu.mobile-open {
+    display: block;
   }
 
   #mobile-ats-menu,

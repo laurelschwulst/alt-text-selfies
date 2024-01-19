@@ -1,5 +1,4 @@
 setupSoundToggle();
-
 function setupSoundToggle() {
     var audio = document.getElementById('bg');
     var soundOn = document.getElementById('sound-on');
@@ -11,6 +10,7 @@ function setupSoundToggle() {
         soundOn.addEventListener('click', function(e) {
             console.log('playing');
             audio.play();
+            soundToggleButton.classList.remove('muted')
         });
     }
 
@@ -33,9 +33,8 @@ function setupSoundToggle() {
     }
 }
 
-setupSelfieAudio();
-
 // audio button for individual selfie
+setupSelfieAudio();
 function setupSelfieAudio() {
     var audio = document.getElementById("selfie");
     var button = document.querySelector(".selfie-audio");
@@ -65,7 +64,8 @@ function setupMobileMenu() {
             console.log('click mobile link');
             e.preventDefault();
             mobileLink.style.display = "none";
-            menuUl.style.display = "block";
+            menuUl.classList.add('mobile-open')
+            // menuUl.style.display = "block";
         });
     }
 
@@ -73,7 +73,8 @@ function setupMobileMenu() {
         closeLink.addEventListener("click", function(e) {
             e.preventDefault();
             mobileLink.style.display = "inline-block";
-            menuUl.style.display = "none";
+            menuUl.classList.remove('mobile-open')
+            // menuUl.style.display = "none";
         });
     }
 }

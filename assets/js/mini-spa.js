@@ -22,7 +22,7 @@
       window.scrollTo(0, 0);
       updateMainMenu(href);
       setupSelfieFilters();
-      setupSoundToggle();
+      // setupSoundToggle();
       setupSelfieAudio();
       setupMobileMenu();
     };
@@ -36,9 +36,23 @@
     xhr.send();
   }
 
+  updateMainMenu()
+
   function updateMainMenu(newHref) {
-    const menu = $('menu.bottom');
-    const links = menu.querySelectorAll('a');
+    const menus = $('.menus');
+    
+    // If splash page, hide the menu
+    if (document.querySelector('.splash')) {
+      console.log(menus)
+      menus.classList.add('hidden')
+    } else {
+      menus.classList.remove('hidden')
+    }
+
+    if (!newHref) return
+
+    // Make sure button in menu is active
+    const links = menus.querySelectorAll('a');
     links.forEach((link) => {
       if (link.href === newHref) {
         link.classList.add('active');
