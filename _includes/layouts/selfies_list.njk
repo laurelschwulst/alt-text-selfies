@@ -9,7 +9,6 @@
             <span class="ats-button">Change</span>
         </button>
 
-        {{ eleventy.serverless }}
         <menu class="filter-modal w-full h-full fixed inset-0 justify-center items-center leading-6" v-bind:class="{open: filterModalIsOpen}">
             <button class="close-filters-button ats-button absolute top-4 left-4" v-on:click="closeFilterModal">Close</button>
             <div class="text-center flex flex-col items-center gap-4">
@@ -19,10 +18,12 @@
                     <img class="w-[30px] mt-[20px]" src="{{site.url}}/assets/images/star02.svg"/>
                     <img class="w-[32px] mt-[60px]" src="{{site.url}}/assets/images/star03.svg"/>
                 </div>
-                <h3 class="italic mt-2">Sort</h3>
-                <button class="hover:underline" v-bind:class="{underline: !newSort}" v-on:click="applySort()">By ABC</button>
-                <button class="hover:underline" v-bind:class="{underline: newSort === 'length'}" v-on:click="applySort('length')">By Length</button>
-                <button class="hover:underline" v-bind:class="{underline: newSort === 'random'}" v-on:click="applySort('random')">By Random</button>
+                <h3 class="italic mt-2" id="sort-label" role="label">Sort</h3>
+                <div role="listbox" aria-labelledby="sort-label" class="flex flex-col items-center">
+                    <button class="hover:underline" v-bind:class="{underline: !newSort}" v-on:click="applySort()" role="option" :aria-selected="!newSort">By ABC</button>
+                    <button class="hover:underline" v-bind:class="{underline: newSort === 'length'}" v-on:click="applySort('length')" role="option" :aria-selected="newSort === 'length'">By Length</button>
+                    <button class="hover:underline" v-bind:class="{underline: newSort === 'random'}" v-on:click="applySort('random')" role="option" :aria-selected="newSort === 'random'">By Random</button>
+                </div>
             </div>
             <div class="ats__filtering-options flex flex-col items-center">
                 <div aria-label="three sparkles in a row, the center one rising" class="flex justify-center items-end">
@@ -30,10 +31,12 @@
                     <img class="w-[30px] mb-[20px]" src="{{site.url}}/assets/images/star02.svg"/>
                     <img class="w-[32px]" src="{{site.url}}/assets/images/star03.svg"/>
                 </div>
-                <h3 class="italic mt-2">Filter</h3>
-                <button class="hover:underline" v-bind:class="{underline: !newFilter}" v-on:click="applyFilter()">All selfies</button>
-                <button class="hover:underline" v-bind:class="{underline: newFilter === 'chapbook'}" v-on:click="applyFilter('chapbook')">Only those in the chapbook</button>
-                <button class="hover:underline" v-bind:class="{underline: newFilter === 'audio'}" v-on:click="applyFilter('audio')">Only those with audio</button>
+                <h3 class="italic mt-2" id="filter-label" role="label">Filter</h3>
+                <div role="listbox" aria-labelledby="sort-label" class="flex flex-col items-center">
+                    <button class="hover:underline" v-bind:class="{underline: !newFilter}" v-on:click="applyFilter()" role="option" :aria-selected="!newFilter">All selfies</button>
+                    <button class="hover:underline" v-bind:class="{underline: newFilter === 'chapbook'}" v-on:click="applyFilter('chapbook')" role="option" :aria-selected="newFilter === 'chapbook'">Only those in the chapbook</button>
+                    <button class="hover:underline" v-bind:class="{underline: newFilter === 'audio'}" v-on:click="applyFilter('audio')" role="option" :aria-selected="newFilter === 'audio'">Only those with audio</button>
+                </div>
             </div>
             </div>
         </menu>

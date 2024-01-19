@@ -80,7 +80,6 @@ function setupMobileMenu() {
 }
 
 setupSelfieFilters();
-
 function setupSelfieFilters() {
     const selfieFilterSnippet = document.getElementById('filter-snippet');
     const selfieListItems = document.querySelectorAll('.selfie-list-item');
@@ -162,9 +161,11 @@ function setupSelfieFilters() {
         methods: {
         applySort: function(sort) {
             this.newSort = sort
+            this.redirectToNewUrl()
         },
         applyFilter: function(filter) {
             this.newFilter = filter
+            this.redirectToNewUrl()
         },
         redirectToNewUrl: function() {
             const params = []
