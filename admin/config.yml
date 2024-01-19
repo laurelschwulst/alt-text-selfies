@@ -32,15 +32,27 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "About"
-        name: "about"
-        file: "about.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "About Text", name: "body", widget: "markdown" }
       - label: "Welcome"
         name: "welcome"
         file: "welcome.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Welcome Text", name: "body", widget: "markdown" }
+      - label: "Book"
+        name: "book"
+        file: "book.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Book Text", name: "body", widget: "markdown" }
+      - label: "About"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "About Text", name: "body", widget: "markdown" }
+      - label: "Links"
+        name: "links"
+        file: "links.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Links Text", name: "body", widget: "markdown" }
