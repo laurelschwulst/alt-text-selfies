@@ -1,11 +1,20 @@
-<p>
-    We are excited to share two essays connected to this project and a note from each of us about the process of working on this project.
-</p>
-<ul>
-    {% for essay in essays_list %}
-        <li>
-            <a class="underline" href="{{ site.url }}{{ essay.url | url }}">{{ essay.data.title }}</a><br>
-            {{ essay.data.author }}
-        </li>
-    {% endfor %}
-</ul>
+---
+layout: layouts/base.njk
+---
+
+<div class="column large">
+
+    <h2>Essays</h2>
+
+    {{ content | safe }}
+
+    <ul>
+        {% for essay in essays_list %}
+            <li>
+                <a class="underline" href="{{ site.url }}{{ essay.url | url }}">{{ essay.data.title }}</a><br>
+                {{ essay.data.author }}
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
