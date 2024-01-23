@@ -11,4 +11,4 @@ Our chapbook comes in many formats:
 
 <a href="#" class="ats-button">Download as a PDF</a>
 
-<a href="https://alt-text-selfies.netlify.app/selfies/?filter=chapbook">Browse chapbook selfies online</a>
+<a href="https://alt-text-selfies.netlify.app/selfies/?filter=chapbook" class="ats-button">Browse chapbook selfies online</a>
