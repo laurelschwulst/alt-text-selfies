@@ -9,7 +9,7 @@ For us, an alt text selfie is any written self-portrait. This project takes a we
 
 - - -
 
-*What is alt. text?*
+*What is alt text?*
 
 Alternative text, or alt text, is a written description of an image or visual material. Put another way, alt text is a non-visual text alternative to digital images. Alt text is an essential part of web accessibility and is one way to create access to visual content for people who are blind, low vision, or have certain cognitive disabilities.
 
