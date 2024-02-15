@@ -1,7 +1,7 @@
 ---
 layout: layouts/page_wide.njk
 permalink: /links/
-title: Resources
+title: Links
 ---
 [Binary Calculations ](https://binarycalculationsareinadequate.org/)by Stephanie Dinkins
 
