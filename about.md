@@ -29,7 +29,7 @@ As we explore the medium of alt text selfies, accessibility will remain our prio
 
 *Who worked on this project?*
 
-This project is produced by Bojana Coklyat, Finnegan Shannon, and Olivia Dreisinger. Laurel Schwulst and Taichi Aritomo designed the website. Tristan Douglas created the website audio.
+This project is produced by [Bojana Coklyat](https://blindambitionjc.com/), [Finnegan Shannon](https://shannonfinnegan.com/), and [Olivia Dreisinger](https://oliviadreisinger.com/). Laurel Schwulst and Taichi Aritomo designed the website. Tristan Douglas created the website audio.
 
 Big thank you to everyone who contributed a selfie to this project. We love them!!
 
