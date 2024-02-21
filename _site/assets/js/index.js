@@ -122,7 +122,7 @@ function setupSelfieFilters() {
     localStorage.removeItem('selfieHrefs')
 
     const urlParams = new URLSearchParams(window.location.search);
-    const currentSort = urlParams.get('sort');
+    const currentSort = urlParams.get('sort') || 'random';
     const currentFilter = urlParams.get('filter');
 
     let filterText = '';
@@ -145,13 +145,13 @@ function setupSelfieFilters() {
             }
         });
     } else {
-        filterText = 'All selfies, '
+        filterText = 'All selfies'
         selfieListItems.forEach(function(selfieListItem) {
             selfieListItem.classList.remove('hidden')
         });
     }
     if (currentSort === 'length') {
-        filterText += 'sorted by length'
+        filterText += ', sorted by length'
         // rearrange items by value in data-length attribute
         const selfieList = document.querySelector('.selfie-list');
         const selfieListItems = document.querySelectorAll('.selfie-list-item');
@@ -162,8 +162,20 @@ function setupSelfieFilters() {
         selfieListItemsArray.forEach(function(selfieListItem) {
             selfieList.appendChild(selfieListItem);
         });
-    } else if (currentSort === 'random') {
-        filterText += 'in random order'
+    } else if (currentSort === 'abc') {
+        filterText += ', sorted in ABC order'
+        // rearrange items in alphabetical order
+        const selfieList = document.querySelector('.selfie-list');
+        const selfieListItems = document.querySelectorAll('.selfie-list-item');
+        const selfieListItemsArray = Array.from(selfieListItems);
+        selfieListItemsArray.sort(function(a, b) {
+            return a.dataset.title.localeCompare(b.dataset.title);
+        });
+        selfieListItemsArray.forEach(function(selfieListItem) {
+            selfieList.appendChild(selfieListItem);
+        });
+    } else {
+        filterText += ', in random order'
         // rearrange items in random order
         const selfieList = document.querySelector('.selfie-list');
         const selfieListItems = document.querySelectorAll('.selfie-list-item');
@@ -174,8 +186,6 @@ function setupSelfieFilters() {
         selfieListItemsArray.forEach(function(selfieListItem) {
             selfieList.appendChild(selfieListItem);
         });
-    } else {
-        filterText += 'sorted in ABC order'
     }
 
     if (currentSort || currentFilter) {

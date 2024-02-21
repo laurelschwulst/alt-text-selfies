@@ -22,17 +22,29 @@
 
             
 
----
-layout: layouts/base.njk
----
-
 <div class="column large">
 
-    <h2>Essays</h2>
+    <div class="star-title-container">
+        <h2 class="star-title">Essays</h2>
+        <div class="stars" aria-label="the title, surrounded in sparkles">
+            <img class="star" src="http://localhost:8080/assets/images/star01.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star02.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star03.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star04.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star05.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star06.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star07.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star08.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star09.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star10.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star11.svg"/>
+            <img class="star" src="http://localhost:8080/assets/images/star12.svg"/>
+        </div>
+    </div>
 
     
 
-    <ul>
+    <ul class="essays">
         
             <li>
                 <a class="underline" href="http://localhost:8080/essays/i-is-someone-else/">“I Is Someone Else”: A Sidelong Glance at the Disabled Self-Portrait</a><br>
@@ -52,7 +64,7 @@ layout: layouts/base.njk
         <div class="menus">
   <div class="mobile-menu-container">
       <div id="mobile-ats-menu" class="fade-up">
-          <a class="ats-button toggle-link">Menu</a>
+          <button class="ats-button toggle-link">Menu</button>
       </div>
   </div>
       
@@ -64,7 +76,7 @@ layout: layouts/base.njk
           <li><a class="ats-button about" href="http://localhost:8080/about/">About</a></li>
           <li><a class="ats-button links" href="http://localhost:8080/links/">Links</a></li>
           <li><a class="ats-button essays" href="http://localhost:8080/essays/">Essays</a></li>
-          <li><a class="ats-button close-menu">Close!!!</a></li>
+          <li><button class="ats-button close-menu">Close</button></li>
       </ul>
   </menu>
 

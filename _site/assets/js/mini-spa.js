@@ -36,7 +36,7 @@
     xhr.send();
   }
 
-  updateMainMenu()
+  updateMainMenu(document.location.href)
 
   function updateMainMenu(newHref) {
     const menus = $('.menus');
