@@ -20,9 +20,9 @@
                 </div>
                 <h3 class="italic mt-2" id="sort-label" role="label">Sort</h3>
                 <div role="listbox" aria-labelledby="sort-label" class="flex flex-col items-center">
-                    <button class="hover:underline" v-bind:class="{underline: !newSort}" v-on:click="applySort()" role="option" :aria-selected="!newSort">By ABC</button>
+                    <button class="hover:underline" v-bind:class="{underline: newSort === 'abc'}" v-on:click="applySort('abc')" role="option" :aria-selected="newSort === 'abc'">By ABC</button>
                     <button class="hover:underline" v-bind:class="{underline: newSort === 'length'}" v-on:click="applySort('length')" role="option" :aria-selected="newSort === 'length'">By Length</button>
-                    <button class="hover:underline" v-bind:class="{underline: newSort === 'random'}" v-on:click="applySort('random')" role="option" :aria-selected="newSort === 'random'">By Random</button>
+                    <button class="hover:underline" v-bind:class="{underline: !newSort}" v-on:click="applySort('random')" role="option" :aria-selected="!newSort">By Random</button>
                 </div>
             </div>
             <div class="ats__filtering-options flex flex-col items-center">
@@ -49,6 +49,7 @@
                 {% if selfie.data['is-in-chapbook'] %}data-chapbook="true"{% endif %}
                 {% if selfie.data['audio'] %}data-audio="true"{% endif %}
                 data-length="{{ selfie.templateContent | length }}"
+                data-title="{{ selfie.data.title }}"
             >
                 <img class="star" src="{{ site.url }}/assets/images/star{{ ((loop.index) % 83 + 1).toString().padStart(2, '0') }}.svg"/>
                 <a href="{{ site.url }}{{ selfie.url | url }}">{{ selfie.data.title }}</a>

@@ -6,8 +6,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setTemplateFormats(["md", "njk"]);
 
     eleventyConfig.addCollection("selfies", function(collection) {
-        // Filter the collection to include only selfies
-        return collection.getAll().filter(item => item.inputPath.startsWith('./selfies/'));
-      });
+      // Filter the collection to include only selfies, and sort it randomly
+      return collection.getAll().filter(item => item.inputPath.startsWith('./selfies/')).sort((a, b) => Math.random() - 0.5);
+    });
 
 };
