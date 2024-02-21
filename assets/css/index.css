@@ -623,7 +623,6 @@ header.essay h2 {
 
 #mobile-ats-menu {
   display: none;
-  cursor: pointer;
 }
 
 .ats-button.close-menu {
@@ -652,7 +651,6 @@ header.essay h2 {
   #mobile-ats-menu,
   .ats-button.close-menu {
     display: inline-block;
-    cursor: pointer;
   }
 
   #mobile-ats-menu {
