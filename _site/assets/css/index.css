@@ -125,18 +125,28 @@ menu {
 menu.bottom {
   position: fixed;
   left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0;
   text-align: center;
   background: var(--yellow);
   padding: 1.25rem;
+  z-index: 55555;
 }
 
 menu.bottom ul {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.5rem; */
+  text-align: left;
+}
+
+menu.bottom ul li {
+  margin-bottom: 0.5em;
+}
+
+menu.bottom a {
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.25); */
+  text-decoration: underline;
 }
 
 menu.bottom .ats-button.active {
@@ -144,24 +154,34 @@ menu.bottom .ats-button.active {
 }
 
 .column {
-  max-width: 519px;
+  max-width: 700px;
   padding: 0 0.5em;
-  /* justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  flex-shrink: 0;
-  display: flex; */
   margin: 6rem auto;
   padding-bottom: 6rem;
 }
 
+.column p {
+  /* text-indent: 1.5em; */
+  margin: 1.25em 0;
+}
+
+/* .column p:first-of-type {
+  text-indent: 0;
+} */
+
 .column.large {
-  max-width: 855px;
+  max-width: 700px;
 }
 
 .column h2 {
   font-style: italic;
   margin-bottom: 1em;
+}
+
+.column h2.big {
+  font-size: 2.5rem;
+  font-style: normal;
+  text-align: center;
 }
 
 .content ol,
@@ -454,8 +474,10 @@ nav#sound-toggle button.muted .slash {
 
 hr {
   border: 0;
-  margin: 2em 0;
-  border-bottom: 1px solid var(--light-grey);
+  margin: 2em auto;
+  height: 40px;
+  width: 312px;
+  background: url(../images/star-hr.svg) no-repeat center;
 }
 
 .text-xl {
@@ -569,7 +591,6 @@ main.splash a {
   flex-grow: 1;
   flex-shrink: 0;
   display: flex;
-  margin-bottom: 1.25rem;
 }
 
 .splash menu {
@@ -637,7 +658,7 @@ header.essay {
 }
 
 header.essay h2 {
-  padding: 3rem 0.5rem;
+  padding: 3rem 5rem;
 }
 
 .star {
