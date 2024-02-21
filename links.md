@@ -3,6 +3,7 @@ layout: layouts/page_wide.njk
 permalink: /links/
 title: Links
 ---
+
 [Binary Calculations ](https://binarycalculationsareinadequate.org/)by Stephanie Dinkins
 
 [“It’s Complicated”: Negotiating Accessibility and (Mis)Representation in Image Descriptions of Race, Gender, and Disability](https://www.bennettc.com/wp-content/uploads/2022/02/Bennett_Its-Complicated-Negotiating-Accessibility-and-MisRepresentation-in-image-Descriptions-of-Race-Gender-and-Disability.pdf) by Cynthia L. Bennett et al
