@@ -3,8 +3,9 @@ layout: layouts/selfie.njk
 title: Shao
 order: 67
 is-in-chapbook: false
-audio: 
+audio:
 ---
+
 Waist length dark hair parted in the middle
 Ducked lips pushing the wisps of a subtle mustache
 Smudged eyeliner on fingers and lids

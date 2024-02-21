@@ -3,8 +3,9 @@ layout: layouts/selfie.njk
 title: Adele Ruhdorfer
 order: 56
 is-in-chapbook: false
-audio: 
+audio:
 ---
+
 saturday, march 27, 2021.
 masked museum selfie, featuring: Jacques Hurtubise, Hyacinthe, acrylic on canvas, 1966.
 
