@@ -571,7 +571,6 @@ main.splash a {
   flex-grow: 1;
   flex-shrink: 0;
   display: flex;
-  margin-bottom: 1.25rem;
 }
 
 .splash menu {
