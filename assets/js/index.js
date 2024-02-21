@@ -127,7 +127,7 @@ function setupSelfieFilters() {
 
     let filterText = '';
     if (currentFilter === 'chapbook') {
-        filterText = 'Selfies in the chapbook, '
+        filterText = 'Selfies in the chapbook'
         selfieListItems.forEach(function(selfieListItem) {
             if (selfieListItem.dataset.chapbook === 'true') {
                 selfieListItem.classList.remove('hidden')
@@ -136,7 +136,7 @@ function setupSelfieFilters() {
             }
         });
     } else if (currentFilter === 'audio') {
-        filterText = 'Selfies with audio, '
+        filterText = 'Selfies with audio'
         selfieListItems.forEach(function(selfieListItem) {
             if (selfieListItem.dataset.audio === 'true') {
                 selfieListItem.classList.remove('hidden')

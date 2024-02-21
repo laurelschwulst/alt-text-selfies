@@ -1,8 +1,8 @@
 <div class="column">
     <div id="filter-snippet">
         <!-- TODO: When modal is open, underlying page elements (behind the modal) should be hidden from screen-reader using aria-hidden -->
-        <button class="open-filters-button flex items-center gap-2 py-1" v-on:click="openFilterModal">
-            <h2 class="underline">
+        <button class="open-filters-button" v-on:click="openFilterModal">
+            <h2 class="underline shrink-0">
                 {# Using "verbatim" to let these double curly brackets pass through nunjucks, so that Vue can parse it in the browser #}
                 {% verbatim %}{{ filterText }}{% endverbatim %}
             </h2>
