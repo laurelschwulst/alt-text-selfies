@@ -149,8 +149,15 @@ menu.bottom a {
   text-decoration: underline;
 }
 
-menu.bottom .ats-button.active {
-  border-color: black;
+menu.bottom a.active {
+}
+
+menu.bottom a.active::after {
+  content: url(../images/star06.svg);
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  margin-left: 0.5em;
 }
 
 .column {
@@ -180,6 +187,7 @@ menu.bottom .ats-button.active {
 
 .column h2.big {
   font-size: 2.5rem;
+  margin-bottom: 1.25em;
   font-style: normal;
   text-align: center;
 }
@@ -315,6 +323,7 @@ nav#sound-toggle button {
   background: transparent;
   cursor: pointer;
   font-size: 1em;
+  border-color: transparent !important;
 }
 
 nav#sound-toggle button .sound-icon {
