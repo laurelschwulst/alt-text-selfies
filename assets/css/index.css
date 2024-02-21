@@ -570,6 +570,19 @@ audio#bg {
   transform: translateY(-50%);
 }
 
+.selfie-title {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.selfie-title .star {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  object-position: center;
+}
+
 /* SPLASH */
 
 /* main.normal {

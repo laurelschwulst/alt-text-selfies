@@ -4,7 +4,10 @@ layout: layouts/base.njk
 
 <div class="column">
 
-    <h2>{{ title }}</h2>
+    <div class="selfie-title">
+        <img alt="sparkle" class="star" src="{{ site.url }}/assets/images/star01.svg"/>
+        <h2>{{ title }}</h2>
+    </div>
 
     {% if audio %}
     <button class="selfie-audio">Listen</button>
