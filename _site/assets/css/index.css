@@ -1,23 +1,26 @@
 :root {
   --black: #000;
-  --light-grey: rgba(0,0,0,0.25);
+  --light-grey: rgba(0, 0, 0, 0.25);
   --grey: rgb(228, 228, 228);
-  --yellow: #FEFFBB;
+  --yellow: #feffbb;
   --light-yellow: rgba(254, 255, 194, 0.5);
 }
 
 @font-face {
-  font-family: 'Century Expanded';
+  font-family: "Century Expanded";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/century_expanded_lt_w03_roman-webfont.woff2) format('woff2'), url(../fonts/century_expanded_lt_w03_roman-webfont.woff) format('woff');
+  src: url(../fonts/century_expanded_lt_w03_roman-webfont.woff2) format("woff2"),
+    url(../fonts/century_expanded_lt_w03_roman-webfont.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Century Expanded';
+  font-family: "Century Expanded";
   font-style: italic;
   font-weight: 400;
-  src: url(../fonts/century_expanded_lt_w03_italic-webfont.woff2) format('woff2'), url(../fonts/century_expanded_lt_w03_italic-webfont.woff) format('woff');
+  src: url(../fonts/century_expanded_lt_w03_italic-webfont.woff2)
+      format("woff2"),
+    url(../fonts/century_expanded_lt_w03_italic-webfont.woff) format("woff");
 }
 
 * {
@@ -25,7 +28,7 @@
 }
 
 html {
-  font-family: 'Century Expanded';
+  font-family: "Century Expanded";
   font-size: 24px;
   line-height: 1.35;
   background: var(--yellow);
@@ -37,13 +40,15 @@ body {
   overflow-x: hidden;
 }
 
-b, strong {
-  font-family: 'Century Expanded';
+b,
+strong {
+  font-family: "Century Expanded";
   font-weight: normal;
 }
 
-i, em {
-  font-family: 'Century Expanded';
+i,
+em {
+  font-family: "Century Expanded";
   font-style: italic;
 }
 
@@ -59,13 +64,19 @@ button {
   line-height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   font-size: 1em;
   margin: 0;
 }
 
-ul, li {
+ul,
+li {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -87,7 +98,8 @@ main {
 
 header.title {
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -152,6 +164,11 @@ menu.bottom .ats-button.active {
   margin-bottom: 1em;
 }
 
+.content ol,
+.content ul {
+  padding-left: 1em;
+}
+
 .sound-icon {
   font-size: 0.85rem;
   position: absolute;
@@ -164,10 +181,10 @@ menu.bottom .ats-button.active {
   width: 1rem;
   transform: rotate(45deg);
   position: absolute;
-  left: -1rem;
-  top: 0.25rem;
-  height: 1.75rem;
-  width: 1.75rem;
+  left: -0.75rem;
+  height: 1.35rem;
+  width: 1.35rem;
+  top: 0.35rem;
 }
 
 h2.name {
@@ -183,7 +200,7 @@ h2.star-title {
 }
 
 a.underline {
-  text-decoration: underline;;
+  text-decoration: underline;
 }
 
 .ats-button {
@@ -207,7 +224,7 @@ a.underline {
 }
 
 .ats-button-large {
-  border: 1px solid rgba(0,0,0,0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   height: 12em;
   width: 12em;
   border-radius: 12px;
@@ -332,7 +349,11 @@ nav#sound-toggle button.muted .slash {
   right: 0;
   height: 50px;
   width: auto;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 195, 0), rgba(255, 255, 195, 1));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 195, 0),
+    rgba(255, 255, 195, 1)
+  );
   pointer-events: none;
   /* background: lime; */
 }
@@ -346,7 +367,11 @@ nav#sound-toggle button.muted .slash {
   left: 0;
   right: 0;
   height: 50px;
-  background-image: linear-gradient(to top, rgba(255, 255, 195, 0), rgba(255, 255, 195, 1));
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 195, 0),
+    rgba(255, 255, 195, 1)
+  );
   pointer-events: none;
   /* background: lime; */
 }
@@ -367,7 +392,7 @@ nav#sound-toggle button.muted .slash {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scaleY(0.66)
+  transform: scaleY(0.66);
 }
 
 .stars .star {
@@ -379,40 +404,52 @@ nav#sound-toggle button.muted .slash {
 }
 
 .stars .star:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(0deg) translate(0, -100px) rotate(0deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(0deg) translate(0, -100px)
+    rotate(0deg) scaleY(1.5);
 }
 .stars .star:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(25deg) translate(0, -100px) rotate(-25deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(25deg) translate(0, -100px)
+    rotate(-25deg) scaleY(1.5);
 }
 .stars .star:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(55deg) translate(0, -100px) rotate(-55deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(55deg) translate(0, -100px)
+    rotate(-55deg) scaleY(1.5);
 }
 .stars .star:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(90deg) translate(0, -100px) rotate(-90deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(90deg) translate(0, -100px)
+    rotate(-90deg) scaleY(1.5);
 }
 .stars .star:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(125deg) translate(0, -100px) rotate(-125deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(125deg) translate(0, -100px)
+    rotate(-125deg) scaleY(1.5);
 }
 .stars .star:nth-child(6) {
-  transform: translate(-50%, -50%) rotate(155deg) translate(0, -100px) rotate(-155deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(155deg) translate(0, -100px)
+    rotate(-155deg) scaleY(1.5);
 }
 .stars .star:nth-child(7) {
-  transform: translate(-50%, -50%) rotate(180deg) translate(0, -100px) rotate(-180deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(180deg) translate(0, -100px)
+    rotate(-180deg) scaleY(1.5);
 }
 .stars .star:nth-child(8) {
-  transform: translate(-50%, -50%) rotate(205deg) translate(0, -100px) rotate(-205deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(205deg) translate(0, -100px)
+    rotate(-205deg) scaleY(1.5);
 }
 .stars .star:nth-child(9) {
-  transform: translate(-50%, -50%) rotate(230deg) translate(0, -100px) rotate(-230deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(230deg) translate(0, -100px)
+    rotate(-230deg) scaleY(1.5);
 }
 .stars .star:nth-child(10) {
-  transform: translate(-50%, -50%) rotate(270deg) translate(0, -100px) rotate(-270deg) scaleY(1.5);
+  transform: translate(-50%, -50%) rotate(270deg) translate(0, -100px)
+    rotate(-270deg) scaleY(1.5);
 }
 .stars .star:nth-child(11) {
-  transform: translate(-50%, -50%) rotate(305deg) translate(0, -100px) rotate(-305deg) scaleY(2);
+  transform: translate(-50%, -50%) rotate(305deg) translate(0, -100px)
+    rotate(-305deg) scaleY(2);
 }
 .stars .star:nth-child(12) {
-  transform: translate(-50%, -50%) rotate(335deg) translate(0, -100px) rotate(-335deg) scaleY(2);
+  transform: translate(-50%, -50%) rotate(335deg) translate(0, -100px)
+    rotate(-335deg) scaleY(2);
 }
 
 hr {
@@ -446,6 +483,11 @@ body.selfies menu.bottom {
 
 .open-filters-button {
   margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 0.25em;
 }
 
 .open-filters-button h2 {
@@ -464,7 +506,7 @@ body.selfies menu.bottom {
 
 button.selfie-audio {
   background: black;
-  color:rgba(255, 255, 195, 1);
+  color: rgba(255, 255, 195, 1);
   font-style: italic;
   border-radius: 12px;
   padding: 6px 16px;
@@ -630,7 +672,6 @@ header.essay h2 {
 }
 
 @media screen and (max-width: 1045px) {
-
   html {
     font-size: 18px;
   }
@@ -662,7 +703,7 @@ header.essay h2 {
     padding-top: 1rem;
     background: var(--yellow);
   }
-  
+
   /* #ats-menu {
     display: none;
   } */
@@ -693,7 +734,7 @@ header.essay h2 {
     padding: 0 0.5rem 6rem;
   } */
 
-	nav#lateral .next-container,
+  nav#lateral .next-container,
   nav#lateral .prev-container {
     position: fixed;
     z-index: 500;
@@ -728,4 +769,20 @@ header.essay h2 {
     display: none;
   }
 
+  .selfie-list {
+    padding-left: 1.5em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .ats-button-large {
+    height: auto;
+    width: auto;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+    line-height: 1.25;
+  }
+  .splash menu {
+    display: block;
+    width: 100%;
+  }
 }
