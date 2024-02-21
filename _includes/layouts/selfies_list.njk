@@ -22,7 +22,7 @@
                 <div role="listbox" aria-labelledby="sort-label" class="flex flex-col items-center">
                     <button class="hover:underline" v-bind:class="{underline: newSort === 'abc'}" v-on:click="applySort('abc')" role="option" :aria-selected="newSort === 'abc'">By ABC</button>
                     <button class="hover:underline" v-bind:class="{underline: newSort === 'length'}" v-on:click="applySort('length')" role="option" :aria-selected="newSort === 'length'">By Length</button>
-                    <button class="hover:underline" v-bind:class="{underline: !newSort}" v-on:click="applySort('random')" role="option" :aria-selected="!newSort">By Random</button>
+                    <button class="hover:underline" v-bind:class="{underline: !newSort || newSort === 'random'}" v-on:click="applySort('random')" role="option" :aria-selected="!newSort || newSort === 'random'">By Random</button>
                 </div>
             </div>
             <div class="ats__filtering-options flex flex-col items-center">

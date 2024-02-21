@@ -122,7 +122,7 @@ function setupSelfieFilters() {
     localStorage.removeItem('selfieHrefs')
 
     const urlParams = new URLSearchParams(window.location.search);
-    const currentSort = urlParams.get('sort');
+    const currentSort = urlParams.get('sort') || 'random';
     const currentFilter = urlParams.get('filter');
 
     let filterText = '';
