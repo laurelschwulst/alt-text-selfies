@@ -164,7 +164,8 @@ menu.bottom .ats-button.active {
   margin-bottom: 1em;
 }
 
-.content ol, .content ul {
+.content ol,
+.content ul {
   padding-left: 1em;
 }
 
@@ -771,7 +772,6 @@ header.essay h2 {
   .selfie-list {
     padding-left: 1.5em;
   }
-}
 }
 @media screen and (max-width: 550px) {
   .ats-button-large {
