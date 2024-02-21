@@ -421,8 +421,10 @@ nav#sound-toggle button.muted .slash {
 
 hr {
   border: 0;
-  margin: 2em 0;
-  border-bottom: 1px solid var(--light-grey);
+  margin: 2em auto;
+  height: 40px;
+  width: 312px;
+  background: url(../images/star-hr.svg) no-repeat center;
 }
 
 .text-xl {
