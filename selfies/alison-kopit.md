@@ -3,8 +3,9 @@ layout: layouts/selfie.njk
 title: Alison Kopit
 order: 59
 is-in-chapbook: false
-audio: 
+audio:
 ---
+
 A queer femme squints at the camera from a bench in the woods.
 Eyes blue, round face a bit crooked,
 pale skin warmed by early spring sun.

@@ -5,6 +5,7 @@ order: 7
 is-in-chapbook: true
 audio: kyla-jamieson-alt-text-selfie.mp3
 ---
+
 Series of five self-portraits:
 
 1. Is a bathroom mirror selfie from last summer, when I had a tan. I’m wrapped in a white towel and my wet hair is slicked back. Warm sunlight coming through an off-stage doorway illuminates my face, neck, and the centre of my chest.

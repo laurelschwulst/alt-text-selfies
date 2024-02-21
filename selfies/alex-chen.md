@@ -3,9 +3,10 @@ layout: layouts/selfie.njk
 title: Alex Chen
 order: 6
 is-in-chapbook: false
-audio: 
+audio:
 ---
-*Note - I often upload a group of images on instagram and write alt text for the whole group in a number list.*
+
+_Note - I often upload a group of images on instagram and write alt text for the whole group in a number list._
 
 1. Selfie of me wearing a bright green short wig with glittery blue-green eyeshadow and a collared button up shirt with a dark lead pattern by @rebirthgarments
 
