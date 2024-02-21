@@ -152,6 +152,10 @@ menu.bottom .ats-button.active {
   margin-bottom: 1em;
 }
 
+.content ol, .content ul {
+  padding-left: 1em;
+}
+
 .sound-icon {
   font-size: 0.85rem;
   position: absolute;
@@ -446,6 +450,11 @@ body.selfies menu.bottom {
 
 .open-filters-button {
   margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 0.25em;
 }
 
 .open-filters-button h2 {
@@ -728,4 +737,7 @@ header.essay h2 {
     display: none;
   }
 
+  .selfie-list {
+    padding-left: 1.5em;
+  }
 }
