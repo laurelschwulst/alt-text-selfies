@@ -14,11 +14,11 @@ layout: layouts/base.njk
 
     {% if audio %}
     <button class="selfie-audio">Listen</button>
-    <audio id="selfie" src="{{ site.url }}/assets/sounds/{{ audio }}" controls preload>
+    <audio id="selfie" src="{{ site.url }}/assets/sounds/{{ audio }}" controls preload data-selfie-name="{{ page.fileSlug }}">
         Your browser does not support the audio element.
     </audio>
     {% endif %}
 
-    <div class="content"> {{ content | safe }}</div>
+    <div class="content" id="transcript">{{ content | safe }}</div>
 
 </div>

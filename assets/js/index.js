@@ -37,25 +37,6 @@ function setupSoundToggle() {
   }
 }
 
-// audio button for individual selfie
-setupSelfieAudio();
-function setupSelfieAudio() {
-  var audio = document.getElementById("selfie");
-  var button = document.querySelector(".selfie-audio");
-
-  if (button) {
-    button.addEventListener("click", function () {
-      if (audio.paused) {
-        audio.play();
-        button.innerHTML = "Pause";
-      } else {
-        audio.pause();
-        button.innerHTML = "Listen";
-      }
-    });
-  }
-}
-
 // mobile menu
 setupMobileMenu();
 function setupMobileMenu() {

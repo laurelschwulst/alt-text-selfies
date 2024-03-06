@@ -919,3 +919,34 @@ menu#ats-menu.mobile-open ul li {
     width: 100%;
   }
 }
+
+#transcript span {
+  position: relative;
+  display: inline-block;
+  /* background: linear-gradient(90deg, transparent 0%, transparent 100%);
+  transition: background 1s linear; */
+}
+
+#transcript span::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -0.5em;
+  right: -0.5em;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(249, 228, 175, 0) 0%, #F9E4AF 21.88%, #F9E4AF 80.21%, rgba(249, 228, 175, 0) 100%);
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+#transcript span.active::before {
+  /* background: linear-gradient(90deg, rgba(249, 228, 175, 0) 0%, #F9E4AF 21.88%, #F9E4AF 80.21%, rgba(249, 228, 175, 0) 100%); */
+  opacity: 1;
+  transition-duration: 0.1s;
+}
+
+
+
+
+
