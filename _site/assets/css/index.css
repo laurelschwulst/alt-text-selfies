@@ -237,8 +237,8 @@ a.underline {
 .ats-button {
   padding: 6px 16px;
   border: 1px solid var(--black);
-  border-radius: 20px;
-  border-radius: 12px;
+  /* border-radius: 20px; */
+  /* border-radius: 12px; */
   transition: 0.25s border ease;
   display: inline-block;
 }
@@ -584,7 +584,7 @@ button.selfie-audio {
   background: black;
   color: rgba(255, 255, 195, 1);
   font-style: italic;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   padding: 6px 16px;
 }
 
