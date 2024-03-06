@@ -61,24 +61,37 @@ setupMobileMenu();
 function setupMobileMenu() {
   var mobileLink = document.querySelector("#mobile-ats-menu .toggle-link");
   var menuUl = document.getElementById("ats-menu");
-  var closeLink = document.querySelector("#ats-menu .close-menu");
+  var menuLinks = document.querySelectorAll("#ats-menu a");
+
+  // Check if the menu was open before
+  var isMenuOpen = sessionStorage.getItem("isMenuOpen");
+  if (isMenuOpen === "true") {
+    mobileLink.textContent = "Close";
+    menuUl.classList.add("mobile-open");
+  }
 
   if (mobileLink) {
     mobileLink.addEventListener("click", function (e) {
       console.log("click mobile link");
       e.preventDefault();
-      mobileLink.style.display = "none";
-      menuUl.classList.add("mobile-open");
-      // menuUl.style.display = "block";
+      if (mobileLink.textContent === "Menu") {
+        mobileLink.textContent = "Close";
+        sessionStorage.setItem("isMenuOpen", "true");
+      } else {
+        mobileLink.textContent = "Menu";
+        sessionStorage.setItem("isMenuOpen", "false");
+      }
+      menuUl.classList.toggle("mobile-open");
     });
   }
 
-  if (closeLink) {
-    closeLink.addEventListener("click", function (e) {
-      e.preventDefault();
-      mobileLink.style.display = "inline-block";
-      menuUl.classList.remove("mobile-open");
-      // menuUl.style.display = "none";
+  if (menuLinks) {
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileLink.textContent = "Menu";
+        sessionStorage.setItem("isMenuOpen", "false");
+        menuUl.classList.remove("mobile-open");
+      });
     });
   }
 }

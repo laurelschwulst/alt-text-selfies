@@ -258,7 +258,8 @@ a.underline {
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-color: rgba(0, 0, 0, 1);
   height: 315px;
-  width: 315px;
+  /* width: 315px; */
+  flex-grow: 1;
   border-radius: 12px;
   border-radius: 0;
   display: flex;
@@ -668,12 +669,18 @@ main.splash a {
 }
 
 .splash menu {
+  max-width: 700px;
   gap: 0.75rem;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   display: flex;
+  flex: 1 1 0px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0.5em;
+}
+
+.splash menu li {
+  flex: 1 1 0px;
 }
 
 .splash .star-scatter {
@@ -732,7 +739,9 @@ header.essay {
 }
 
 header.essay h2 {
-  padding: 3rem 5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.25rem 0;
 }
 
 .star {
@@ -766,6 +775,34 @@ header.essay h2 {
   display: none;
 }
 
+menu#ats-menu.mobile-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+menu#ats-menu.mobile-open .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+menu#ats-menu.mobile-open.bottom a.active::after {
+  content: "";
+  height: 0;
+  width: 0;
+  margin: 0;
+}
+
+menu#ats-menu.mobile-open ul li {
+  display: block;
+  text-align: center;
+}
+
 @media screen and (max-width: 1045px) {
   html {
     font-size: 18px;
@@ -797,6 +834,7 @@ header.essay h2 {
     padding-bottom: 1.25rem;
     padding-top: 1rem;
     background: var(--yellow);
+    z-index: 55555;
   }
 
   /* #ats-menu {
