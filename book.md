@@ -7,7 +7,7 @@ We made a chapbook that collects 30 alt text selfies, showcasing a variety of st
 
 Our chapbook comes in many formats:
 
-<a href="#" class="ats-button">Buy a chapbook</a>
+<a href="https://forms.gle/3Snbv6Hm9gZfPZXy6" class="ats-button">Buy a chapbook</a>
 
 <a href="https://docs.google.com/document/d/1o4dbbsqHpfyGTvlNcZPUMrxVQYVqHC2WKJ9AglfshPI/edit?usp=sharing" class="ats-button">Open as Google doc</a>
 
