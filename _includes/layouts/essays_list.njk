@@ -23,7 +23,7 @@
     <ul class="essays">
         {% for essay in essays_list %}
             <li>
-                <a class="underline" href="{{ site.url }}{{ essay.url | url }}">{{ essay.data.title }}</a><br>
+                <a class="underline" href="{{ site.url }}{{ essay.url | url }}">{{ essay.data.title }}</a> by
                 {{ essay.data.author }}
             </li>
         {% endfor %}

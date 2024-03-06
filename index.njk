@@ -4,7 +4,7 @@ title: Splash
 ---
 
 <div class="splash">
-    <div class="star-scatter" aria-label="A scattering of sparkles">
+    <div class="star-scatter stars-animating" aria-label="A scattering of sparkles">
         <img class="star" src="{{ site.url }}/assets/images/star01.svg">
         <img class="star" src="{{ site.url }}/assets/images/star02.svg">
         <img class="star" src="{{ site.url }}/assets/images/star03.svg">
@@ -15,7 +15,7 @@ title: Splash
     <menu>
         <li>
             <a class="ats-button-large sound" id="sound-on" href="{{ site.url }}/welcome">
-                <span class="sound-icon">♫</span>
+                {# <span class="sound-icon">♫</span> #}
                 Enter<br>
                 with<br>
                 sound
@@ -23,13 +23,15 @@ title: Splash
         </li>
         <li>
             <a class="ats-button-large no-sound" id="no-sound" href="{{ site.url }}/welcome">
-                <span class="sound-icon">
+                {# <span class="sound-icon">
                     <div class="slash"></div>
                     ♫
-                </span>
-                Enter<br>
-                * without *<br>
-                sound
+                </span> #}
+                <div>
+                    Enter<br>
+                    without<br>
+                    sound
+                </div>
             </a>
         </li>
     </menu>

@@ -22,7 +22,7 @@
 
             
 <div class="splash">
-    <div class="star-scatter" aria-label="A scattering of sparkles">
+    <div class="star-scatter stars-animating" aria-label="A scattering of sparkles">
         <img class="star" src="http://localhost:8080/assets/images/star01.svg">
         <img class="star" src="http://localhost:8080/assets/images/star02.svg">
         <img class="star" src="http://localhost:8080/assets/images/star03.svg">
@@ -33,7 +33,7 @@
     <menu>
         <li>
             <a class="ats-button-large sound" id="sound-on" href="http://localhost:8080/welcome">
-                <span class="sound-icon">♫</span>
+                
                 Enter<br>
                 with<br>
                 sound
@@ -41,13 +41,12 @@
         </li>
         <li>
             <a class="ats-button-large no-sound" id="no-sound" href="http://localhost:8080/welcome">
-                <span class="sound-icon">
-                    <div class="slash"></div>
-                    ♫
-                </span>
-                Enter<br>
-                * without *<br>
-                sound
+                
+                <div>
+                    Enter<br>
+                    without<br>
+                    sound
+                </div>
             </a>
         </li>
     </menu>
@@ -76,9 +75,9 @@
 
   <nav id="sound-toggle">
       <button class="sound ats-button muted">
+        Sound: off
           <span class="sound-icon">
-              <div class="slash"></div>
-              ♫
+              
           </span>
       </button>
   </nav>

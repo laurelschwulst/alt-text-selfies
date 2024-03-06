@@ -5,8 +5,11 @@ layout: layouts/base.njk
 <div class="column">
 
     <div class="selfie-title">
-        <img alt="sparkle" class="star" src="{{ site.url }}/assets/images/star01.svg"/>
-        <h2>{{ title }}</h2>
+        <div class="left">
+            <img alt="sparkle" class="star" src="{{ site.url }}/assets/images/star01.svg"/>
+            <h2>{{ title }}</h2>
+        </div>
+        {% include "layouts/menu_lateral.njk" %}
     </div>
 
     {% if audio %}
@@ -19,5 +22,3 @@ layout: layouts/base.njk
     <div class="content"> {{ content | safe }}</div>
 
 </div>
-
-{% include "layouts/menu_lateral.njk" %}
