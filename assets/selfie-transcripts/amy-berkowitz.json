@@ -1,5 +1,5 @@
 {
-  "transcript": "my orange cat and I both look tired but we\u2019re in good spirits. she\u2019s resting a paw on my knee.",
+  "transcript": "my orange cat and I both look tired but we’re in good spirits. she’s resting a paw on my knee.",
   "words": [
     {
       "alignedWord": "my",
@@ -225,7 +225,7 @@
       ],
       "start": 3.53,
       "startOffset": 40,
-      "word": "we\u2019re"
+      "word": "we’re"
     },
     {
       "alignedWord": "in",
@@ -329,7 +329,7 @@
       ],
       "start": 4.76,
       "startOffset": 63,
-      "word": "she\u2019s"
+      "word": "she’s"
     },
     {
       "alignedWord": "resting",

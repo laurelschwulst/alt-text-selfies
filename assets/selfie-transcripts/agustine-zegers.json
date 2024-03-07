@@ -1,5 +1,5 @@
 {
-  "transcript": "a body shapes itself angularly like a poppy searching for the sun\u2019s surfaces. It introduces itself to an irregularly shaped mirror with all the tonalities of a wheat field and a whiff of chestnuts and vetiver. their curves and angles agree.",
+  "transcript": "a body shapes itself angularly like a poppy searching for the sun’s surfaces. It introduces itself to an irregularly shaped mirror with all the tonalities of a wheat field and a whiff of chestnuts and vetiver. their curves and angles agree.",
   "words": [
     {
       "alignedWord": "a",
@@ -283,7 +283,7 @@
       ],
       "start": 6.25,
       "startOffset": 62,
-      "word": "sun\u2019s"
+      "word": "sun’s"
     },
     {
       "alignedWord": "surfaces",
@@ -634,7 +634,7 @@
       "word": "the"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "tonalities",
       "case": "success",
       "end": 14.9,
       "endOffset": 154,
@@ -813,7 +813,7 @@
       "word": "of"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "chestnuts",
       "case": "success",
       "end": 18.019999000000002,
       "endOffset": 196,
@@ -851,7 +851,7 @@
       "word": "and"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "vetiver",
       "case": "success",
       "end": 18.83,
       "endOffset": 208,

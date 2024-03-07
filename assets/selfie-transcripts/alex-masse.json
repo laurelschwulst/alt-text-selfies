@@ -572,7 +572,7 @@
       "word": "timed"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "selfie",
       "case": "success",
       "end": 7.38,
       "endOffset": 128,
@@ -671,7 +671,7 @@
       "word": "mid"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "stim",
       "case": "success",
       "end": 8.610000000000001,
       "endOffset": 154,
@@ -736,7 +736,7 @@
       "word": "hand"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "aflutter",
       "case": "success",
       "end": 9.679999,
       "endOffset": 173,
@@ -1917,7 +1917,7 @@
       "word": "by"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "frosted",
       "case": "success",
       "end": 24.75,
       "endOffset": 446,

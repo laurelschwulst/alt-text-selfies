@@ -20,15 +20,15 @@ glee,glee,5.45,5.890000000000001
 In,in,6.17,6.24
 this,this,6.25,6.47
 timed,timed,6.48,6.83
-selfie,<unk>,6.83,7.38
+selfie,selfie,6.83,7.38
 they,they,7.38,7.4799999999999995
 are,are,7.48,7.58
 caught,caught,7.58,7.84
 mid,mid,7.85,8.12
-stim,<unk>,8.13,8.610000000000001
+stim,stim,8.13,8.610000000000001
 one,one,8.809999,9.119999
 hand,hand,9.12,9.42
-aflutter,<unk>,9.429999,9.679999
+aflutter,aflutter,9.429999,9.679999
 at,at,9.78,9.889999999999999
 their,their,9.889999,10.029999
 side,side,10.03,10.41
@@ -75,5 +75,5 @@ at,at,22.490000000000002,22.71
 peace,peace,22.71,23.19
 framed,framed,23.52,23.98
 by,by,23.990000000000002,24.200000000000003
-frosted,<unk>,24.21,24.75
+frosted,frosted,24.21,24.75
 evergreens,evergreens,24.78,25.6

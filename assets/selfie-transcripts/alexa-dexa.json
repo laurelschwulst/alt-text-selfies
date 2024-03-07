@@ -1,5 +1,5 @@
 {
-  "transcript": "Wearing their \u0393\u03b9\u03b1\u03b3\u03b9\u03ac\u2019s fancy embroidered floral dress, Alexa Dexa sits at a table sized for a toddler and cuts plastic vegetables with a wooden toy knife. Their teddy bear sits in a tiny chair to their right. On their left is a toy refrigerator, a toy sink, and a toy stove, all pastel pink. Above the toy sink is a painting of a window with pink curtains, a plant, and a bird flying by. The wallpaper is made up of crayon drawings of different kinds of flowers in different colors. In this world that commands them to #BeADoll, Alexa becomes unable to determine whether they are actually a person or a doll.",
+  "transcript": "Wearing their Γιαγιά’s fancy embroidered floral dress, Alexa Dexa sits at a table sized for a toddler and cuts plastic vegetables with a wooden toy knife. Their teddy bear sits in a tiny chair to their right. On their left is a toy refrigerator, a toy sink, and a toy stove, all pastel pink. Above the toy sink is a painting of a window with pink curtains, a plant, and a bird flying by. The wallpaper is made up of crayon drawings of different kinds of flowers in different colors. In this world that commands them to #BeADoll, Alexa becomes unable to determine whether they are actually a person or a doll.",
   "words": [
     {
       "alignedWord": "wearing",
@@ -56,7 +56,7 @@
       "word": "their"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "Γιαγιά’s",
       "case": "success",
       "end": 3.11,
       "endOffset": 22,
@@ -68,7 +68,7 @@
       ],
       "start": 2.46,
       "startOffset": 14,
-      "word": "\u0393\u03b9\u03b1\u03b3\u03b9\u03ac\u2019s"
+      "word": "Γιαγιά’s"
     },
     {
       "alignedWord": "fancy",
@@ -242,7 +242,7 @@
       "word": "Alexa"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "Dexa",
       "case": "success",
       "end": 6.96,
       "endOffset": 65,
@@ -1274,7 +1274,7 @@
       "word": "all"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "pastel",
       "case": "success",
       "end": 24.209999999999997,
       "endOffset": 285,

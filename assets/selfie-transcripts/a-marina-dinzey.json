@@ -420,7 +420,7 @@
       "word": "white"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "bandana",
       "case": "success",
       "end": 6.45,
       "endOffset": 88,
@@ -915,7 +915,7 @@
           "phone": "er_E"
         }
       ],
-      "start": 14.0,
+      "start": 14,
       "startOffset": 191,
       "word": "quarter"
     },
@@ -943,7 +943,7 @@
       "word": "moon"
     },
     {
-      "alignedWord": "<unk>",
+      "alignedWord": "gleams",
       "case": "success",
       "end": 15.51,
       "endOffset": 210,
