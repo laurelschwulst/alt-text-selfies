@@ -277,3 +277,107 @@ function setupSelfieFilters() {
     },
   }).mount("#filter-snippet");
 }
+
+// audio button for individual selfie
+setupSelfieAudio();
+async function setupSelfieAudio() {
+  var audio = document.getElementById("selfie");
+  var button = document.querySelector(".selfie-audio");
+
+  const selfieName = audio.dataset.selfieName
+  const transcriptData = await fetch(`/assets/selfie-transcripts/${selfieName}.json`).then(response => response.json())
+  console.log(transcriptData)
+
+  if (button) {
+    button.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play();
+        if (transcriptData) render(transcriptData)
+        button.innerHTML = "Pause";
+      } else {
+        audio.pause();
+        button.innerHTML = "Listen";
+      }
+    });
+  }
+
+  // copied from https://github.com/lowerquality/gentle/blob/master/www/view_alignment.html
+  var $trans = document.getElementById("transcript");
+  var wds = [];
+  var cur_wd;
+
+  function render(ret) {
+      wds = ret['words'] || [];
+      transcript = ret['transcript'];
+
+      $trans.innerHTML = '';
+
+      var currentOffset = 0;
+
+      wds.forEach(function(wd) {
+        if(wd.case == 'not-found-in-transcript') {
+            // TODO: show phonemes somewhere
+            var txt = ' ' + wd.word;
+            var $plaintext = document.createTextNode(txt);
+            $trans.appendChild($plaintext);
+            return;
+        }
+
+        // Add non-linked text
+        if(wd.startOffset > currentOffset) {
+            var txt = transcript.slice(currentOffset, wd.startOffset);
+            var $plaintext = document.createTextNode(txt);
+            $trans.appendChild($plaintext);
+            currentOffset = wd.startOffset;
+        }
+
+        var $wd = document.createElement('span');
+        var txt = transcript.slice(wd.startOffset, wd.endOffset);
+        var $wdText = document.createTextNode(txt);
+        $wd.appendChild($wdText);
+        wd.$div = $wd;
+        if(wd.start !== undefined) {
+            $wd.className = 'success';
+        }
+        // click on a word to start playback from that word
+        // $wd.onclick = function() {
+        //     if(wd.start !== undefined) {
+        //         console.log(wd.start);
+        //         $a.currentTime = wd.start;
+        //         $a.play();
+        //     }
+        // };
+        $trans.appendChild($wd);
+        currentOffset = wd.endOffset;
+      });
+
+      var txt = transcript.slice(currentOffset, transcript.length);
+      var $plaintext = document.createTextNode(txt);
+      $trans.appendChild($plaintext);
+      currentOffset = transcript.length;
+  }
+
+  var $a = audio;
+  function highlight_word() {
+    var t = $a.currentTime;
+    // XXX: O(N); use binary search
+    var hits = wds.filter(function(x) {
+        return (t - x.start) > 0.01 && (x.end - t) > 0.01;
+    }, wds);
+    var next_wd = hits[hits.length - 1];
+
+    if(cur_wd != next_wd) {
+        var active = document.querySelectorAll('.active');
+        for(var i = 0; i < active.length; i++) {
+            active[i].classList.remove('active');
+        }
+        if(next_wd && next_wd.$div) {
+            next_wd.$div.classList.add('active');
+        }
+    }
+    cur_wd = next_wd;
+
+    window.requestAnimationFrame(highlight_word);
+  }
+  window.requestAnimationFrame(highlight_word);
+}
