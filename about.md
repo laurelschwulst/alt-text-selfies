@@ -41,7 +41,7 @@ A selfie of me (Olivia) standing in my living room. I’m using an Instagram fil
 
 These days I (Bojana) am going more on memory of my face than what I could see in a mirror. Yet, I do know I recently dyed my hair multiple layers of blond, honey, and maple. My hair is wet from the lake and smells like the outdoors. I’m smiling brightly and am looking straight ahead. My usually peach skin has now tanned into a golden shade. It’s the summer, and I’m wearing a red and white polka dot bikini and white-rimmed sunglasses, which complete the retro look. As I write, I feel a little shy about describing myself as “sexy” in my bikini, even though it is there to see. It fits me well, and I feel and look like a 1950s pin up. Delving back into this moment, I can hear the chimes and the lake lapping at the shore, and feel my skin warming to the sun, a slight breeze caressing my skin. 
 
-A selfie of me (Fin). This selfie is not a photo of me. It is a photo I took of a lightning bolt character I found on the side of an electrician’s van. The lighting bolt is me. I’m bright, genderfluid, goofy, and giving a thumbs up. My facial expression conveys a smiling-through-the-chaos-of-life vibe. As I type this at the keyboard, I’m a mid-30s white person with short buzzed hair, sweating in my summery studio.
+A selfie of me (Fin). This selfie is not a photo of me. It is a photo I took of a lightning bolt character I found on the side of an electrician’s van. The lightning bolt is me. I’m bright, genderfluid, goofy, and giving a thumbs up. My facial expression conveys a smiling-through-the-chaos-of-life vibe. As I type this at the keyboard, I’m a mid-30s white person with short buzzed hair, sweating in my summery studio.
 
 - - -
 
