@@ -6,7 +6,7 @@ layout: layouts/base.njk
 
     <div class="selfie-title">
         <div class="left">
-            <img alt="sparkle" class="star" src="{{ site.url }}/assets/images/star01.svg"/>
+            <img alt="sparkle" class="star" src="{{ site.url }}/assets/images/star{{ ((order) % 83 + 1).toString().padStart(2, '0') }}.svg"/>
             <h2>{{ title }}</h2>
         </div>
         {% include "layouts/menu_lateral.njk" %}
