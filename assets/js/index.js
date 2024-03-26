@@ -294,11 +294,23 @@ async function setupSelfieAudio() {
         audio.play();
         if (transcriptData) render(transcriptData)
         button.innerHTML = "Pause";
+        $("audio#bg").animate({volume: 0.3}, 1000);
       } else {
         audio.pause();
         button.innerHTML = "Listen";
+        $("audio#bg").animate({volume: 1}, 1000);
       }
     });
+
+    audio.addEventListener("ended", function () {
+      button.innerHTML = "Listen";
+      $("audio#bg").animate({volume: 1}, 1000);
+    });
+  }
+
+  // when page loads, check if bg audio's volume is reduced, and restore it if so
+  if ($("audio#bg").prop("volume") < 1) {
+    $("audio#bg").animate({volume: 1}, 1000);
   }
 
   // copied from https://github.com/lowerquality/gentle/blob/master/www/view_alignment.html
