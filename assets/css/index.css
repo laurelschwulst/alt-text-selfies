@@ -216,6 +216,13 @@ menu.bottom a.active::after {
   text-decoration: underline;
 }
 
+.content blockquote {
+  padding-left: 1.5em;
+  border-left: 1px solid black;
+  font-family: "Century Expanded";
+  font-style: italic;
+}
+
 .sound-icon {
   font-size: 0.85rem;
   position: absolute;
