@@ -947,6 +947,10 @@ menu#ats-menu.mobile-open ul li {
   transition: background 1s linear; */
 }
 
+.splash .star-scatter .star {
+  width: 20px;
+}
+
 #transcript span::before {
   position: absolute;
   content: "";
