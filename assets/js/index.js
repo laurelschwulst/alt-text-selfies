@@ -51,7 +51,7 @@ function setupMobileMenu() {
     menuUl.classList.add("mobile-open");
   }
 
-  if (mobileLink) {
+  if (mobileLink && !mobileLink.dataset.hasEventListener) {
     mobileLink.addEventListener("click", function (e) {
       console.log("click mobile link");
       e.preventDefault();
@@ -64,6 +64,7 @@ function setupMobileMenu() {
       }
       menuUl.classList.toggle("mobile-open");
     });
+    mobileLink.dataset.hasEventListener = true;
   }
 
   if (menuLinks) {
@@ -283,6 +284,8 @@ setupSelfieAudio();
 async function setupSelfieAudio() {
   var audio = document.getElementById("selfie");
   var button = document.querySelector(".selfie-audio");
+
+  if (!audio) return;
 
   const selfieName = audio.dataset.selfieName
   const transcriptData = await fetch(`/assets/selfie-transcripts/${selfieName}.json`).then(response => response.json())
