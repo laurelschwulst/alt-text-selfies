@@ -9,7 +9,7 @@
     "build:dev": "NODE_ENV=development npx @11ty/eleventy --serve",
     "build:prod": "NODE_ENV=production npx @11ty/eleventy",
     "tailwind:watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./assets/css/tailwind.css --content './**/*.njk' -w",
-    "tailwind:build": "npx tailwindcss -i ./src/css/tailwind.css -o ./assets/css/tailwind.css --content './**/*.njk' -m"
+    "tailwind:build": "npx tailwindcss -o ./assets/css/tailwind.css --content './**/*.njk' -m"
   },
   "keywords": [],
   "author": "",

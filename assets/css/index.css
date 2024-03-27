@@ -573,7 +573,7 @@ body.selfies menu.bottom {
 .filter-modal {
   display: none;
   background: var(--grey);
-  z-index: 10;
+  z-index: 88888;
 }
 
 .filter-modal.open {
@@ -669,13 +669,18 @@ main.splash a {
 }
 
 .splash menu {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.splash menu ul {
   max-width: 700px;
   gap: 0.75rem;
   /* flex-shrink: 0; */
   display: flex;
   flex: 1 1 0px;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 0.5em;
 }
 
@@ -817,6 +822,10 @@ menu#ats-menu.mobile-open ul li {
     padding-top: 0.5em;
   }
 
+  menu#ats-menu .container {
+    margin: 0 auto;
+  }
+
   menu#ats-menu.mobile-open {
     display: block;
   }
@@ -914,7 +923,7 @@ menu#ats-menu.mobile-open ul li {
     padding: 0.5rem;
     line-height: 1.25;
   }
-  .splash menu {
+  .splash menu ul {
     display: block;
     width: 100%;
   }
