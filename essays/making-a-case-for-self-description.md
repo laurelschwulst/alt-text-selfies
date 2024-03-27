@@ -5,9 +5,9 @@ author: Thomas Reid
 ---
 When the World Health Organization declared COVID-19 a pandemic on March 11, 2020, the world changed forever and a spotlight shined on systemic inequality in areas such as the following: 
 
-* [Police brutality and systematic racism]("https://www.psychiatrictimes.com/view/policing-and-covid-19-disparities-discrimination-racism-and-xenophobia")
-* [Inequitable healthcare]("https://www.cdc.gov/coronavirus/2019-ncov/community/health-equity/race-ethnicity.html")
-* [Overworked and dissatisfied employees]("https://time.com/6051955/work-after-covid-19/")
+* [Police brutality and systematic racism](https://www.psychiatrictimes.com/view/policing-and-covid-19-disparities-discrimination-racism-and-xenophobia)
+* [Inequitable healthcare](https://www.cdc.gov/coronavirus/2019-ncov/community/health-equity/race-ethnicity.html)
+* [Overworked and dissatisfied employees](https://time.com/6051955/work-after-covid-19)
 
 That spotlight radiated outward enabling others to see new possibilities. Working from home, an accommodation to some and a necessity for others, became more commonplace. The world became aware of Zoom and other online meeting platforms. Eventually, even corporations began including self-descriptions and pronouns in meeting protocols.
 
