@@ -97,7 +97,7 @@ setInterval(() => {
     } while (usedIndices.includes(newIndex));
 
     // Update the src attribute of the star
-    star.src = `http://localhost:8080/assets/images/star${(
+    star.src = `/assets/images/star${(
       "0" + newIndex
     ).slice(-2)}.svg`;
 
