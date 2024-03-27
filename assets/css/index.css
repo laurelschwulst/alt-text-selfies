@@ -576,11 +576,7 @@ body.selfies menu.bottom {
 
 .filter-modal {
   display: none;
-<<<<<<< HEAD
   background: var(--yellow);
-=======
-  background: var(--grey);
->>>>>>> 45b00bd86083ebde74b9c08492e84b2cb37dd0d4
   z-index: 88888;
 }
 
@@ -931,7 +927,6 @@ menu#ats-menu.mobile-open ul li {
     padding: 0.5rem;
     line-height: 1.25;
   }
-<<<<<<< HEAD
   .ats-button-large.simple {
     margin-left: 0;
     margin-right: 0;
@@ -939,10 +934,7 @@ menu#ats-menu.mobile-open ul li {
   .ats-button.change {
     margin-top: 0.5em;
   }
-  .splash menu {
-=======
   .splash menu ul {
->>>>>>> 45b00bd86083ebde74b9c08492e84b2cb37dd0d4
     display: block;
     width: 100%;
   }
@@ -963,7 +955,13 @@ menu#ats-menu.mobile-open ul li {
   right: -0.5em;
   bottom: 0;
   z-index: -1;
-  background: linear-gradient(90deg, rgba(249, 228, 175, 0) 0%, #F9E4AF 21.88%, #F9E4AF 80.21%, rgba(249, 228, 175, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(249, 228, 175, 0) 0%,
+    #f9e4af 21.88%,
+    #f9e4af 80.21%,
+    rgba(249, 228, 175, 0) 100%
+  );
   opacity: 0;
   transition: opacity 1s linear;
 }
@@ -973,8 +971,3 @@ menu#ats-menu.mobile-open ul li {
   opacity: 1;
   transition-duration: 0.1s;
 }
-
-
-
-
-

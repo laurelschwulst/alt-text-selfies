@@ -18,13 +18,10 @@
     </div>
     <div id="filter-snippet">
         <!-- TODO: When modal is open, underlying page elements (behind the modal) should be hidden from screen-reader using aria-hidden -->
-<<<<<<< HEAD
         <button class="open-filters-button" v-on:click="openFilterModal">
             <h2 class="underline shrink-0" style="font-style: normal;">
-=======
         <button id="open-filters-button" class="open-filters-button" v-on:click="openFilterModal" aria-controls="menu">
             <h2 class="underline shrink-0">
->>>>>>> 45b00bd86083ebde74b9c08492e84b2cb37dd0d4
                 {# Using "verbatim" to let these double curly brackets pass through nunjucks, so that Vue can parse it in the browser #}
                 {% verbatim %}{{ filterText }}{% endverbatim %}
             </h2>
