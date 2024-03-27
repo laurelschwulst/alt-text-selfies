@@ -18,15 +18,20 @@
     </div>
     <div id="filter-snippet">
         <!-- TODO: When modal is open, underlying page elements (behind the modal) should be hidden from screen-reader using aria-hidden -->
+<<<<<<< HEAD
         <button class="open-filters-button" v-on:click="openFilterModal">
             <h2 class="underline shrink-0" style="font-style: normal;">
+=======
+        <button id="open-filters-button" class="open-filters-button" v-on:click="openFilterModal" aria-controls="menu">
+            <h2 class="underline shrink-0">
+>>>>>>> 45b00bd86083ebde74b9c08492e84b2cb37dd0d4
                 {# Using "verbatim" to let these double curly brackets pass through nunjucks, so that Vue can parse it in the browser #}
                 {% verbatim %}{{ filterText }}{% endverbatim %}
             </h2>
             <span class="ats-button change">Change</span>
         </button>
 
-        <menu class="filter-modal w-full h-full fixed inset-0 justify-center items-center leading-6" v-bind:class="{open: filterModalIsOpen}">
+        <menu id="menu" role="dialog" aria-modal="true" class="filter-modal w-full h-full fixed inset-0 justify-center items-center leading-6" v-bind:class="{open: filterModalIsOpen}">
             <button class="close-filters-button ats-button absolute top-4 left-4" v-on:click="closeFilterModal">Close</button>
             <div class="text-center flex flex-col items-center gap-4">
             <div class="ats__sorting-options flex flex-col items-center">
@@ -68,7 +73,7 @@
                 data-length="{{ selfie.templateContent | length }}"
                 data-title="{{ selfie.data.title }}"
             >
-                <img alt="sparkle" class="star" src="{{ site.url }}/assets/images/star{{ ((loop.index) % 83 + 1).toString().padStart(2, '0') }}.svg"/>
+                <img alt="sparkle" class="star" src="{{ site.url }}/assets/images/star{{ (selfie.data.order % 83 + 1).toString().padStart(2, '0') }}.svg"/>
                 <a href="{{ site.url }}{{ selfie.url | url }}">{{ selfie.data.title }}</a>
             </li>
         {% endfor %}

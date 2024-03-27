@@ -37,25 +37,6 @@ function setupSoundToggle() {
   }
 }
 
-// audio button for individual selfie
-setupSelfieAudio();
-function setupSelfieAudio() {
-  var audio = document.getElementById("selfie");
-  var button = document.querySelector(".selfie-audio");
-
-  if (button) {
-    button.addEventListener("click", function () {
-      if (audio.paused) {
-        audio.play();
-        button.innerHTML = "Pause";
-      } else {
-        audio.pause();
-        button.innerHTML = "Listen";
-      }
-    });
-  }
-}
-
 // mobile menu
 setupMobileMenu();
 function setupMobileMenu() {
@@ -70,7 +51,7 @@ function setupMobileMenu() {
     menuUl.classList.add("mobile-open");
   }
 
-  if (mobileLink) {
+  if (mobileLink && !mobileLink.dataset.hasEventListener) {
     mobileLink.addEventListener("click", function (e) {
       console.log("click mobile link");
       e.preventDefault();
@@ -83,6 +64,7 @@ function setupMobileMenu() {
       }
       menuUl.classList.toggle("mobile-open");
     });
+    mobileLink.dataset.hasEventListener = true;
   }
 
   if (menuLinks) {
@@ -115,7 +97,7 @@ setInterval(() => {
     } while (usedIndices.includes(newIndex));
 
     // Update the src attribute of the star
-    star.src = `http://localhost:8080/assets/images/star${(
+    star.src = `/assets/images/star${(
       "0" + newIndex
     ).slice(-2)}.svg`;
 
@@ -295,4 +277,115 @@ function setupSelfieFilters() {
       });
     },
   }).mount("#filter-snippet");
+}
+
+// audio button for individual selfie
+setupSelfieAudio();
+async function setupSelfieAudio() {
+  var audio = document.getElementById("selfie");
+  var button = document.querySelector(".selfie-audio");
+
+  if (!audio) return;
+
+  const selfieName = audio.dataset.selfieName
+  const transcriptData = await fetch(`/assets/selfie-transcripts/${selfieName}.json`).then(response => response.json())
+  console.log(transcriptData)
+
+  if (button) {
+    button.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play();
+        if (transcriptData) render(transcriptData)
+        button.innerHTML = "Pause";
+        $("audio#bg").animate({volume: 0.3}, 1000);
+      } else {
+        audio.pause();
+        button.innerHTML = "Listen";
+        $("audio#bg").animate({volume: 1}, 1000);
+      }
+    });
+
+    audio.addEventListener("ended", function () {
+      button.innerHTML = "Listen";
+      $("audio#bg").animate({volume: 1}, 1000);
+    });
+  }
+
+  // when page loads, check if bg audio's volume is reduced, and restore it if so
+  if ($("audio#bg").prop("volume") < 1) {
+    $("audio#bg").animate({volume: 1}, 1000);
+  }
+
+  // copied from https://github.com/lowerquality/gentle/blob/master/www/view_alignment.html
+  var $trans = document.getElementById("transcript");
+  var wds = [];
+  var cur_wd;
+
+  // add span for each word inside a <p> inside $trans
+  const paragraphs = $trans.querySelectorAll("p");
+  const spans = [];
+  paragraphs.forEach((p) => {
+    const words = p.textContent.split(" ");
+    p.innerHTML = "";
+    words.forEach((word) => {
+      const span = document.createElement("span");
+      span.textContent = word + " ";
+      p.appendChild(span);
+      const space = document.createTextNode(" ");
+      p.appendChild(space);
+      spans.push(span);
+    });
+  });
+  console.log(spans);
+
+  function render(ret) {
+      wds = ret['words'] || [];
+      transcript = ret['transcript'];
+
+      var currentOffset = 0;
+      let spanIndex = 0;
+      wds.forEach(function(wd) {
+        var txt = transcript.slice(wd.startOffset, wd.endOffset);
+        // search through spans from index spanIndex to find the first span whose text content is the same as txt and set wd.$div to that span
+        let tempSpanIndex = spanIndex;
+        while (tempSpanIndex < spans.length) {
+          const currentSpan = spans[tempSpanIndex];
+          const spanText = currentSpan.innerText.trim();
+          if (spanText.includes(txt)) {
+            wd.$div = currentSpan;
+            const txtLength = txt.length;
+            if (spanText.length === txtLength) {
+              spanIndex = tempSpanIndex + 1;
+            }
+            break;
+          }
+          tempSpanIndex++;
+        }
+        currentOffset = wd.endOffset;
+      });
+  }
+
+  var $a = audio;
+  function highlight_word() {
+    var t = $a.currentTime;
+    // XXX: O(N); use binary search
+    var hits = wds.filter(function(x) {
+        return (t - x.start) > 0.01 && (x.end - t) > 0.01;
+    }, wds);
+    var next_wd = hits[hits.length - 1];
+
+    if(cur_wd != next_wd) {
+        var active = document.querySelectorAll('.active');
+        for(var i = 0; i < active.length; i++) {
+            active[i].classList.remove('active');
+        }
+        if(next_wd && next_wd.$div) {
+            next_wd.$div.classList.add('active');
+        }
+    }
+    cur_wd = next_wd;
+
+    window.requestAnimationFrame(highlight_word);
+  }
+  window.requestAnimationFrame(highlight_word);
 }

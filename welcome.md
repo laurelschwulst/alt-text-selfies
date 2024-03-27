@@ -10,9 +10,9 @@ Thank you for being here with our project, a celebration and collection of alt t
 Thank you for checking out our alt-text experiment. We are so happy you are here!
 
 <div class="stars-animating">
-    <img class="star small" src="http://localhost:8080/assets/images/star01.svg"/>
-    <img class="star small" src="http://localhost:8080/assets/images/star02.svg"/>
-    <img class="star small" src="http://localhost:8080/assets/images/star03.svg"/>
+    <img class="star small" src="/assets/images/star01.svg"/>
+    <img class="star small" src="/assets/images/star02.svg"/>
+    <img class="star small" src="/assets/images/star03.svg"/>
 </div>
 
 Olivia
@@ -22,5 +22,5 @@ Bojana
 Finnegan
 
 <a class="ats-button-large simple" href="/selfies">
-    <span class="stars-animating"><img class="star small" src="http://localhost:8080/assets/images/star20.svg"/></span> <span class="star-text">Explore the Selfies</span> <span class="stars-animating"><img class="star small" src="http://localhost:8080/assets/images/star22.svg"/></span>
+    <span class="stars-animating"><img class="star small" src="/assets/images/star20.svg"/></span> <span class="star-text">Explore the Selfies</span> <span class="stars-animating"><img class="star small" src="/assets/images/star22.svg"/></span>
 </a>

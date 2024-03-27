@@ -15,10 +15,11 @@ site_title: Alt Text Selfies
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         {# Vue used for sort and filtering on Selfies page #}
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="{{ site.url }}/assets/js/code.jquery.com_jquery-3.7.0.min.js"></script>
     </head>
     <body>
         <main class="{{ main_class }}">
-            <header class="title fade-down">
+            <header class="title">
                 <h1>
                     <a href="{{ site.url }}/welcome">{{ site_title }}</a>
                 </h1>

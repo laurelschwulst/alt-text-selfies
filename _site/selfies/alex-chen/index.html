@@ -12,10 +12,11 @@
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="http://localhost:8080/assets/js/code.jquery.com_jquery-3.7.0.min.js"></script>
     </head>
     <body>
         <main class="">
-            <header class="title fade-down">
+            <header class="title">
                 <h1>
                     <a href="http://localhost:8080/welcome">Alt Text Selfies</a>
                 </h1>
@@ -26,7 +27,7 @@
 
     <div class="selfie-title">
         <div class="left">
-            <img alt="sparkle" class="star" src="http://localhost:8080/assets/images/star01.svg"/>
+            <img alt="sparkle" class="star" src="http://localhost:8080/assets/images/star07.svg"/>
             <h2>Alex Chen</h2>
         </div>
         
@@ -42,17 +43,17 @@
 
 <nav id="lateral">
     <div class="prev-container">
-        <a href="http://localhost:8080/selfies/allegra-favila/" class="prev ats-button">←</a>
+        <a href="http://localhost:8080/selfies/louise-hickman-kevin-gotkin-and-the-in-between/" class="prev ats-button">←</a>
     </div>
     <div class="next-container">
-        <a href="http://localhost:8080/selfies/kelsie-acton/" class="next ats-button">→</a>
+        <a href="http://localhost:8080/selfies/george-wu-teng/" class="next ats-button">→</a>
     </div>
 </nav>
     </div>
 
     
 
-    <div class="content"> <p><em>Note - I often upload a group of images on instagram and write alt text for the whole group in a number list.</em></p>
+    <div class="content" id="transcript"><p><em>Note - I often upload a group of images on instagram and write alt text for the whole group in a number list.</em></p>
 <ol>
 <li>
 <p>Selfie of me wearing a bright green short wig with glittery blue-green eyeshadow and a collared button up shirt with a dark lead pattern by @rebirthgarments</p>
@@ -76,7 +77,7 @@
       </div>
   </div>
       
-  <menu id="ats-menu" class="bottom fade-up">
+  <menu id="ats-menu" class="bottom fade-up" role="menu">
       <div class="container">
         <ul>
             <li><a class="welcome" href="http://localhost:8080/welcome/">Welcome</a></li>
