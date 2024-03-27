@@ -13,7 +13,7 @@ For us, an alt text selfie is any written self-portrait. This project takes a we
 
 Alternative text, or alt text, is a written description of an image or visual material. Put another way, alt text is a non-visual text alternative to digital images. Alt text is an essential part of web accessibility and is one way to create access to visual content for people who are blind, low vision, or have certain cognitive disabilities.
 
-You can [read more about alt text basics on WebAIM’s website](https://webaim.org/techniques/alttext/).
+You can <a href="https://webaim.org/techniques/alttext" target="_blank">read more about alt text basics on WebAIM’s website</a>.
 
 - - -
 
