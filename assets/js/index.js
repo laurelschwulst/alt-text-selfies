@@ -318,55 +318,94 @@ async function setupSelfieAudio() {
   var wds = [];
   var cur_wd;
 
+  // add span for each word inside a <p> inside $trans
+  const paragraphs = $trans.querySelectorAll("p");
+  const spans = [];
+  paragraphs.forEach((p) => {
+    const words = p.textContent.split(" ");
+    p.innerHTML = "";
+    words.forEach((word) => {
+      const span = document.createElement("span");
+      span.textContent = word + " ";
+      p.appendChild(span);
+      const space = document.createTextNode(" ");
+      p.appendChild(space);
+      spans.push(span);
+    });
+  });
+  console.log(spans);
+
   function render(ret) {
       wds = ret['words'] || [];
       transcript = ret['transcript'];
 
-      $trans.innerHTML = '';
+      // $trans.innerHTML = '';
 
       var currentOffset = 0;
+      let spanIndex = 0;
+
+      console.log(wds);
 
       wds.forEach(function(wd) {
-        if(wd.case == 'not-found-in-transcript') {
-            // TODO: show phonemes somewhere
-            var txt = ' ' + wd.word;
-            var $plaintext = document.createTextNode(txt);
-            $trans.appendChild($plaintext);
-            return;
-        }
+        // if(wd.case == 'not-found-in-transcript') {
+        //     // TODO: show phonemes somewhere
+        //     var txt = ' ' + wd.word;
+        //     var $plaintext = document.createTextNode(txt);
+        //     $trans.appendChild($plaintext);
+        //     return;
+        // }
 
-        // Add non-linked text
-        if(wd.startOffset > currentOffset) {
-            var txt = transcript.slice(currentOffset, wd.startOffset);
-            var $plaintext = document.createTextNode(txt);
-            $trans.appendChild($plaintext);
-            currentOffset = wd.startOffset;
-        }
+        // // Add non-linked text
+        // if(wd.startOffset > currentOffset) {
+        //     var txt = transcript.slice(currentOffset, wd.startOffset);
+        //     var $plaintext = document.createTextNode(txt);
+        //     $trans.appendChild($plaintext);
+        //     currentOffset = wd.startOffset;
+        // }
 
-        var $wd = document.createElement('span');
         var txt = transcript.slice(wd.startOffset, wd.endOffset);
-        var $wdText = document.createTextNode(txt);
-        $wd.appendChild($wdText);
-        wd.$div = $wd;
-        if(wd.start !== undefined) {
-            $wd.className = 'success';
+        // var $wd = document.createElement('span');
+        // var $wdText = document.createTextNode(txt);
+        // $wd.appendChild($wdText);
+
+        // search through spans from index spanIndex to find the first span whose text content is the same as txt and set wd.$div to that span
+        let tempSpanIndex = spanIndex;
+        while (tempSpanIndex < spans.length) {
+          const currentSpan = spans[tempSpanIndex];
+          const spanText = currentSpan.innerText.trim();
+          if (spanText.includes(txt)) {
+            wd.$div = currentSpan;
+            const txtLength = txt.length;
+            if (spanText.length === txtLength) {
+              spanIndex = tempSpanIndex + 1;
+            }
+            break;
+          }
+          tempSpanIndex++;
         }
-        // click on a word to start playback from that word
-        // $wd.onclick = function() {
-        //     if(wd.start !== undefined) {
-        //         console.log(wd.start);
-        //         $a.currentTime = wd.start;
-        //         $a.play();
-        //     }
-        // };
-        $trans.appendChild($wd);
+
+        
+        // const currentSpan = spans[spanIndex];
+        // if (currentSpan) {
+        //   console.log(currentSpan.innerText.trim(), txt);
+        //   if (currentSpan.innerText.trim() === txt) {
+        //     wd.$div = currentSpan;
+        //     spanIndex++
+        //   }
+        // }
+
+        // wd.$div = $wd;
+        // if(wd.start !== undefined) {
+        //   $wd.className = 'success';
+        // }
+        // $trans.appendChild($wd);
         currentOffset = wd.endOffset;
       });
 
-      var txt = transcript.slice(currentOffset, transcript.length);
-      var $plaintext = document.createTextNode(txt);
-      $trans.appendChild($plaintext);
-      currentOffset = transcript.length;
+      // var txt = transcript.slice(currentOffset, transcript.length);
+      // var $plaintext = document.createTextNode(txt);
+      // $trans.appendChild($plaintext);
+      // currentOffset = transcript.length;
   }
 
   var $a = audio;
