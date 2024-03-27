@@ -297,6 +297,10 @@ a.underline {
   margin-top: 2.5em;
 }
 
+a.ats-button-large.simple {
+  text-decoration: none;
+}
+
 .ats-button-large:hover {
   border-color: var(--black);
 }
@@ -965,7 +969,8 @@ menu#ats-menu.mobile-open ul li {
   transition: background 1s linear; */
 }
 
-.splash .star-scatter .star {
+.star,
+.stars .star {
   width: 20px;
 }
 
