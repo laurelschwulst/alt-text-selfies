@@ -19,11 +19,11 @@
     <div id="filter-snippet">
         <!-- TODO: When modal is open, underlying page elements (behind the modal) should be hidden from screen-reader using aria-hidden -->
         <button class="open-filters-button" v-on:click="openFilterModal">
-            <h2 class="underline shrink-0">
+            <h2 class="underline shrink-0" style="font-style: normal;">
                 {# Using "verbatim" to let these double curly brackets pass through nunjucks, so that Vue can parse it in the browser #}
                 {% verbatim %}{{ filterText }}{% endverbatim %}
             </h2>
-            <span class="ats-button">Change</span>
+            <span class="ats-button change">Change</span>
         </button>
 
         <menu class="filter-modal w-full h-full fixed inset-0 justify-center items-center leading-6" v-bind:class="{open: filterModalIsOpen}">

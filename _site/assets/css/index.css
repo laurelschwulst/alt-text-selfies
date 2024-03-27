@@ -243,6 +243,10 @@ a.underline {
   display: inline-block;
 }
 
+.ats-button.change {
+  margin-top: -0.5em;
+}
+
 .ats-button:hover,
 .ats-button.current {
   border-color: black;
@@ -572,8 +576,8 @@ body.selfies menu.bottom {
 
 .filter-modal {
   display: none;
-  background: var(--grey);
-  z-index: 10;
+  background: var(--yellow);
+  z-index: 88888;
 }
 
 .filter-modal.open {
@@ -913,6 +917,13 @@ menu#ats-menu.mobile-open ul li {
     margin: 0.5rem 1rem;
     padding: 0.5rem;
     line-height: 1.25;
+  }
+  .ats-button-large.simple {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .ats-button.change {
+    margin-top: 0.5em;
   }
   .splash menu {
     display: block;
