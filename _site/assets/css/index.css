@@ -838,6 +838,10 @@ menu#ats-menu.mobile-open ul li {
     font-size: 18px;
   }
 
+  .content {
+    word-break: break-all;
+  }
+
   /* header.title {
     padding-bottom: 0.5em;
   } */
