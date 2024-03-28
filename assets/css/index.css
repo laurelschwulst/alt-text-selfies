@@ -847,7 +847,7 @@ menu#ats-menu.mobile-open ul li {
     font-size: 18px;
   }
 
-  .content {
+  .content .word-break {
     word-break: break-all;
   }
 
