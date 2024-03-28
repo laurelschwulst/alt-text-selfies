@@ -29,7 +29,7 @@ As we explore the medium of alt text selfies, accessibility will remain our prio
 
 *Who worked on this project?*
 
-This project is produced by <a href="https://blindambitionjc.com/" target="_blank">Bojana Coklyat</a>, <a href="https://shannonfinnegan.com/" target="_blank">Finnegan Shannon</a>, and <a href="https://oliviadreisinger.com/" target="_blank">Olivia Dreisinger</a>[](https://blindambitionjc.com/)[](https://shannonfinnegan.com/)[](https://oliviadreisinger.com/). [Laurel Schwulst](https://laurelschwulst.com/) and [Taichi Aritomo](https://taichiwi.com/) designed the website. [Tristan Douglas](https://planet.mu/artists/antwood/) created the website audio.
+This project is produced by <a href="https://blindambitionjc.com/" target="_blank">Bojana Coklyat</a>, <a href="https://shannonfinnegan.com/" target="_blank">Finnegan Shannon</a>, and <a href="https://oliviadreisinger.com/" target="_blank">Olivia Dreisinger</a>[](https://blindambitionjc.com/)[](https://shannonfinnegan.com/)[](https://oliviadreisinger.com/). <a href="https://laurelschwulst.com/" target="_blank">Laurel Schwulst</a> and <a href="https://taichiwi.com/" target="_blank">Taichi Aritomo</a>[](https://laurelschwulst.com/)[](https://taichiwi.com/) designed the website.  <a href="https://planet.mu/artists/antwood/" target="_blank">Tristan Douglas</a>[](https://laurelschwulst.com/)[](https://taichiwi.com/)[](https://planet.mu/artists/antwood/) created the website audio.
 
 Big thank you to everyone who contributed a selfie to this project. We love them!!
 
