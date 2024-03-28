@@ -48,3 +48,9 @@ A selfie of me (Fin). This selfie is not a photo of me. It is a photo I took of 
 *Who funded this project?*
 
 [CultureHub](https://www.culturehub.org/shannon-finnegan) and [Canada Council for the Arts](https://canadacouncil.ca/).
+
+- - -
+
+*Want to submit a selfie for the website or get in touch with us?*
+
+Email us at: AltTextSelfies \[at] gmail \[dot] com
