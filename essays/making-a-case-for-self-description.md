@@ -59,4 +59,4 @@ Self-description is not a magic wand. It will never provide an equivalent experi
 
 I’m not a fan of award shows and their red carpet segments and I don’t consume sports or reality television, but I would fully support any effort to increase our access to all content even if the details may bore me. I’m willing to “suffer” through 15 seconds of poor self-description understanding that the true goal is normalizing the inclusion of Blind people in spaces where we have traditionally been left out. Everyone has a role and responsibility in building a culture of access, even if it takes some time and effort.
 
-*\*Originally published by Disability Visibility Project*
+*\*Originally published by <a href="https://disabilityvisibilityproject.com/" target="_blank">Disability Visibility Project</a>*
