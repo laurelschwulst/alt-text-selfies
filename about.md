@@ -47,7 +47,7 @@ A selfie of me (Fin). This selfie is not a photo of me. It is a photo I took of 
 
 *Who funded this project?*
 
-[CultureHub](https://www.culturehub.org/shannon-finnegan)[](https://www.culturehub.org/shannon-finnegan) and [Canada Council for the Arts](https://canadacouncil.ca/).
+<a href="https://www.culturehub.org/shannon-finnegan" target="_blank">Culture Hub</a> and <a href="https://canadacouncil.ca/" target="_blank">Canada Council for the Arts</a>.[](https://www.culturehub.org/shannon-finnegan)
 
 - - -
 
