@@ -63,7 +63,7 @@ Rimbaud is, of course, entitled to his despair; one can only speculate that, if 
 
 **Citations**
 
-1. Department of Photographs. “Paul Strand (1890–1976).” In *Heilbrunn Timeline of Art History*. New York: The Metropolitan Museum of Art, 2000–. http://www.metmuseum.org/toah/hd/pstd/hd_pstd.html (October 2004).
+1. Department of Photographs. “Paul Strand (1890–1976).” In *Heilbrunn Timeline of Art History*. New York: The Metropolitan Museum of Art, 2000–. <span class="word-break">http://www.metmuseum.org/toah/hd/pstd/hd_pstd.html</span> (October 2004).
 2. Garland-Thomson, Rosemarie. *Staring: How We Look*, Oxford University Press, 2009.
 3. O’Dell, Emily Jane. “Geographies of Disability in the Letters of Rimbaud: Mapping Colonialism and Disablement in Yemen and Ethiopia.” J*ournal of Literary & Cultural Disability Studies*, Volume 13, Issue 4, 2019, pp. 445-460.
 4. Rimbaud, Arthur. *I promise to be good: The letters of Arthur Rimbaud.* Edited and translated by Wyatt Mason. Modern Library, 2007.
