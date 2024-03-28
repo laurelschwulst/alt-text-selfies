@@ -13,7 +13,7 @@ For us, an alt text selfie is any written self-portrait. This project takes a we
 
 Alternative text, or alt text, is a written description of an image or visual material. Put another way, alt text is a non-visual text alternative to digital images. Alt text is an essential part of web accessibility and is one way to create access to visual content for people who are blind, low vision, or have certain cognitive disabilities.
 
-You can [read more about alt text basics on WebAIM’s website](https://webaim.org/techniques/alttext/).
+You can <a href="https://webaim.org/techniques/alttext" target="_blank">read more about alt text basics on WebAIM’s website</a>.
 
 - - -
 
@@ -29,7 +29,7 @@ As we explore the medium of alt text selfies, accessibility will remain our prio
 
 *Who worked on this project?*
 
-This project is produced by [Bojana Coklyat](https://blindambitionjc.com/), [Finnegan Shannon](https://shannonfinnegan.com/), and [Olivia Dreisinger](https://oliviadreisinger.com/). [Laurel Schwulst](https://laurelschwulst.com/) and [Taichi Aritomo](https://taichiwi.com/) designed the website. [Tristan Douglas](https://planet.mu/artists/antwood/) created the website audio.
+This project is produced by <a href="https://blindambitionjc.com/" target="_blank">Bojana Coklyat</a>, <a href="https://shannonfinnegan.com/" target="_blank">Finnegan Shannon</a>, and <a href="https://oliviadreisinger.com/" target="_blank">Olivia Dreisinger</a>[](https://blindambitionjc.com/)[](https://shannonfinnegan.com/)[](https://oliviadreisinger.com/). <a href="https://laurelschwulst.com/" target="_blank">Laurel Schwulst</a> and <a href="https://taichiwi.com/" target="_blank">Taichi Aritomo</a>[](https://laurelschwulst.com/)[](https://taichiwi.com/) designed the website.  <a href="https://planet.mu/artists/antwood/" target="_blank">Tristan Douglas</a>[](https://laurelschwulst.com/)[](https://taichiwi.com/)[](https://planet.mu/artists/antwood/) created the website audio.
 
 Big thank you to everyone who contributed a selfie to this project. We love them!!
 
@@ -47,4 +47,10 @@ A selfie of me (Fin). This selfie is not a photo of me. It is a photo I took of 
 
 *Who funded this project?*
 
-[CultureHub](https://www.culturehub.org/shannon-finnegan) and [Canada Council for the Arts](https://canadacouncil.ca/).
+<a href="https://www.culturehub.org/shannon-finnegan" target="_blank">Culture Hub</a> and <a href="https://canadacouncil.ca/" target="_blank">Canada Council for the Arts</a>.[](https://www.culturehub.org/shannon-finnegan)
+
+- - -
+
+*Want to submit a selfie for the website or get in touch with us?*
+
+Email us at: AltTextSelfies \[at] gmail \[dot] com

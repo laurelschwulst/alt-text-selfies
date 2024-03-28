@@ -3,13 +3,12 @@ layout: layouts/page_wide.njk
 permalink: /links/
 title: Links
 ---
+<a href="https://binarycalculationsareinadequate.org/" target="_blank">Binary Calculations</a> by Stephanie Dinkins
 
-[Binary Calculations ](https://binarycalculationsareinadequate.org/)by Stephanie Dinkins
+<a href="https://guoanhong.com/papers/CHI21-ImageDescriptions.pdf" target="_blank">“It’s Complicated”: Negotiating Accessibility and (Mis)Representation in Image Descriptions of Race, Gender, and Disability</a>[ ](https://www.bennettc.com/wp-content/uploads/2022/02/Bennett_Its-Complicated-Negotiating-Accessibility-and-MisRepresentation-in-image-Descriptions-of-Race-Gender-and-Disability.pdf)by Cynthia L. Bennett et al
 
-[“It’s Complicated”: Negotiating Accessibility and (Mis)Representation in Image Descriptions of Race, Gender, and Disability](https://www.bennettc.com/wp-content/uploads/2022/02/Bennett_Its-Complicated-Negotiating-Accessibility-and-MisRepresentation-in-image-Descriptions-of-Race-Gender-and-Disability.pdf) by Cynthia L. Bennett et al
+<a href="https://www.fringeofcolour.co.uk/responses/screen-representation-through-audio-description-thomas-reid" target="_blank">Screen Representation Through Audio Description</a> by Thomas Reid
 
-[Screen Representation Through Audio Description](https://www.fringeofcolour.co.uk/responses/screen-representation-through-audio-description-thomas-reid) by Thomas Reid
+<a href="https://vocaleyes.co.uk/services/resources/digital-accessibility-and-inclusion/self-description-for-inclusive-meetings/" target="_blank">Self-Description Guide</a> by Vocal Eyes UK
 
-[Self-Description Guide](https://vocaleyes.co.uk/services/resources/digital-accessibility-and-inclusion/self-description-for-inclusive-meetings/) by Vocal Eyes UK
-
-[Selfie Aesthetics: Seeing Trans Feminist Futures in Self-Representational Art](https://www.dukeupress.edu/selfie-aesthetics) by Nicole Erin Morse
+<a href="https://www.dukeupress.edu/selfie-aesthetics" target="_blank">Selfie Aesthetics: Seeing Trans Feminist Futures in Self-Representational Art </a> by Nicole Erin Morse
