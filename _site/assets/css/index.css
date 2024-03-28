@@ -691,6 +691,7 @@ main.splash a {
 .splash,
 .menu-container {
   height: 100vh;
+  height: 100dvh;
 }
 
 .splash .menu-container {
