@@ -357,6 +357,7 @@ a.prev {
   align-items: center;
   justify-content: center; */
   border: 0;
+  border: 1px solid black;
 }
 
 nav#sound-toggle {

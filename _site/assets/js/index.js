@@ -78,38 +78,60 @@ function setupMobileMenu() {
   }
 }
 
-// Animating stars
+// Animating and Random Stars
 
-// Array to hold the indices of stars used
-let usedIndices = [];
+class StarsAnimating {
+  constructor(containerSelector) {
+    this.container = document.querySelector(containerSelector);
+    this.usedIndices = [];
+    this.initialize();
+  }
 
-// Function to change stars every second
-setInterval(() => {
-  // Get all star elements
-  let stars = document.querySelectorAll(".stars-animating .star");
+  initialize() {
+    setInterval(() => {
+      let stars = this.container.querySelectorAll(".star");
+      stars.forEach((star) => {
+        this.setRandomStar(star);
+      });
+    }, 1250); // Change every second
+  }
 
-  // Iterate through each star
-  stars.forEach((star) => {
+  setRandomStar(star) {
     // Get a random index that hasn't been used before
     let newIndex;
     do {
       newIndex = Math.floor(Math.random() * 83) + 1;
-    } while (usedIndices.includes(newIndex));
+    } while (this.usedIndices.includes(newIndex));
 
     // Update the src attribute of the star
-    star.src = `/assets/images/star${(
-      "0" + newIndex
-    ).slice(-2)}.svg`;
+    star.src = `/assets/images/star${("0" + newIndex).slice(-2)}.svg`;
 
     // Add the index to the used indices array
-    usedIndices.push(newIndex);
+    this.usedIndices.push(newIndex);
 
     // Remove the first element from used indices if it exceeds 3
-    if (usedIndices.length > 3) {
-      usedIndices.shift();
+    if (this.usedIndices.length > 3) {
+      this.usedIndices.shift();
     }
-  });
-}, 1250); // Change every second
+  }
+}
+
+class RandomStars extends StarsAnimating {
+  constructor(containerSelector) {
+    super(containerSelector);
+  }
+
+  initialize() {
+    let stars = this.container.querySelectorAll(".star");
+    stars.forEach((star) => {
+      this.setRandomStar(star);
+    });
+  }
+}
+
+// Usage
+const animatingStars = new StarsAnimating(".stars-animating");
+const randomStars = new RandomStars(".random-stars");
 
 // This must run before setupSelfieFilters()
 setupLateralNav();
@@ -287,33 +309,35 @@ async function setupSelfieAudio() {
 
   if (!audio) return;
 
-  const selfieName = audio.dataset.selfieName
-  const transcriptData = await fetch(`/assets/selfie-transcripts/${selfieName}.json`).then(response => response.json())
-  console.log(transcriptData)
+  const selfieName = audio.dataset.selfieName;
+  const transcriptData = await fetch(
+    `/assets/selfie-transcripts/${selfieName}.json`
+  ).then((response) => response.json());
+  console.log(transcriptData);
 
   if (button) {
     button.addEventListener("click", function () {
       if (audio.paused) {
         audio.play();
-        if (transcriptData) render(transcriptData)
+        if (transcriptData) render(transcriptData);
         button.innerHTML = "Pause";
-        $("audio#bg").animate({volume: 0.3}, 1000);
+        $("audio#bg").animate({ volume: 0.3 }, 1000);
       } else {
         audio.pause();
         button.innerHTML = "Listen";
-        $("audio#bg").animate({volume: 1}, 1000);
+        $("audio#bg").animate({ volume: 1 }, 1000);
       }
     });
 
     audio.addEventListener("ended", function () {
       button.innerHTML = "Listen";
-      $("audio#bg").animate({volume: 1}, 1000);
+      $("audio#bg").animate({ volume: 1 }, 1000);
     });
   }
 
   // when page loads, check if bg audio's volume is reduced, and restore it if so
   if ($("audio#bg").prop("volume") < 1) {
-    $("audio#bg").animate({volume: 1}, 1000);
+    $("audio#bg").animate({ volume: 1 }, 1000);
   }
 
   // copied from https://github.com/lowerquality/gentle/blob/master/www/view_alignment.html
@@ -339,49 +363,49 @@ async function setupSelfieAudio() {
   console.log(spans);
 
   function render(ret) {
-      wds = ret['words'] || [];
-      transcript = ret['transcript'];
+    wds = ret["words"] || [];
+    transcript = ret["transcript"];
 
-      var currentOffset = 0;
-      let spanIndex = 0;
-      wds.forEach(function(wd) {
-        var txt = transcript.slice(wd.startOffset, wd.endOffset);
-        // search through spans from index spanIndex to find the first span whose text content is the same as txt and set wd.$div to that span
-        let tempSpanIndex = spanIndex;
-        while (tempSpanIndex < spans.length) {
-          const currentSpan = spans[tempSpanIndex];
-          const spanText = currentSpan.innerText.trim();
-          if (spanText.includes(txt)) {
-            wd.$div = currentSpan;
-            const txtLength = txt.length;
-            if (spanText.length === txtLength) {
-              spanIndex = tempSpanIndex + 1;
-            }
-            break;
+    var currentOffset = 0;
+    let spanIndex = 0;
+    wds.forEach(function (wd) {
+      var txt = transcript.slice(wd.startOffset, wd.endOffset);
+      // search through spans from index spanIndex to find the first span whose text content is the same as txt and set wd.$div to that span
+      let tempSpanIndex = spanIndex;
+      while (tempSpanIndex < spans.length) {
+        const currentSpan = spans[tempSpanIndex];
+        const spanText = currentSpan.innerText.trim();
+        if (spanText.includes(txt)) {
+          wd.$div = currentSpan;
+          const txtLength = txt.length;
+          if (spanText.length === txtLength) {
+            spanIndex = tempSpanIndex + 1;
           }
-          tempSpanIndex++;
+          break;
         }
-        currentOffset = wd.endOffset;
-      });
+        tempSpanIndex++;
+      }
+      currentOffset = wd.endOffset;
+    });
   }
 
   var $a = audio;
   function highlight_word() {
     var t = $a.currentTime;
     // XXX: O(N); use binary search
-    var hits = wds.filter(function(x) {
-        return (t - x.start) > 0.01 && (x.end - t) > 0.01;
+    var hits = wds.filter(function (x) {
+      return t - x.start > 0.01 && x.end - t > 0.01;
     }, wds);
     var next_wd = hits[hits.length - 1];
 
-    if(cur_wd != next_wd) {
-        var active = document.querySelectorAll('.active');
-        for(var i = 0; i < active.length; i++) {
-            active[i].classList.remove('active');
-        }
-        if(next_wd && next_wd.$div) {
-            next_wd.$div.classList.add('active');
-        }
+    if (cur_wd != next_wd) {
+      var active = document.querySelectorAll(".active");
+      for (var i = 0; i < active.length; i++) {
+        active[i].classList.remove("active");
+      }
+      if (next_wd && next_wd.$div) {
+        next_wd.$div.classList.add("active");
+      }
     }
     cur_wd = next_wd;
 
