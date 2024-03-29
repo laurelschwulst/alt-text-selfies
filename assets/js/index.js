@@ -89,8 +89,8 @@ class StarsAnimating {
 
   initialize() {
     setInterval(() => {
-      let stars = this.container.querySelectorAll(".star");
-      stars.forEach((star) => {
+      let stars = this.container?.querySelectorAll(".star");
+      stars?.forEach((star) => {
         this.setRandomStar(star);
       });
     }, 1250); // Change every second
@@ -122,16 +122,19 @@ class RandomStars extends StarsAnimating {
   }
 
   initialize() {
-    let stars = this.container.querySelectorAll(".star");
-    stars.forEach((star) => {
+    let stars = this.container?.querySelectorAll(".star");
+    stars?.forEach((star) => {
       this.setRandomStar(star);
     });
-  }
+}
 }
 
-// Usage
-const animatingStars = new StarsAnimating(".stars-animating");
-const randomStars = new RandomStars(".random-stars");
+setupStars();
+function setupStars() {
+  // Usage
+  const animatingStars = new StarsAnimating(".stars-animating");
+  const randomStars = new RandomStars(".random-stars");
+}
 
 // This must run before setupSelfieFilters()
 setupLateralNav();
