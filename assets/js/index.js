@@ -88,9 +88,10 @@ class StarsAnimating {
   }
 
   initialize() {
+    if (!this.container) return
     setInterval(() => {
-      let stars = this.container?.querySelectorAll(".star");
-      stars?.forEach((star) => {
+      let stars = this.container.querySelectorAll(".star");
+      stars.forEach((star) => {
         this.setRandomStar(star);
       });
     }, 1250); // Change every second
@@ -122,8 +123,9 @@ class RandomStars extends StarsAnimating {
   }
 
   initialize() {
-    let stars = this.container?.querySelectorAll(".star");
-    stars?.forEach((star) => {
+    if (!this.container) return
+    let stars = this.container.querySelectorAll(".star");
+    stars.forEach((star) => {
       this.setRandomStar(star);
     });
 }
