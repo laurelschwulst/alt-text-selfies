@@ -44,25 +44,38 @@ function setupMobileMenu() {
   var menuUl = document.getElementById("ats-menu");
   var menuLinks = document.querySelectorAll("#ats-menu a");
 
-  // Check if the menu was open before
-  var isMenuOpen = sessionStorage.getItem("isMenuOpen");
-  if (isMenuOpen === "true") {
+  function closeMenu() {
+    mobileLink.textContent = "Menu";
+    sessionStorage.setItem("isMenuOpen", "false");
+    menuUl.classList.remove("mobile-open");
+    document.body.style.overflow = "auto";
+  }
+
+  function openMenu() {
     mobileLink.textContent = "Close";
+    sessionStorage.setItem("isMenuOpen", "true");
     menuUl.classList.add("mobile-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function isMenuOpen() {
+    return menuUl.classList.contains("mobile-open");
+  }
+
+  // Check if the menu was open before
+  if (sessionStorage.getItem("isMenuOpen") === "true") {
+    openMenu();
   }
 
   if (mobileLink && !mobileLink.dataset.hasEventListener) {
     mobileLink.addEventListener("click", function (e) {
       console.log("click mobile link");
       e.preventDefault();
-      if (mobileLink.textContent === "Menu") {
-        mobileLink.textContent = "Close";
-        sessionStorage.setItem("isMenuOpen", "true");
+      if (isMenuOpen()) {
+        closeMenu();
       } else {
-        mobileLink.textContent = "Menu";
-        sessionStorage.setItem("isMenuOpen", "false");
+        openMenu();
       }
-      menuUl.classList.toggle("mobile-open");
     });
     mobileLink.dataset.hasEventListener = true;
   }
@@ -70,9 +83,7 @@ function setupMobileMenu() {
   if (menuLinks) {
     menuLinks.forEach(function (link) {
       link.addEventListener("click", function () {
-        mobileLink.textContent = "Menu";
-        sessionStorage.setItem("isMenuOpen", "false");
-        menuUl.classList.remove("mobile-open");
+        closeMenu();
       });
     });
   }
