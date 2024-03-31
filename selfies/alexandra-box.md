@@ -3,7 +3,7 @@ layout: layouts/selfie.njk
 title: Alexandra Box
 order: 39
 is-in-chapbook: true
-audio: /assets/sounds/null
+audio: /assets/sounds/alexandra-box.m4a
 transcript: /assets/selfie-transcripts/alexandra-box.json
 ---
 ID #1
