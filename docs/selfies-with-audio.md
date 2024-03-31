@@ -9,7 +9,7 @@ Note: Make sure the audio file is in a commonly supported file format, like `mp3
 ## Create a transcript file for the audio
 When you play a selfie's audio on the website, you may see that the words become highlighted as they are spoken. This is because the audio is synced with a transcript file. The transcript file is a `.json` file that contains the text of the audio, broken down into phrases. Each phrase is associated with a start time and an end time, which tells the website when to highlight the phrase.
 
-The transcript files are generated using a software called [Gentle](http://lowerquality.com/gentle/). Gentle is a software that aligns audio and text. You can download the transcript file from Gentle and upload it to the selfie in the CMS.
+The transcript files are generated using an open-source software called [Gentle](http://lowerquality.com/gentle/). Gentle is a software that aligns audio and text. You can use Gentle to create the transcript file, and then upload it to the CMS.
 
 ### Installing Gentle
 1. On the [Gentle homepage](http://lowerquality.com/gentle/), click "Download a DMG" to download it to your computer.
