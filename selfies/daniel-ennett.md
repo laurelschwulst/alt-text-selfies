@@ -4,6 +4,7 @@ title: Daniel Ennett
 order: 45
 is-in-chapbook: false
 audio:
+transcript:
 ---
 
 ID: Daniel, a limbless man, smolders in the direction of the camera, he's wearing an earthy yellow ochre suit, with his left shoulder exposed. He has thick rimmed glasses and bedroom eyes (writing your own image descriptions should be illegal).

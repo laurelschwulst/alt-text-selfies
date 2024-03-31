@@ -20,6 +20,7 @@ collections:
       - { label: "Selfie Text", name: "body", widget: "markdown" }
       - { label: "Is in chapbook?", name: "is-in-chapbook", widget: "boolean", default: false }
       - { label: "Audio", name: "audio", widget: "file", required: false, media_folder: "/assets/sounds" }
+      - { label: "Transcript", name: "transcript", widget: "file", required: false, media_folder: "/assets/selfie-transcripts" }
   - name: "essays"
     label: "Essays"
     folder: "essays"

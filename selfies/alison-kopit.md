@@ -4,6 +4,7 @@ title: Alison Kopit
 order: 59
 is-in-chapbook: false
 audio:
+transcript:
 ---
 
 A queer femme squints at the camera from a bench in the woods.

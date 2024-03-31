@@ -4,6 +4,7 @@ title: Sara Bertino
 order: 43
 is-in-chapbook: false
 audio:
+transcript:
 ---
 
 She tries to cover her mouth and nose with her left hand, eyes tightly closed.

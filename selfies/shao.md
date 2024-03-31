@@ -4,6 +4,7 @@ title: Shao
 order: 67
 is-in-chapbook: false
 audio:
+transcript:
 ---
 
 Waist length dark hair parted in the middle

@@ -4,6 +4,7 @@ title: Kyla Jamieson
 order: 7
 is-in-chapbook: true
 audio: /assets/sounds/kyla-jamieson-alt-text-selfie.mp3
+transcript: /assets/selfie-transcripts/kyla-jamieson.json
 ---
 
 Series of five self-portraits:

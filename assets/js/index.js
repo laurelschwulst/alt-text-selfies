@@ -325,11 +325,11 @@ async function setupSelfieAudio() {
 
   if (!audio) return;
 
-  const selfieName = audio.dataset.selfieName;
-  const transcriptData = await fetch(
-    `/assets/selfie-transcripts/${selfieName}.json`
-  ).then((response) => response.json());
-  console.log(transcriptData);
+  const transcriptSrc = audio.dataset.transcriptSrc;
+  const transcriptData = await fetch(transcriptSrc)
+    .then((response) => response.json())
+    .catch((error) => { console.error(error) });
+  if (!transcriptData) return;
 
   if (button) {
     button.addEventListener("click", function () {
