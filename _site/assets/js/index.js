@@ -42,6 +42,7 @@ setupMobileMenu();
 function setupMobileMenu() {
   var mobileLink = document.querySelector("#mobile-ats-menu .toggle-link");
   var menuUl = document.getElementById("ats-menu");
+  var soundNav = document.getElementById("sound-toggle");
   var menuLinks = document.querySelectorAll("#ats-menu a");
 
   // Check if the menu was open before
@@ -49,6 +50,7 @@ function setupMobileMenu() {
   if (isMenuOpen === "true") {
     mobileLink.textContent = "Close";
     menuUl.classList.add("mobile-open");
+    soundNav.classList.add("mobile-open");
   }
 
   if (mobileLink && !mobileLink.dataset.hasEventListener) {
@@ -63,6 +65,7 @@ function setupMobileMenu() {
         sessionStorage.setItem("isMenuOpen", "false");
       }
       menuUl.classList.toggle("mobile-open");
+      soundNav.classList.toggle("mobile-open");
     });
     mobileLink.dataset.hasEventListener = true;
   }
