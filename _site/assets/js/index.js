@@ -45,27 +45,47 @@ function setupMobileMenu() {
   var soundNav = document.getElementById("sound-toggle");
   var menuLinks = document.querySelectorAll("#ats-menu a");
 
-  // Check if the menu was open before
-  var isMenuOpen = sessionStorage.getItem("isMenuOpen");
-  if (isMenuOpen === "true") {
+  function closeMenu() {
+    mobileLink.textContent = "Menu";
+    sessionStorage.setItem("isMenuOpen", "false");
+    menuUl.classList.remove("mobile-open");
+    document.body.style.overflow = "auto";
+  }
+
+  function openMenu() {
     mobileLink.textContent = "Close";
+    sessionStorage.setItem("isMenuOpen", "true");
     menuUl.classList.add("mobile-open");
+<<<<<<< HEAD
     soundNav.classList.add("mobile-open");
+=======
+    document.body.style.overflow = "hidden";
+  }
+
+  function isMenuOpen() {
+    return menuUl.classList.contains("mobile-open");
+  }
+
+  // Check if the menu was open before
+  if (sessionStorage.getItem("isMenuOpen") === "true") {
+    openMenu();
+>>>>>>> 7c8116517957bc24484547330f60bc871b10128e
   }
 
   if (mobileLink && !mobileLink.dataset.hasEventListener) {
     mobileLink.addEventListener("click", function (e) {
       console.log("click mobile link");
       e.preventDefault();
-      if (mobileLink.textContent === "Menu") {
-        mobileLink.textContent = "Close";
-        sessionStorage.setItem("isMenuOpen", "true");
+      if (isMenuOpen()) {
+        closeMenu();
       } else {
-        mobileLink.textContent = "Menu";
-        sessionStorage.setItem("isMenuOpen", "false");
+        openMenu();
       }
+<<<<<<< HEAD
       menuUl.classList.toggle("mobile-open");
       soundNav.classList.toggle("mobile-open");
+=======
+>>>>>>> 7c8116517957bc24484547330f60bc871b10128e
     });
     mobileLink.dataset.hasEventListener = true;
   }
@@ -73,9 +93,7 @@ function setupMobileMenu() {
   if (menuLinks) {
     menuLinks.forEach(function (link) {
       link.addEventListener("click", function () {
-        mobileLink.textContent = "Menu";
-        sessionStorage.setItem("isMenuOpen", "false");
-        menuUl.classList.remove("mobile-open");
+        closeMenu();
       });
     });
   }
@@ -91,6 +109,7 @@ class StarsAnimating {
   }
 
   initialize() {
+    if (!this.container) return
     setInterval(() => {
       let stars = this.container.querySelectorAll(".star");
       stars.forEach((star) => {
@@ -125,16 +144,20 @@ class RandomStars extends StarsAnimating {
   }
 
   initialize() {
+    if (!this.container) return
     let stars = this.container.querySelectorAll(".star");
     stars.forEach((star) => {
       this.setRandomStar(star);
     });
-  }
+}
 }
 
-// Usage
-const animatingStars = new StarsAnimating(".stars-animating");
-const randomStars = new RandomStars(".random-stars");
+setupStars();
+function setupStars() {
+  // Usage
+  const animatingStars = new StarsAnimating(".stars-animating");
+  const randomStars = new RandomStars(".random-stars");
+}
 
 // This must run before setupSelfieFilters()
 setupLateralNav();
@@ -312,11 +335,11 @@ async function setupSelfieAudio() {
 
   if (!audio) return;
 
-  const selfieName = audio.dataset.selfieName;
-  const transcriptData = await fetch(
-    `/assets/selfie-transcripts/${selfieName}.json`
-  ).then((response) => response.json());
-  console.log(transcriptData);
+  const transcriptSrc = audio.dataset.transcriptSrc;
+  const transcriptData = await fetch(transcriptSrc)
+    .then((response) => response.json())
+    .catch((error) => { console.error(error) });
+  if (!transcriptData) return;
 
   if (button) {
     button.addEventListener("click", function () {

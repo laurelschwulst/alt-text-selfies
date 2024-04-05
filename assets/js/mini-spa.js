@@ -25,6 +25,7 @@
       setupSelfieFilters();
       setupSelfieAudio();
       setupMobileMenu();
+      setupStars();
     };
     xhr.onerror = function () {
       // fallback to normal link behaviour

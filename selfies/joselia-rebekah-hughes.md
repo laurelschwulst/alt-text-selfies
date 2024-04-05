@@ -4,6 +4,7 @@ title: Joselia Rebekah Hughes
 order: 29
 is-in-chapbook: true
 audio:
+transcript:
 ---
 
 happy birthday to me! i’m 32! sooo i’d usually use this opportunity to expound on the status of my thought process and how i feel and tie some neat, funny well considered bow. welp, like your favorite jamaican restaurant with the good fish head soup and rich, deep brown oxtail gravy —HAPPY JAMAICAN INDEPENDENCE DAY—me nuh have dat fi offa today! today i’m soaking the expansiveness of my life in. today i’m feeling NOT thinking through! if you want to understand my outfit—copped at the local rainbow—go read Hood: Index 3 on my website. slide me a gift! slide me some money! slide me words of precise intention and well timed matter! slide me some peace! i will be rocking at my crib with my bestie and my mama like the itty bitty baby wrestler i am, feeling loved and releasing all that does not serve the abundance that my spirit taps into. happy birthday to me! happy birthday TO ME!

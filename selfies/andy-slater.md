@@ -4,6 +4,7 @@ title: Andy Slater
 order: 97
 is-in-chapbook: true
 audio:
+transcript:
 ---
 
 Before a wall of glass bricks, I lean against a splintering wooden post. I am smirking. My lips are ample and I never show my teeth. My dimples remind my family of Beau Bridges but I miss the reference entirely. I have a salt & cayenne pepper beard: deep red & grey. It hangs about 4 inches below my chin and climbs like thick moss up my face. My moustache curls inwards. I’ve had it since Y2K . . . My eyebrows are bushy like a wizard’s and my eyes are deep blue as I’ve been told but not everyone can agree on that. They are focused straight ahead with the left one turning inward.

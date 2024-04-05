@@ -4,6 +4,7 @@ title: Adele Ruhdorfer
 order: 56
 is-in-chapbook: false
 audio:
+transcript:
 ---
 
 saturday, march 27, 2021.

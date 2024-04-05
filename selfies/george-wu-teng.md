@@ -4,6 +4,7 @@ title: George Wu Teng
 order: 28
 is-in-chapbook: true
 audio:
+transcript:
 ---
 
 A rare instance of George in the wild, standing in front of a mirror in the bathroom of the restaurant he works at. He’s cocked his torso to the side at an egregiously sassy angle, hand-on-hip, other wielding his phone to snap the photo, as if to say, “Oh yeah. Not only am I a dishwasher, I also play the piano.” He looks horrible, the amount of grease and sweat in his hair and on his brow breaching health-code-violation levels, and he has, on this evening, discovered the wonders of saying “hoo-AHH” while lifting heavy objects. It gives him a little boost, a little acute strength, even. Box of veggies? Hoo-AAH. Big thing of garlic sauce? No problem boss man watch this move: hooo-AAAH.
