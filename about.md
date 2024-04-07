@@ -54,3 +54,5 @@ A selfie of me (Fin). This selfie is not a photo of me. It is a photo I took of 
 *Want to submit a selfie for the website or get in touch with us?*
 
 Email us at: AltTextSelfies \[at] gmail \[dot] com
+
+Or submit through <a href="https://forms.gle/GvqZ4daNT1czErhd8" target="_blank">this Google Form</a>.
