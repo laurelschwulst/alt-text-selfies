@@ -1,25 +1,23 @@
 <div class="column">
     <div class="star-title-container">
         <h2 class="star-title">Selfies</h2>
-        <div class="stars stars-animating" aria-label="the title, surrounded in sparkles">
-            <img class="star" src="{{site.url}}/assets/images/star01.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star02.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star03.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star04.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star05.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star06.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star07.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star08.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star09.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star10.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star11.svg"/>
-            <img class="star" src="{{site.url}}/assets/images/star12.svg"/>
+        <div role="img" class="stars stars-animating" aria-label="the title, surrounded in sparkles">
+            <img alt="" class="star" src="{{site.url}}/assets/images/star01.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star02.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star03.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star04.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star05.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star06.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star07.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star08.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star09.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star10.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star11.svg"/>
+            <img alt="" class="star" src="{{site.url}}/assets/images/star12.svg"/>
         </div>
     </div>
     <div id="filter-snippet">
         <!-- TODO: When modal is open, underlying page elements (behind the modal) should be hidden from screen-reader using aria-hidden -->
-        <button class="open-filters-button" v-on:click="openFilterModal">
-            <h2 class="underline shrink-0" style="font-style: normal;">
         <button id="open-filters-button" class="open-filters-button" v-on:click="openFilterModal" aria-controls="menu">
             <h2 class="underline shrink-0">
                 {# Using "verbatim" to let these double curly brackets pass through nunjucks, so that Vue can parse it in the browser #}
@@ -37,7 +35,7 @@
                     <img class="w-[30px] mt-[20px]" src="{{site.url}}/assets/images/star02.svg"/>
                     <img class="w-[32px] mt-[60px]" src="{{site.url}}/assets/images/star03.svg"/>
                 </div>
-                <h3 class="italic mt-2" id="sort-label" role="label">Sort</h3>
+                <h3 class="italic mt-2" id="sort-label">Sort</h3>
                 <div role="listbox" aria-labelledby="sort-label" class="flex flex-col items-center">
                     <button class="hover:underline" v-bind:class="{underline: newSort === 'abc'}" v-on:click="applySort('abc')" role="option" :aria-selected="newSort === 'abc'">By ABC</button>
                     <button class="hover:underline" v-bind:class="{underline: newSort === 'length'}" v-on:click="applySort('length')" role="option" :aria-selected="newSort === 'length'">By Length</button>
@@ -50,8 +48,8 @@
                     <img class="w-[30px] mb-[20px]" src="{{site.url}}/assets/images/star02.svg"/>
                     <img class="w-[32px]" src="{{site.url}}/assets/images/star03.svg"/>
                 </div>
-                <h3 class="italic mt-2" id="filter-label" role="label">Filter</h3>
-                <div role="listbox" aria-labelledby="sort-label" class="flex flex-col items-center">
+                <h3 class="italic mt-2" id="filter-label">Filter</h3>
+                <div role="listbox" aria-labelledby="filter-label" class="flex flex-col items-center">
                     <button class="hover:underline" v-bind:class="{underline: !newFilter}" v-on:click="applyFilter()" role="option" :aria-selected="!newFilter">All selfies</button>
                     <button class="hover:underline" v-bind:class="{underline: newFilter === 'chapbook'}" v-on:click="applyFilter('chapbook')" role="option" :aria-selected="newFilter === 'chapbook'">Only those in the chapbook</button>
                     <button class="hover:underline" v-bind:class="{underline: newFilter === 'audio'}" v-on:click="applyFilter('audio')" role="option" :aria-selected="newFilter === 'audio'">Only those with audio</button>

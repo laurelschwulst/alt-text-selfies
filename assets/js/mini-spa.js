@@ -57,8 +57,10 @@
     links.forEach((link) => {
       if (link.href === newHref) {
         link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
       } else {
         link.classList.remove('active');
+        link.removeAttribute('aria-current');
       }
     });
   }

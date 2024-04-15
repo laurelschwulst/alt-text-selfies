@@ -50,6 +50,7 @@ function setupMobileMenu() {
     sessionStorage.setItem("isMenuOpen", "false");
     menuUl.classList.remove("mobile-open");
     document.body.style.overflow = "auto";
+    mobileLink.setAttribute("aria-expanded", "false");
   }
 
   function openMenu() {
@@ -60,6 +61,7 @@ function setupMobileMenu() {
     soundNav.classList.add("mobile-open");
 =======
     document.body.style.overflow = "hidden";
+    mobileLink.setAttribute("aria-expanded", "true");
   }
 
   function isMenuOpen() {
