@@ -19,7 +19,7 @@ You can <a href="https://webaim.org/techniques/alttext" target="_blank">read mor
 
 *Why are we making this project?*
 
-Description is an important access practice. Visual description—as well as descriptions of sound, taste, smell, and texture—are ways that we can connect across sensory experiences and distance. Like many access practices, description has often been approached in a dry and compliance-oriented way. We’re excited about the possibilities of description that are pleasurable and make the Internet, in particular, a more engaging and welcoming place for disabled people.
+Description is an important access practice. Visual description—as well as descriptions of sound, taste, smell, and texture—are ways that we can connect across sensory experiences and distance. Like many access practices, description has often been approached in a dry and compliance-oriented way. We’re excited about the possibilities of description that are pleasurable and make the Internet, in particular, a more engaging and connective place for disabled people.
 
 Description and self-description are also complex. How do we name and acknowledge visual (and non-visual) markers of our identities? How we see and name things is anything but neutral. Disabled people, especially multi-marginalized disabled people, have been writing self-descriptions online in thoughtful and inventive ways. To us, it is a vital facet of disability cultures. We are creating this project in order to celebrate this writing practice. As well, by paying closer attention to self-description, alt text selfies may give us new tools or ways of understanding and describing ourselves.
 
@@ -29,7 +29,7 @@ As we explore the medium of alt text selfies, accessibility will remain our prio
 
 *Who worked on this project?*
 
-This project is produced by <a href="https://blindambitionjc.com/" target="_blank">Bojana Coklyat</a>, <a href="https://shannonfinnegan.com/" target="_blank">Finnegan Shannon</a>, and <a href="https://oliviadreisinger.com/" target="_blank">Olivia Dreisinger</a>[](https://blindambitionjc.com/)[](https://shannonfinnegan.com/)[](https://oliviadreisinger.com/). <a href="https://laurelschwulst.com/" target="_blank">Laurel Schwulst</a> and <a href="https://taichiwi.com/" target="_blank">Taichi Aritomo</a>[](https://laurelschwulst.com/)[](https://taichiwi.com/) designed the website.  <a href="https://planet.mu/artists/antwood/" target="_blank">Tristan Douglas</a>[](https://laurelschwulst.com/)[](https://taichiwi.com/)[](https://planet.mu/artists/antwood/) created the website audio.
+This project is produced by <a href="https://blindambitionjc.com/" target="_blank">Bojana Coklyat</a>, <a href="https://shannonfinnegan.com/" target="_blank">Finnegan Shannon</a>, and <a href="https://oliviadreisinger.com/" target="_blank">Olivia Dreisinger</a>[](https://blindambitionjc.com/)[](https://shannonfinnegan.com/)[](https://oliviadreisinger.com/). <a href="https://laurelschwulst.com/" target="_blank">Laurel Schwulst</a> and <a href="https://taichiwi.com/" target="_blank">Taichi Aritomo</a>[](https://laurelschwulst.com/)[](https://taichiwi.com/) designed the website.  <a href="https://planet.mu/artists/antwood/" target="_blank">Tristan Douglas</a>[](https://laurelschwulst.com/)[](https://taichiwi.com/)[](https://planet.mu/artists/antwood/) created the website audio. Screenreader testing by Jim Bauer.
 
 Big thank you to everyone who contributed a selfie to this project. We love them!!
 
@@ -51,8 +51,8 @@ A selfie of me (Fin). This selfie is not a photo of me. It is a photo I took of 
 
 - - -
 
-*Want to submit a selfie for the website or get in touch with us?*
+*Want to contribute to this project?* 
 
-Email us at: AltTextSelfies \[at] gmail \[dot] com
+Share your alt text selfie with us, and we'll add it to this collection! We plan to continue uploading selfies to the website on a rolling basis. 
 
-Or submit your selfie through <a href="https://forms.gle/GvqZ4daNT1czErhd8" target="_blank">this Google Form</a>.
+Submit your selfie through <a href="https://forms.gle/GvqZ4daNT1czErhd8" target="_blank">this Google Form</a>. Or email us at: AltTextSelfies \[at] gmail \[dot] com
