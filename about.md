@@ -56,3 +56,11 @@ A selfie of me (Fin). This selfie is not a photo of me. It is a photo I took of 
 Share your alt text selfie with us, and we'll add it to this collection! We plan to continue uploading selfies to the website on a rolling basis. 
 
 Submit your selfie through <a href="https://forms.gle/GvqZ4daNT1czErhd8" target="_blank">this Google Form</a>. Or email us at: AltTextSelfies \[at] gmail \[dot] com
+
+- - -
+
+*Have thoughts, feedback, or questions? Want to collaborate with us in some way?* 
+
+The best way to get in touch is via email at: AltTextSelfies \[at] gmail \[dot] com
+
+We would love to hear from you!
