@@ -18,7 +18,12 @@ layout: layouts/base.njk
         Your browser does not support the audio element.
     </audio>
     {% endif %}
+    
+    <div class="selfie-container">
+        <div class="content" id="transcript">{{ content | safe }}</div>
 
-    <div class="content" id="transcript">{{ content | safe }}</div>
+        {# If the selfie has audio, its highlighting transcript will be placed in the following div so that it doesn't interfere with screen-readers #}
+        <div class="content" id="selfie-transcript-overlay" aria-hidden></div>
+    </div>
 
 </div>

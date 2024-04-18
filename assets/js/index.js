@@ -366,8 +366,14 @@ async function setupSelfieAudio() {
   var wds = [];
   var cur_wd;
 
+  // duplicate the HTML content of $trans into #selfie-transcript-overlay
+  const $overlay = document.getElementById("selfie-transcript-overlay");
+  if ($overlay) {
+    $overlay.innerHTML = $trans.innerHTML;
+  }
+
   // add span for each word inside a <p> inside $trans
-  const paragraphs = $trans.querySelectorAll("p");
+  const paragraphs = $overlay.querySelectorAll("p");
   const spans = [];
   paragraphs.forEach((p) => {
     const words = p.textContent.split(" ");

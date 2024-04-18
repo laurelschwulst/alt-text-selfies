@@ -665,8 +665,10 @@ audio#bg {
   object-position: center;
 }
 
-.selfie-title h2 {
+.selfie-container {
+  position: relative;
 }
+
 
 /* SPLASH */
 
@@ -984,7 +986,21 @@ menu#ats-menu.mobile-open ul li {
   }
 }
 
-#transcript span {
+
+
+#selfie-transcript-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: -1.25rem;
+  pointer-events: none;
+  color: transparent;
+  /* background: white; */
+}
+
+#selfie-transcript-overlay span {
   position: relative;
   display: inline-block;
   /* background: linear-gradient(90deg, transparent 0%, transparent 100%);
@@ -996,7 +1012,7 @@ menu#ats-menu.mobile-open ul li {
   width: 20px;
 }
 
-#transcript span::before {
+#selfie-transcript-overlay span::before {
   position: absolute;
   content: "";
   top: 0;
@@ -1015,7 +1031,7 @@ menu#ats-menu.mobile-open ul li {
   transition: opacity 1s linear;
 }
 
-#transcript span.active::before {
+#selfie-transcript-overlay span.active::before {
   /* background: linear-gradient(90deg, rgba(249, 228, 175, 0) 0%, #F9E4AF 21.88%, #F9E4AF 80.21%, rgba(249, 228, 175, 0) 100%); */
   opacity: 1;
   transition-duration: 0.1s;
