@@ -49,6 +49,7 @@ function setupMobileMenu() {
     mobileLink.textContent = "Menu";
     sessionStorage.setItem("isMenuOpen", "false");
     menuUl.classList.remove("mobile-open");
+    soundNav.classList.remove("mobile-open");
     document.body.style.overflow = "auto";
     mobileLink.setAttribute("aria-expanded", "false");
   }
@@ -57,9 +58,7 @@ function setupMobileMenu() {
     mobileLink.textContent = "Close";
     sessionStorage.setItem("isMenuOpen", "true");
     menuUl.classList.add("mobile-open");
-<<<<<<< HEAD
     soundNav.classList.add("mobile-open");
-=======
     document.body.style.overflow = "hidden";
     mobileLink.setAttribute("aria-expanded", "true");
   }
@@ -71,7 +70,6 @@ function setupMobileMenu() {
   // Check if the menu was open before
   if (sessionStorage.getItem("isMenuOpen") === "true") {
     openMenu();
->>>>>>> 7c8116517957bc24484547330f60bc871b10128e
   }
 
   if (mobileLink && !mobileLink.dataset.hasEventListener) {
@@ -83,11 +81,6 @@ function setupMobileMenu() {
       } else {
         openMenu();
       }
-<<<<<<< HEAD
-      menuUl.classList.toggle("mobile-open");
-      soundNav.classList.toggle("mobile-open");
-=======
->>>>>>> 7c8116517957bc24484547330f60bc871b10128e
     });
     mobileLink.dataset.hasEventListener = true;
   }
