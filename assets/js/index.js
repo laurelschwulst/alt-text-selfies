@@ -301,13 +301,17 @@ function setupSelfieFilters() {
         window.location.href = baseUrl + paramString;
       },
       openFilterModal: function () {
+        document.body.style.overflow = "hidden";
         this.filterModalIsOpen = true;
+        this.$refs.modal.querySelector("input").focus();
       },
       closeFilterModal: function () {
         if (this.newSort !== currentSort || this.newFilter !== currentFilter) {
           this.redirectToNewUrl();
         } else {
           this.filterModalIsOpen = false;
+          this.$refs.openFiltersButton.focus();
+          document.body.style.overflow = "auto";
         }
       },
     },
@@ -315,6 +319,12 @@ function setupSelfieFilters() {
     mounted() {
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
+          this.closeFilterModal();
+        }
+      });
+      // when focus changes, if focus is outside of the modal, close the modal
+      document.addEventListener("focusin", (e) => {
+        if (this.filterModalIsOpen && !this.$refs.modal.contains(e.target)) {
           this.closeFilterModal();
         }
       });
