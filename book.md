@@ -13,7 +13,7 @@ Our chapbook comes in many formats:
 
 <a href="assets/sounds/alt-text-selfies-chapbook.docx" class="ats-button">Download as a Word doc</a>
 
-<a href="#" class="ats-button">Download as a PDF</a>
+<a href="assets/sounds/alt-text-selfies-chapbook.pdf" class="ats-button">Download as a untagged PDF</a>
 
 <a href="#" class="ats-button">Listen to the chapbook on Soundcloud</a>
 
