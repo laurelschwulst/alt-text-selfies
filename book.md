@@ -13,10 +13,6 @@ Our chapbook comes in many formats:
 
 <a href="https://alttextselfies.net/assets/sounds/alt-text-selfies-chapbook.docx" class="ats-button">Download as a Word doc</a>
 
-<a href="https://alttextselfies.net/assets/sounds/alt-text-selfies-chapbook.pdf" class="ats-button">Download as a untagged PDF</a>
+<a href="https://alttextselfies.net/assets/sounds/alt-text-selfies-chapbook.pdf" class="ats-button">Download as a untagged PDF</a><a href="https://alt-text-selfies.netlify.app/selfies/?filter=chapbook" class="ats-button">Browse chapbook selfies online</a>
 
-<a href="#" class="ats-button">Listen to the chapbook on Soundcloud</a>
-
-<a href="#" class="ats-button">Download the chapbook as .wav files</a>
-
-<a href="https://alt-text-selfies.netlify.app/selfies/?filter=chapbook" class="ats-button">Browse chapbook selfies online</a>
+Audio and ePub versions in the works!
