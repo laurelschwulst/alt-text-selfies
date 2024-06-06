@@ -17,7 +17,7 @@ Our chapbook comes in many formats:
 
 <a href="https://alt-text-selfies.netlify.app/selfies/?filter=chapbook" class="ats-button">Browse chapbook selfies online</a>
 
-<a href="#" class="ats-button">Listen to the chapbook on Soundcloud</a>
+<a href="https://soundcloud.com/alt-text-as-poetry/sets/alt-text-selfies?si=21bdca11e3f14cce862eba7737d548c0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="ats-button">Listen to the chapbook on Soundcloud</a>
 
 <a href="https://www.dropbox.com/scl/fo/5qtc3sov4xjg7yay5u32r/AGc-oo28fGtFxU8UGSkXBHI?rlkey=qjbclhx0bssiifn02jdpo0jbd&st=1yv782qr&dl=0" class="ats-button">Download the chapbook as .WAV files</a>
 
