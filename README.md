@@ -13,4 +13,4 @@
 Edit `_data/site.js` to update the base URL for local and production environments. The correct base URL is necessary for SPA linking and file sources to work on the site. In the templates, it's referenced as `{{ site.url }}`.
 
 ## Adding audio and transcripts
-Documentation for this is in [docs/selfies-with-audio.md](docs/selfies-with-audio.md)
+Documentation for this is in [docs/selfies-with-audio.md](_docs/selfies-with-audio.md)
