@@ -35,7 +35,7 @@
                     <img class="w-[32px] mt-[60px]" src="{{site.url}}/assets/images/star03.svg"/>
                 </div>
                 <fieldset class="flex flex-col items-center">
-                    <legend class="italic mt-2">Sort</legend>
+                    <legend class="self-center center italic mt-2">Sort</legend>
                     <label class="hover:underline" v-bind:class="{underline: newSort === 'abc'}">By ABC
                         <input type="radio" id="abc" name="sort" value="abc" :checked="newSort === 'abc'" v-on:click="applySort('abc')" >
                     </label>
@@ -54,7 +54,7 @@
                     <img class="w-[32px]" src="{{site.url}}/assets/images/star03.svg"/>
                 </div>
                 <fieldset class="flex flex-col items-center">
-                    <legend class="italic mt-2">Filter</legend>
+                    <legend class="self-center center italic mt-2">Filter</legend>
                     <label class="hover:underline" v-bind:class="{underline: !newFilter}">
                         All selfies
                         <input type="radio" id="all" name="filter" value="all" :checked="!newFilter" v-on:click="applyFilter()" />
