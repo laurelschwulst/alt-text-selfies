@@ -613,26 +613,11 @@ body.selfies menu.bottom {
   display: flex;
 }
 
-.filter-modal input[type="radio"] {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: inline;
-  z-index: -1;
-  appearance: none;
-}
-
-.filter-modal label {
-  position: relative;
-  cursor: pointer;
-}
-
 button.selfie-audio {
   background: black;
   color: rgba(255, 255, 195, 1);
   font-style: italic;
+  /* border-radius: 12px; */
   padding: 6px 16px;
 }
 
@@ -680,10 +665,8 @@ audio#bg {
   object-position: center;
 }
 
-.selfie-container {
-  position: relative;
+.selfie-title h2 {
 }
-
 
 /* SPLASH */
 
@@ -1001,21 +984,7 @@ menu#ats-menu.mobile-open ul li {
   }
 }
 
-
-
-#selfie-transcript-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin-top: -1.25rem;
-  pointer-events: none;
-  color: transparent;
-  /* background: white; */
-}
-
-#selfie-transcript-overlay span {
+#transcript span {
   position: relative;
   display: inline-block;
   /* background: linear-gradient(90deg, transparent 0%, transparent 100%);
@@ -1027,7 +996,7 @@ menu#ats-menu.mobile-open ul li {
   width: 20px;
 }
 
-#selfie-transcript-overlay span::before {
+#transcript span::before {
   position: absolute;
   content: "";
   top: 0;
@@ -1046,7 +1015,7 @@ menu#ats-menu.mobile-open ul li {
   transition: opacity 1s linear;
 }
 
-#selfie-transcript-overlay span.active::before {
+#transcript span.active::before {
   /* background: linear-gradient(90deg, rgba(249, 228, 175, 0) 0%, #F9E4AF 21.88%, #F9E4AF 80.21%, rgba(249, 228, 175, 0) 100%); */
   opacity: 1;
   transition-duration: 0.1s;
