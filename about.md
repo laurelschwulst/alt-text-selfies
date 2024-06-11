@@ -3,6 +3,10 @@ layout: layouts/page_wide.njk
 permalink: /about/
 title: About
 ---
+Testing about update 123 :)
+
+\*
+
 *What is an alt text selfie?*
 
 For us, an alt text selfie is any written self-portrait. This project takes a well-known practice—the selfie—and approaches it through a disability lens. Selfies and self-descriptions are often visually focused, but to us, an alt text selfie doesn’t need to center visual presentation or a literal description of an image. Alt text selfies might focus on feelings, smells, tastes, sounds, emotions, textures, or some combination. Alt text selfies can be any length, but for this project, we focused on writing in the one-sentence to one-paragraph range.
