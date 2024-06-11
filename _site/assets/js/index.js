@@ -49,17 +49,18 @@ function setupMobileMenu() {
     mobileLink.textContent = "Menu";
     sessionStorage.setItem("isMenuOpen", "false");
     menuUl.classList.remove("mobile-open");
+    soundNav.classList.remove("mobile-open");
     document.body.style.overflow = "auto";
+    mobileLink.setAttribute("aria-expanded", "false");
   }
 
   function openMenu() {
     mobileLink.textContent = "Close";
     sessionStorage.setItem("isMenuOpen", "true");
     menuUl.classList.add("mobile-open");
-<<<<<<< HEAD
     soundNav.classList.add("mobile-open");
-=======
     document.body.style.overflow = "hidden";
+    mobileLink.setAttribute("aria-expanded", "true");
   }
 
   function isMenuOpen() {
@@ -69,7 +70,6 @@ function setupMobileMenu() {
   // Check if the menu was open before
   if (sessionStorage.getItem("isMenuOpen") === "true") {
     openMenu();
->>>>>>> 7c8116517957bc24484547330f60bc871b10128e
   }
 
   if (mobileLink && !mobileLink.dataset.hasEventListener) {
@@ -81,11 +81,6 @@ function setupMobileMenu() {
       } else {
         openMenu();
       }
-<<<<<<< HEAD
-      menuUl.classList.toggle("mobile-open");
-      soundNav.classList.toggle("mobile-open");
-=======
->>>>>>> 7c8116517957bc24484547330f60bc871b10128e
     });
     mobileLink.dataset.hasEventListener = true;
   }
@@ -306,13 +301,17 @@ function setupSelfieFilters() {
         window.location.href = baseUrl + paramString;
       },
       openFilterModal: function () {
+        document.body.style.overflow = "hidden";
         this.filterModalIsOpen = true;
+        this.$refs.modal.querySelector("input").focus();
       },
       closeFilterModal: function () {
         if (this.newSort !== currentSort || this.newFilter !== currentFilter) {
           this.redirectToNewUrl();
         } else {
           this.filterModalIsOpen = false;
+          this.$refs.openFiltersButton.focus();
+          document.body.style.overflow = "auto";
         }
       },
     },
@@ -320,6 +319,12 @@ function setupSelfieFilters() {
     mounted() {
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
+          this.closeFilterModal();
+        }
+      });
+      // when focus changes, if focus is outside of the modal, close the modal
+      document.addEventListener("focusin", (e) => {
+        if (this.filterModalIsOpen && !this.$refs.modal.contains(e.target)) {
           this.closeFilterModal();
         }
       });
@@ -371,8 +376,14 @@ async function setupSelfieAudio() {
   var wds = [];
   var cur_wd;
 
+  // duplicate the HTML content of $trans into #selfie-transcript-overlay
+  const $overlay = document.getElementById("selfie-transcript-overlay");
+  if ($overlay) {
+    $overlay.innerHTML = $trans.innerHTML;
+  }
+
   // add span for each word inside a <p> inside $trans
-  const paragraphs = $trans.querySelectorAll("p");
+  const paragraphs = $overlay.querySelectorAll("p");
   const spans = [];
   paragraphs.forEach((p) => {
     const words = p.textContent.split(" ");
