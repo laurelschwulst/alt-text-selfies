@@ -1,0 +1,1340 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="x-base-url" content="https://alttextselfies.net"/>
+        <title>Alt Text Selfies | Selfies</title>
+        <link rel="icon" href="https://alttextselfies.net/assets/images/star12.svg" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://alttextselfies.net/assets/images/star12.svg">
+        <meta property="og:image" content="https://alttextselfies.net/assets/images/alttextselfies-alt-alt.png">
+        <meta property="og:image:alt" content="The title “Alt Text Selfies” in black serif text, centered over a light yellow background. Several black hand drawn asterisks are sprinkled across the image.">
+        <meta property="og:description" content="An alt text selfie is any written self-portrait. This project takes a well-known practice—the selfie—and approaches it through a disability lens.">
+        <link rel="stylesheet" href="/assets/css/tailwind.css?333">
+        <link rel="stylesheet" href="/assets/css/index.css?333">
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://alttextselfies.net/assets/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    </head>
+    <body>
+        <main class="">
+            <header class="title">
+                <h1>
+                    <a href="https://alttextselfies.net/welcome">Alt Text Selfies</a>
+                </h1>
+            </header>
+
+            
+
+<div class="column">
+    <div class="star-title-container">
+        <h2 class="star-title">Selfies</h2>
+        <div role="img" class="stars stars-animating" aria-label="the title, surrounded in sparkles">
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star01.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star02.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star03.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star04.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star05.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star06.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star07.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star08.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star09.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star10.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star11.svg"/>
+            <img alt="" class="star" src="https://alttextselfies.net/assets/images/star12.svg"/>
+        </div>
+    </div>
+    <div id="filter-snippet">
+        <!-- TODO: When modal is open, underlying page elements (behind the modal) should be hidden from screen-reader using aria-hidden -->
+        <button id="open-filters-button" class="open-filters-button" v-on:click="openFilterModal" aria-controls="menu" ref="openFiltersButton">
+            <h2 class="underline shrink-0">
+                
+                {{ filterText }}
+            </h2>
+            <span class="ats-button change">Change</span>
+        </button>
+
+        <menu id="menu" role="dialog" class="filter-modal w-full h-full fixed inset-0 justify-center items-center leading-6" v-bind:class="{open: filterModalIsOpen}" v-bind:aria-modal="[filterModalIsOpen]" ref="modal">
+            <div class="text-center flex flex-col items-center gap-4">
+            <div class="ats__sorting-options flex flex-col items-center">
+                <div aria-label="three cascading sparkles" class="flex justify-center items-start">
+                    <img class="w-[23px]" src="https://alttextselfies.net/assets/images/star01.svg"/>
+                    <img class="w-[30px] mt-[20px]" src="https://alttextselfies.net/assets/images/star02.svg"/>
+                    <img class="w-[32px] mt-[60px]" src="https://alttextselfies.net/assets/images/star03.svg"/>
+                </div>
+                <fieldset class="flex flex-col items-center">
+                    <legend class="self-center center italic mt-2">Sort</legend>
+                    <label class="hover:underline" v-bind:class="{underline: newSort === 'abc'}">By ABC
+                        <input type="radio" id="abc" name="sort" value="abc" :checked="newSort === 'abc'" v-on:click="applySort('abc')" >
+                    </label>
+                    <label class="hover:underline" v-bind:class="{underline: newSort === 'length'}">By Length
+                        <input type="radio" id="length" name="sort" value="length" :checked="newSort === 'length'" v-on:click="applySort('length')">
+                    </label>
+                    <label class="hover:underline" v-bind:class="{underline: !newSort || newSort === 'random'}" >By Random
+                        <input type="radio" id="random" name="sort" value="random" :checked="!newSort || newSort === 'random'" v-on:click="applySort('random')">
+                    </label>
+                </fieldset>
+            </div>
+            <div class="ats__filtering-options flex flex-col items-center">
+                <div aria-label="three sparkles in a row, the center one rising" class="flex justify-center items-end">
+                    <img class="w-[23px]" src="https://alttextselfies.net/assets/images/star01.svg"/>
+                    <img class="w-[30px] mb-[20px]" src="https://alttextselfies.net/assets/images/star02.svg"/>
+                    <img class="w-[32px]" src="https://alttextselfies.net/assets/images/star03.svg"/>
+                </div>
+                <fieldset class="flex flex-col items-center">
+                    <legend class="self-center center italic mt-2">Filter</legend>
+                    <label class="hover:underline" v-bind:class="{underline: !newFilter}">
+                        All selfies
+                        <input type="radio" id="all" name="filter" value="all" :checked="!newFilter" v-on:click="applyFilter()" />
+                    </label>
+                    <label class="hover:underline" v-bind:class="{underline: newFilter === 'chapbook'}">
+                        Only those in the chapbook
+                        <input type="radio" id="chapbook" name="filter" value="chapbook" :checked="newFilter === 'chapbook'" v-on:click="applyFilter('chapbook')" />
+                    </label>
+                    <label class="hover:underline" v-bind:class="{underline: newFilter === 'audio'}" v-on:click="applyFilter('audio')">
+                        Only those with audio
+                        <input type="radio" id="audio" name="filter" value="audio" :checked="newFilter === 'audio'" v-on:click="applyFilter('audio')" />
+                    </label>
+                </fieldset>
+            </div>
+            </div>
+            <button class="close-filters-button ats-button absolute top-4 left-4" v-on:click="closeFilterModal">Close</button>
+        </menu>
+    </div>
+
+    <ul class="selfie-list">
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="272"
+                data-title="eliot o"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star22.svg"/>
+                <a href="https://alttextselfies.net/selfies/eliot-o/">eliot o</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="1144"
+                data-title="Kyla Jamieson"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star08.svg"/>
+                <a href="https://alttextselfies.net/selfies/kyla-jamieson/">Kyla Jamieson</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="361"
+                data-title="Drew Maude-Griffin"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star58.svg"/>
+                <a href="https://alttextselfies.net/selfies/drew-maude-griffin/">Drew Maude-Griffin</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="1470"
+                data-title="Alexandra Box"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star40.svg"/>
+                <a href="https://alttextselfies.net/selfies/alexandra-box/">Alexandra Box</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="893"
+                data-title="Adele Ruhdorfer"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star57.svg"/>
+                <a href="https://alttextselfies.net/selfies/adele-ruhdorfer/">Adele Ruhdorfer</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="143"
+                data-title="Kelsie Acton"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star38.svg"/>
+                <a href="https://alttextselfies.net/selfies/kelsie-acton/">Kelsie Acton</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="497"
+                data-title="Trusha Chauhan"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star72.svg"/>
+                <a href="https://alttextselfies.net/selfies/trusha-chauhan/">Trusha Chauhan</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="387"
+                data-title="Mariel Santana"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star07.svg"/>
+                <a href="https://alttextselfies.net/selfies/mariel-santana/">Mariel Santana</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="682"
+                data-title="Lil Miss Hot Mess"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star16.svg"/>
+                <a href="https://alttextselfies.net/selfies/lil-miss-hot-mess/">Lil Miss Hot Mess</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="209"
+                data-title="Erik Benjamins"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star70.svg"/>
+                <a href="https://alttextselfies.net/selfies/erik-benjamins/">Erik Benjamins</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="130"
+                data-title="Nimo Ali"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star49.svg"/>
+                <a href="https://alttextselfies.net/selfies/nimo-ali/">Nimo Ali</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="308"
+                data-title="Jennifer Choi"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star37.svg"/>
+                <a href="https://alttextselfies.net/selfies/jennifer-choi/">Jennifer Choi</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="319"
+                data-title="Jenna Sedlack"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star25.svg"/>
+                <a href="https://alttextselfies.net/selfies/jenna-sedlack/">Jenna Sedlack</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="126"
+                data-title="Caroline Schub"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star10.svg"/>
+                <a href="https://alttextselfies.net/selfies/caroline-schub/">Caroline Schub</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="183"
+                data-title="Anna Peterson"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star04.svg"/>
+                <a href="https://alttextselfies.net/selfies/anna-peterson/">Anna Peterson</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="203"
+                data-title="Hayley Cranberry Small"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star24.svg"/>
+                <a href="https://alttextselfies.net/selfies/hayley-cranberry-small/">Hayley Cranberry Small</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="954"
+                data-title="Elliott Madison"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star78.svg"/>
+                <a href="https://alttextselfies.net/selfies/elliott-madison/">Elliott Madison</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="235"
+                data-title="Samuel Oyerinde"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star05.svg"/>
+                <a href="https://alttextselfies.net/selfies/samuel-oyerinde/">Samuel Oyerinde</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="1004"
+                data-title="Emily Sara"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star02.svg"/>
+                <a href="https://alttextselfies.net/selfies/emily-sara/">Emily Sara</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="565"
+                data-title="Birdie"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star23.svg"/>
+                <a href="https://alttextselfies.net/selfies/birdie/">Birdie</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="597"
+                data-title="Mercedes Hesselroth"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star08.svg"/>
+                <a href="https://alttextselfies.net/selfies/mercedes-hesselroth/">Mercedes Hesselroth</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="189"
+                data-title="Kayla Besse"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star09.svg"/>
+                <a href="https://alttextselfies.net/selfies/kayla-besse/">Kayla Besse</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="802"
+                data-title="Jake Woodward"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star76.svg"/>
+                <a href="https://alttextselfies.net/selfies/jake-woodward/">Jake Woodward</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="365"
+                data-title="Sam McGuire"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star61.svg"/>
+                <a href="https://alttextselfies.net/selfies/sam-mcguire/">Sam McGuire</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="938"
+                data-title="George Wu Teng"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star29.svg"/>
+                <a href="https://alttextselfies.net/selfies/george-wu-teng/">George Wu Teng</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="1426"
+                data-title="louise hickman, kevin gotkin, and the in-between"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star79.svg"/>
+                <a href="https://alttextselfies.net/selfies/louise-hickman-kevin-gotkin-and-the-in-between/">louise hickman, kevin gotkin, and the in-between</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="373"
+                data-title="Daniela Bologna"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star62.svg"/>
+                <a href="https://alttextselfies.net/selfies/daniela-bologna/">Daniela Bologna</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="398"
+                data-title="Aditi"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star16.svg"/>
+                <a href="https://alttextselfies.net/selfies/aditi/">Aditi</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="426"
+                data-title="Grace McCants"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star21.svg"/>
+                <a href="https://alttextselfies.net/selfies/grace-mccants/">Grace McCants</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="633"
+                data-title="Rachel Shipps"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star06.svg"/>
+                <a href="https://alttextselfies.net/selfies/rachel-shipps/">Rachel Shipps</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="407"
+                data-title="Sara Bertino"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star44.svg"/>
+                <a href="https://alttextselfies.net/selfies/sara-bertino/">Sara Bertino</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="230"
+                data-title="Cielo Saucedo"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star81.svg"/>
+                <a href="https://alttextselfies.net/selfies/cielo-saucedo/">Cielo Saucedo</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="1096"
+                data-title="Zen Alladina"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star56.svg"/>
+                <a href="https://alttextselfies.net/selfies/zen-alladina/">Zen Alladina</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="212"
+                data-title="Jerron Herman"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star12.svg"/>
+                <a href="https://alttextselfies.net/selfies/jerron-herman/">Jerron Herman</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="173"
+                data-title="Serena Musungu"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star11.svg"/>
+                <a href="https://alttextselfies.net/selfies/serena-musungu/">Serena Musungu</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="179"
+                data-title="QuestionATL"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star13.svg"/>
+                <a href="https://alttextselfies.net/selfies/questionatl/">QuestionATL</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="295"
+                data-title="Self_Saboteur"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star43.svg"/>
+                <a href="https://alttextselfies.net/selfies/self-saboteur/">Self_Saboteur</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="128"
+                data-title="beyza durmuş"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star05.svg"/>
+                <a href="https://alttextselfies.net/selfies/beyza-durmus/">beyza durmuş</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="339"
+                data-title="Allegra Favila"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star48.svg"/>
+                <a href="https://alttextselfies.net/selfies/allegra-favila/">Allegra Favila</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="241"
+                data-title="A. Marina Dinzey"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star54.svg"/>
+                <a href="https://alttextselfies.net/selfies/a-marina-dinzey/">A. Marina Dinzey</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="1487"
+                data-title="Joselia Rebekah Hughes"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star30.svg"/>
+                <a href="https://alttextselfies.net/selfies/joselia-rebekah-hughes/">Joselia Rebekah Hughes</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="258"
+                data-title="Pree Rehal"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star06.svg"/>
+                <a href="https://alttextselfies.net/selfies/pree-rehal/">Pree Rehal</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="183"
+                data-title="Vanessa Ratkus"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star52.svg"/>
+                <a href="https://alttextselfies.net/selfies/vanessa-ratkus/">Vanessa Ratkus</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="685"
+                data-title="Rachel McDermott"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star42.svg"/>
+                <a href="https://alttextselfies.net/selfies/rachel-mcdermott/">Rachel McDermott</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="282"
+                data-title="Bess Williamson"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star12.svg"/>
+                <a href="https://alttextselfies.net/selfies/bess-williamson/">Bess Williamson</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="526"
+                data-title="Jerusha Crone"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star15.svg"/>
+                <a href="https://alttextselfies.net/selfies/jerusha-crone/">Jerusha Crone</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="880"
+                data-title="Candystore"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star04.svg"/>
+                <a href="https://alttextselfies.net/selfies/candystore/">Candystore</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="214"
+                data-title="Asya Miles"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star13.svg"/>
+                <a href="https://alttextselfies.net/selfies/asya-miles/">Asya Miles</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="515"
+                data-title="Mikaylo Tairiku Kelly"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star19.svg"/>
+                <a href="https://alttextselfies.net/selfies/mikaylo-tairiku-kelly/">Mikaylo Tairiku Kelly</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="170"
+                data-title="Sarah Guilbault"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star20.svg"/>
+                <a href="https://alttextselfies.net/selfies/sarah-guilbault/">Sarah Guilbault</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="248"
+                data-title="agustine zegers"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star24.svg"/>
+                <a href="https://alttextselfies.net/selfies/agustine-zegers/">agustine zegers</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="288"
+                data-title="Dominic Quagliozzi"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star45.svg"/>
+                <a href="https://alttextselfies.net/selfies/dominic-quagliozzi/">Dominic Quagliozzi</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="305"
+                data-title="Brennan Roy"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star03.svg"/>
+                <a href="https://alttextselfies.net/selfies/brennan-roy/">Brennan Roy</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="186"
+                data-title="Nora Rodriguez"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star18.svg"/>
+                <a href="https://alttextselfies.net/selfies/nora-rodriguez/">Nora Rodriguez</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="291"
+                data-title="Niya Abdullahi"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star67.svg"/>
+                <a href="https://alttextselfies.net/selfies/niya-abdullahi/">Niya Abdullahi</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="118"
+                data-title="Jessica Barratt"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star55.svg"/>
+                <a href="https://alttextselfies.net/selfies/jessica-barratt/">Jessica Barratt</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="2094"
+                data-title="Andy Slater"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star15.svg"/>
+                <a href="https://alttextselfies.net/selfies/andy-slater/">Andy Slater</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="265"
+                data-title="Vicente Ortiz Cortez"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star69.svg"/>
+                <a href="https://alttextselfies.net/selfies/vicente-ortiz-cortez/">Vicente Ortiz Cortez</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="420"
+                data-title="Amelia R-N"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star32.svg"/>
+                <a href="https://alttextselfies.net/selfies/amelia-r-n/">Amelia R-N</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="240"
+                data-title="karl today"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star77.svg"/>
+                <a href="https://alttextselfies.net/selfies/karl-today/">karl today</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="470"
+                data-title="seeley quest"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star01.svg"/>
+                <a href="https://alttextselfies.net/selfies/seeley-quest/">seeley quest</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="612"
+                data-title="Noli Kat"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star17.svg"/>
+                <a href="https://alttextselfies.net/selfies/noli-kat/">Noli Kat</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="444"
+                data-title="Freja Christiana"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star34.svg"/>
+                <a href="https://alttextselfies.net/selfies/freja-christiana/">Freja Christiana</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="616"
+                data-title="Alexa Dexa"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star09.svg"/>
+                <a href="https://alttextselfies.net/selfies/alexa-dexa/">Alexa Dexa</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="229"
+                data-title="Chinar Shah"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star47.svg"/>
+                <a href="https://alttextselfies.net/selfies/chinar-shah/">Chinar Shah</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="313"
+                data-title="Robin Gaudreau"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star26.svg"/>
+                <a href="https://alttextselfies.net/selfies/robin-gaudreau/">Robin Gaudreau</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="158"
+                data-title="Josephine Sales"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star31.svg"/>
+                <a href="https://alttextselfies.net/selfies/josephine-sales/">Josephine Sales</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="808"
+                data-title="Emilie L. Gossiaux"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star50.svg"/>
+                <a href="https://alttextselfies.net/selfies/emilie-l-gossiaux/">Emilie L. Gossiaux</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="714"
+                data-title="Vanessa Ehecatl Santos"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star66.svg"/>
+                <a href="https://alttextselfies.net/selfies/vanessa-ehecatl-santos/">Vanessa Ehecatl Santos</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="1007"
+                data-title="Eden Dodd"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star26.svg"/>
+                <a href="https://alttextselfies.net/selfies/eden-dodd/">Eden Dodd</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="466"
+                data-title="Alex Masse"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star83.svg"/>
+                <a href="https://alttextselfies.net/selfies/alex-masse/">Alex Masse</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="552"
+                data-title="Kathleen Granados"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star11.svg"/>
+                <a href="https://alttextselfies.net/selfies/kathleen-granados/">Kathleen Granados</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="609"
+                data-title="M. Leona Godin"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star03.svg"/>
+                <a href="https://alttextselfies.net/selfies/m-leona-godin/">M. Leona Godin</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="1475"
+                data-title="Kelly Chuning"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star36.svg"/>
+                <a href="https://alttextselfies.net/selfies/kelly-chuning/">Kelly Chuning</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="312"
+                data-title="Sugandha Gupta"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star20.svg"/>
+                <a href="https://alttextselfies.net/selfies/sugandha-gupta/">Sugandha Gupta</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="202"
+                data-title="Gracen Brilmyer"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star80.svg"/>
+                <a href="https://alttextselfies.net/selfies/gracen-brilmyer/">Gracen Brilmyer</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="429"
+                data-title="Hannah Wong"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star21.svg"/>
+                <a href="https://alttextselfies.net/selfies/hannah-wong/">Hannah Wong</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="741"
+                data-title="Jennifer Brough"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star65.svg"/>
+                <a href="https://alttextselfies.net/selfies/jennifer-brough/">Jennifer Brough</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="503"
+                data-title="Brixton Sandhals"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star39.svg"/>
+                <a href="https://alttextselfies.net/selfies/brixton-sandhals/">Brixton Sandhals</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="211"
+                data-title="April Kosakoff"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star27.svg"/>
+                <a href="https://alttextselfies.net/selfies/april-kosakoff/">April Kosakoff</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="901"
+                data-title="Maika Kimberly Nguyễn"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star10.svg"/>
+                <a href="https://alttextselfies.net/selfies/maika-kimberly-nguy-n/">Maika Kimberly Nguyễn</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="209"
+                data-title="Shao"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star68.svg"/>
+                <a href="https://alttextselfies.net/selfies/shao/">Shao</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="297"
+                data-title="Emma Kath Cullen"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star73.svg"/>
+                <a href="https://alttextselfies.net/selfies/emma-kath-cullen/">Emma Kath Cullen</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="357"
+                data-title="Olivia Spring"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star63.svg"/>
+                <a href="https://alttextselfies.net/selfies/olivia-spring/">Olivia Spring</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="788"
+                data-title="Daniel Ennett"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star46.svg"/>
+                <a href="https://alttextselfies.net/selfies/daniel-ennett/">Daniel Ennett</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="263"
+                data-title="Nora Hanlon"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star59.svg"/>
+                <a href="https://alttextselfies.net/selfies/nora-hanlon/">Nora Hanlon</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="400"
+                data-title="Thai Lu written by Alexandra Box"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star82.svg"/>
+                <a href="https://alttextselfies.net/selfies/thai-lu-written-by-alexandra-box/">Thai Lu written by Alexandra Box</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="102"
+                data-title="Amy Berkowitz"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star41.svg"/>
+                <a href="https://alttextselfies.net/selfies/amy-berkowitz/">Amy Berkowitz</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="409"
+                data-title="Ruby Cromer"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star51.svg"/>
+                <a href="https://alttextselfies.net/selfies/ruby-cromer/">Ruby Cromer</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="737"
+                data-title="Alex Chen"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star07.svg"/>
+                <a href="https://alttextselfies.net/selfies/alex-chen/">Alex Chen</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="550"
+                data-title="Hanna Sheehan"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star22.svg"/>
+                <a href="https://alttextselfies.net/selfies/hanna-sheehan/">Hanna Sheehan</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="614"
+                data-title="Sky Cubacub"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star02.svg"/>
+                <a href="https://alttextselfies.net/selfies/sky-cubacub/">Sky Cubacub</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="530"
+                data-title="E.Klunder"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star14.svg"/>
+                <a href="https://alttextselfies.net/selfies/e-klunder/">E.Klunder</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                
+                data-length="293"
+                data-title="NEVE"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star28.svg"/>
+                <a href="https://alttextselfies.net/selfies/neve/">NEVE</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="470"
+                data-title="Stucker"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star35.svg"/>
+                <a href="https://alttextselfies.net/selfies/stucker/">Stucker</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="414"
+                data-title="Kirsten Hatfield"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star74.svg"/>
+                <a href="https://alttextselfies.net/selfies/kirsten-hatfield/">Kirsten Hatfield</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="393"
+                data-title="Kaius Kirby"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star14.svg"/>
+                <a href="https://alttextselfies.net/selfies/kaius-kirby/">Kaius Kirby</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="1032"
+                data-title="Clint Enns"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star17.svg"/>
+                <a href="https://alttextselfies.net/selfies/clint-enns/">Clint Enns</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="938"
+                data-title="Jodie Kirschner"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star75.svg"/>
+                <a href="https://alttextselfies.net/selfies/jodie-kirschner/">Jodie Kirschner</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="948"
+                data-title="Gabriel Jesiolowski"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star18.svg"/>
+                <a href="https://alttextselfies.net/selfies/gabriel-jesiolowski/">Gabriel Jesiolowski</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="191"
+                data-title="Katie Ione Craney"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star64.svg"/>
+                <a href="https://alttextselfies.net/selfies/katie-ione-craney/">Katie Ione Craney</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="810"
+                data-title="Alison Kopit"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star60.svg"/>
+                <a href="https://alttextselfies.net/selfies/alison-kopit/">Alison Kopit</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="296"
+                data-title="Jenny B Kowalski"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star53.svg"/>
+                <a href="https://alttextselfies.net/selfies/jenny-b-kowalski/">Jenny B Kowalski</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                data-chapbook="true"
+                data-audio="true"
+                data-length="233"
+                data-title="Yemisi"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star19.svg"/>
+                <a href="https://alttextselfies.net/selfies/yemisi/">Yemisi</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="271"
+                data-title="Amy Correia"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star33.svg"/>
+                <a href="https://alttextselfies.net/selfies/amy-correia/">Amy Correia</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="361"
+                data-title="Chris Martin"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star23.svg"/>
+                <a href="https://alttextselfies.net/selfies/chris-martin/">Chris Martin</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                data-audio="true"
+                data-length="574"
+                data-title="Rikki Tan"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star25.svg"/>
+                <a href="https://alttextselfies.net/selfies/rikki-tan/">Rikki Tan</a>
+            </li>
+        
+            <li
+                class="selfie-list-item"
+                
+                
+                data-length="244"
+                data-title="Ash Hagerstrand"
+            >
+                <img alt="sparkle" class="star" src="https://alttextselfies.net/assets/images/star71.svg"/>
+                <a href="https://alttextselfies.net/selfies/ash-hagerstrand/">Ash Hagerstrand</a>
+            </li>
+        
+    </ul>
+
+</div>
+        </main>
+
+        <div class="menus">
+  <div class="mobile-menu-container">
+      <div id="mobile-ats-menu" class="fade-up">
+          <button class="ats-button toggle-link" aria-expanded="false">Menu</button>
+      </div>
+  </div>
+      
+  <menu id="ats-menu" class="bottom fade-up">
+      <nav class="container" aria-label="Menu">
+        <ul>
+            <li><a class="welcome" href="https://alttextselfies.net/welcome/">Welcome</a></li>
+            <li><a class="selfies" href="https://alttextselfies.net/selfies/">Selfies</a></li>
+            <li><a class="book" href="https://alttextselfies.net/book/">Book</a></li>
+            <li><a class="about" href="https://alttextselfies.net/about/">About</a></li>
+            <li><a class="essays" href="https://alttextselfies.net/essays/">Essays</a></li>
+            <li><a class="links" href="https://alttextselfies.net/links/">Links</a></li>
+        </ul>
+      </nav>
+  </menu>
+
+  <nav id="sound-toggle">
+        <button class="sound ats-button muted">
+            Sound: off
+            <span class="sound-icon">
+                
+            </span>
+        </button>
+    </nav>
+
+</div>
+
+        <audio id="bg" loop src="https://alttextselfies.net/assets/alt_text_selfies.mp3" controls>
+            Your browser does not support the audio element.
+        </audio>
+
+        <script src="https://alttextselfies.net/assets/js/mini-spa.js"></script>
+        <script src="https://alttextselfies.net/assets/js/index.js"></script>
+    </body>
+</html>
