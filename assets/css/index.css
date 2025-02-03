@@ -164,8 +164,7 @@ menu.bottom a.active::after {
   max-width: 700px;
   padding: 0 0.5em;
   margin: 5rem auto;
-  /* padding-bottom: 6rem; */
-  padding-bottom: 0;
+  padding-bottom: 6rem;
   margin-bottom: 1.5em;
 }
 
