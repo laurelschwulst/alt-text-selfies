@@ -14,8 +14,8 @@ site_title: Alt Text Selfies
         <meta property="og:image" content="{{site.url}}/assets/images/alttextselfies-alt-alt.png">
         <meta property="og:image:alt" content="The title “Alt Text Selfies” in black serif text, centered over a light yellow background. Several black hand drawn asterisks are sprinkled across the image.">
         <meta property="og:description" content="An alt text selfie is any written self-portrait. This project takes a well-known practice—the selfie—and approaches it through a disability lens.">
-        <link rel="stylesheet" href="/assets/css/tailwind.css?333">
-        <link rel="stylesheet" href="/assets/css/index.css?333">
+        <link rel="stylesheet" href="/assets/css/tailwind.css?334">
+        <link rel="stylesheet" href="/assets/css/index.css?334">
         {# Vue used for sort and filtering on Selfies page #}
         <script src="{{ site.url }}/assets/js/vue.global.js"></script>
         <script src="{{ site.url }}/assets/js/code.jquery.com_jquery-3.7.0.min.js"></script>
@@ -27,17 +27,20 @@ site_title: Alt Text Selfies
                     <a href="{{ site.url }}/welcome">{{ site_title }}</a>
                 </h1>
             </header>
-
             {{ content | safe }}
         </main>
 
-        {% include "layouts/menu.njk" %}
+        {% if page.fileSlug == "" %}
+            
+        {% else %}
+            {% include "layouts/menu.njk" %}
+        {% endif %}
 
         {# <audio id="bg" loop src="{{ site.url }}/assets/alt_text_selfies.mp3" controls>
             Your browser does not support the audio element.
         </audio> #}
 
         {# <script src="{{ site.url }}/assets/js/mini-spa.js"></script> #}
-        <script src="{{ site.url }}/assets/js/index.js"></script>
+        <script src="{{ site.url }}/assets/js/index.js?334"></script>
     </body>
 </html>
