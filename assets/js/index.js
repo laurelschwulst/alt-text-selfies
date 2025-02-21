@@ -1,55 +1,55 @@
-setupSoundToggle();
-function setupSoundToggle() {
-  var audio = document.getElementById("bg");
-  var soundOn = document.getElementById("sound-on");
-  var soundToggle = document.getElementById("sound-toggle");
-  var soundToggleButton = soundToggle.querySelector("button");
+// setupSoundToggle();
+// function setupSoundToggle() {
+//   var audio = document.getElementById("bg");
+//   var soundOn = document.getElementById("sound-on");
+//   var soundToggle = document.getElementById("sound-toggle");
+//   // var soundToggleButton = soundToggle.querySelector("button");
 
-  // Play sound and then navigate for 'sound-on' link
-  if (soundOn) {
-    soundOn.addEventListener("click", function (e) {
-      console.log("playing");
-      audio.play();
-      soundToggleButton.classList.remove("muted");
-      soundToggleButton.textContent = "Sound: on"; // Change button text
-    });
-  }
+//   // Play sound and then navigate for 'sound-on' link
+//   if (soundOn) {
+//     soundOn.addEventListener("click", function (e) {
+//       console.log("playing");
+//       audio.play();
+//       soundToggleButton.classList.remove("muted");
+//       soundToggleButton.textContent = "Sound: on"; // Change button text
+//     });
+//   }
 
-  if (audio.paused) {
-    soundToggleButton.classList.add("muted");
-    soundToggleButton.textContent = "Sound: off"; // Change button text
-  }
+//   if (audio.paused) {
+//     soundToggleButton.classList.add("muted");
+//     soundToggleButton.textContent = "Sound: off"; // Change button text
+//   }
 
-  // Toggle sound for 'sound-toggle' link without navigating
-  if (soundToggle) {
-    soundToggle.addEventListener("click", function (e) {
-      console.log("click sound button");
-      if (audio.paused) {
-        audio.play(); // Play the audio if it's paused
-        soundToggleButton.classList.remove("muted");
-        soundToggleButton.textContent = "Sound: on"; // Change button text
-      } else {
-        audio.pause(); // Pause the audio if it's playing
-        soundToggleButton.classList.add("muted");
-        soundToggleButton.textContent = "Sound: off"; // Change button text
-      }
-    });
-  }
-}
+//   // Toggle sound for 'sound-toggle' link without navigating
+//   if (soundToggle) {
+//     soundToggle.addEventListener("click", function (e) {
+//       console.log("click sound button");
+//       if (audio.paused) {
+//         audio.play(); // Play the audio if it's paused
+//         soundToggleButton.classList.remove("muted");
+//         soundToggleButton.textContent = "Sound: on"; // Change button text
+//       } else {
+//         audio.pause(); // Pause the audio if it's playing
+//         soundToggleButton.classList.add("muted");
+//         soundToggleButton.textContent = "Sound: off"; // Change button text
+//       }
+//     });
+//   }
+// }
 
 // mobile menu
 setupMobileMenu();
 function setupMobileMenu() {
   var mobileLink = document.querySelector("#mobile-ats-menu .toggle-link");
   var menuUl = document.getElementById("ats-menu");
-  var soundNav = document.getElementById("sound-toggle");
+  // var soundNav = document.getElementById("sound-toggle");
   var menuLinks = document.querySelectorAll("#ats-menu a");
 
   function closeMenu() {
     mobileLink.textContent = "Menu";
     sessionStorage.setItem("isMenuOpen", "false");
     menuUl.classList.remove("mobile-open");
-    soundNav.classList.remove("mobile-open");
+    // soundNav.classList.remove("mobile-open");
     document.body.style.overflow = "auto";
     mobileLink.setAttribute("aria-expanded", "false");
   }
@@ -58,7 +58,7 @@ function setupMobileMenu() {
     mobileLink.textContent = "Close";
     sessionStorage.setItem("isMenuOpen", "true");
     menuUl.classList.add("mobile-open");
-    soundNav.classList.add("mobile-open");
+    // soundNav.classList.add("mobile-open");
     document.body.style.overflow = "hidden";
     mobileLink.setAttribute("aria-expanded", "true");
   }

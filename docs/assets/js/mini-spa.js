@@ -85,30 +85,30 @@
     return null;
   }
 
-  window.addEventListener('click', function (evt) {
-    let baseUrl = $('meta[name="x-base-url"]')?.getAttribute('content') || '/';
-    const el = findAnchorTag(evt.target);
-    const href = el?.getAttribute('href');
-    if (el && href) {
-      if (
-        href.startsWith('#') ||
-        el.getAttribute('target') === '_blank' ||
-        /\.\w+$/.test(href)
-      ) {
-        console.log('no SPA handling')
-        // eleventy urls in this configuration do not have extensions like .html
-        // if they have, or if target _blank is set, or they are a hash link,
-        // then do nothing.
-        return;
-      }
-      // if the URL starts with the base url, do the SPA handling
-      if (href.startsWith(baseUrl)) {
-        console.log('handle SPA')
-        evt.preventDefault();
-        load(href, true);
-      }
-    }
-  });
+  // window.addEventListener('click', function (evt) {
+  //   let baseUrl = $('meta[name="x-base-url"]')?.getAttribute('content') || '/';
+  //   const el = findAnchorTag(evt.target);
+  //   const href = el?.getAttribute('href');
+  //   if (el && href) {
+  //     if (
+  //       href.startsWith('#') ||
+  //       el.getAttribute('target') === '_blank' ||
+  //       /\.\w+$/.test(href)
+  //     ) {
+  //       console.log('no SPA handling')
+  //       // eleventy urls in this configuration do not have extensions like .html
+  //       // if they have, or if target _blank is set, or they are a hash link,
+  //       // then do nothing.
+  //       return;
+  //     }
+  //     // if the URL starts with the base url, do the SPA handling
+  //     if (href.startsWith(baseUrl)) {
+  //       console.log('handle SPA')
+  //       evt.preventDefault();
+  //       load(href, true);
+  //     }
+  //   }
+  // });
 
   window.addEventListener('popstate', function (e) {
     load(document.location.pathname, false);

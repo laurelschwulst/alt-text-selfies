@@ -20,7 +20,3 @@ Olivia
 Bojana
 
 Finnegan
-
-<a class="ats-button-large simple" href="/selfies">
-    <span class="stars-animating"><img class="star small" src="/assets/images/star20.svg"/></span> <span class="star-text">Explore the Selfies</span> <span class="stars-animating"><img class="star small" src="/assets/images/star22.svg"/></span>
-</a>
